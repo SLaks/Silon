@@ -4,6 +4,17 @@
 * {
   box-sizing: border-box;
 }
+.Canvas {
+  position: relative;
+  background-color: #FFF3E0;
+  border: 2px solid #FFB74D;
+  overflow: auto;
+  box-sizing: content-box;
+  padding: .25rem;
+}
+.Canvas > * {
+  position: absolute;
+}
 input[type=checkbox] {
   -moz-appearance: none;
   position: relative;
@@ -41,6 +52,9 @@ input[type=checkbox]:after {
 }
 input[type=checkbox]:checked:after {
   top: -3rem;
+}
+.Connector {
+  background: #e0e0e0;
 }
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-result:before,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-result:before {
