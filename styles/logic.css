@@ -1,0 +1,70 @@
+﻿:root {
+  font-size: 16px;
+}
+* {
+  box-sizing: border-box;
+}
+input[type=checkbox] {
+  -moz-appearance: none;
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+}
+input[type=checkbox]:before {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  box-sizing: border-box;
+  background-color: #e0e0e0;
+  border: 2px solid #ffb300;
+  -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+          transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+input[type=checkbox]:checked:before {
+  background-color: #ffc107;
+}
+input[type=checkbox]:after {
+  white-space: pre;
+  content: '0\00000a1';
+  font-size: 2rem;
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  -webkit-transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+          transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+input[type=checkbox]:checked:after {
+  top: -3rem;
+}
+#simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-result:before,
+#simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-result:before {
+  content: '1';
+  font-weight: bold;
+}
+ #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-result:before {
+  content: '1';
+  font-weight: bold;
+}
+ #simple-or-a:checked ~ #simple-or-result:before {
+  content: '1';
+  font-weight: bold;
+}
+ #simple-or-b:checked ~ #simple-or-result:before {
+  content: '1';
+  font-weight: bold;
+}
+ #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~  #simple-and-a:checked ~ #simple-and-b:checked ~ #compound-result:before,
+ #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~  #simple-and-a:checked ~ #simple-and-b:checked ~ #compound-result:before {
+  content: '1';
+  font-weight: bold;
+}
+.Result:before {
+  content: '0';
+}
+/*# sourceMappingURL=logic.css.map */

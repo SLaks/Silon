@@ -1,0 +1,30 @@
+﻿
+.xor(@first, @second, @content: @content) {
+	@{first}:not(:checked) ~ @{second}:checked,
+	@{first}:checked ~ @{second}:not(:checked) {
+		@content();
+	}
+}
+
+.or(@first, @second, @content: @content) {
+	#private.call(~'', @first, @content);
+	#private.call(~'', @second, @content);
+}
+
+.and(@first, @second, @content: @content) {
+	#private.call(~'', @first, {
+		#private.call(~'~', @second, @content);
+	});
+}
+
+#private {
+	.call(@combinator, @selector, @content) when (isString(@selector)), (isKeyword(@selector)) {
+		@{combinator} @{selector}:checked { @content(); }
+	}
+
+	.call(@combinator, @selector, @content) when(default()) {	// isruleset(@selector) doesn't work
+		@{combinator} {
+			@selector();
+		}
+	}
+}

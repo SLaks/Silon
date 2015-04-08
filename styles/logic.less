@@ -1,0 +1,43 @@
+﻿@import "_theme";
+@import "_combinators";
+
+.xor(~'#simple-xor-a', ~'#simple-xor-b', {
+	~ #simple-xor-result {
+		.On();
+	}
+});
+
+.and(~'#simple-and-a', ~'#simple-and-b', {
+	~ #simple-and-result {
+		.On();
+	}
+});
+
+.or(~'#simple-or-a', ~'#simple-or-b', {
+	~ #simple-or-result {
+		.On();
+	}
+});
+
+.and(
+	{ .xor(~'#simple-xor-a', ~'#simple-xor-b'); }, 
+	{ .and(~'#simple-and-a', ~'#simple-and-b'); }, 
+	{
+		~ #compound-result {
+			.On();
+		}
+	}
+);
+
+
+
+.Result:before {
+	content: '0';
+}
+
+.On() {
+	&:before {
+		content: '1';
+		font-weight: bold;
+	}
+}
