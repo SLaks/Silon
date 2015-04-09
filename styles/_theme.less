@@ -15,9 +15,6 @@
 
 :root {
 	font-size: 16px; // Layout base unit
-}
-
-* {
 	box-sizing: border-box;
 }
 
@@ -40,6 +37,8 @@
 	}
 }
 
+// Draws a box around a value (input or computed result).  The caller 
+// must apply background-color: @activeColor when the value is active
 .ValueBox() {
 	display: block;
 	.square(@valueSize);
@@ -49,7 +48,11 @@
 	transition: background @transitionDuration;
 }
 
+// Draws the content of a value. The caller must apply
+// .ActiveValueContent() whenever the value is active.
 .ValueContent() {
+	position: relative;
+	overflow: hidden;
 	&:after {
 		white-space: pre;
 		content: '0\00000a1';
@@ -65,7 +68,8 @@
 }
 
 
-.ActiveValue() {
+// Applies active styles to a .ValueContent() element
+.ActiveValueContent() {
 	&:after {
 		top: -@valueSize;
 	}
@@ -75,12 +79,8 @@
 	});
 }
 
-
 input[type=checkbox] {
-	-moz-appearance: none;
-	position: relative;
 	.square(@valueSize);
-	overflow: hidden;
 	margin: 0;
 	padding: 0;
 
@@ -88,15 +88,13 @@ input[type=checkbox] {
 		content: '';
 		.ValueBox();
 	}
-
 	&:checked:before {
 		background-color: @activeColor;
 	}
 
 	.ValueContent();
-
 	&:checked {
-		.ActiveValue();
+		.ActiveValueContent();
 	}
 
 	&:hover {
@@ -106,6 +104,7 @@ input[type=checkbox] {
 		.ConnectorsFor({
 			background-color: @inactiveHoverColor;
 		});
+
 		&:checked {
 			&:before {
 				background-color: @activeHoverColor;
@@ -120,10 +119,13 @@ input[type=checkbox] {
 .Canvas {
 	@padding: .5rem;
 	position: relative;
-	overflow: visible;
-	box-sizing: content-box;
-	margin: @padding;
 
+	// Add spacing around the content, without affecting
+	// the offsets of absolutely positioned children, by
+	// making the background & border extend outside the
+	// element's boundaries
+	overflow: visible;
+	margin: @padding;
 	&:before {
 		content: '';
 		display: block;
@@ -137,37 +139,67 @@ input[type=checkbox] {
 	}
 
 	> * {
-		position: absolute !important;
+		position: absolute !important;	// Override position: relative from checkboxes
 	}
 }
 
+// A line connecting value boxes or combinators.
+// These lines are laid out in style attributes,
+// as if the line had zero thickness. Therefore,
+// the position (top or left) sets the center of
+// the line.
 .Connector {
-	z-index: 1;
 	background: @inactiveColor;
 	transition: background @transitionDuration;
-	// Use padding to add an additional pixel to the declared size to cover the adjacent borders.
+	// Add padding to the cross axis to cover
+	// the border of the connected elements.
 	box-sizing: content-box;
 
-	@thickness: .5rem;
+	@thickness: .5rem; // The length in the cross axis
+
+	// Corners cover the joint between two connectors,
+	// as a class applied to the second element.  They
+	// are centered around the overlapping centers for
+	// their two adjacent connectors, and have borders
+	// to close the edges.
+	&.Corner:before {
+		content: '';
+		display: block;
+		position: absolute;
+
+		// The corner must have the same dimensions as
+		// the connectors.  Borders are added by every
+		// direction separately for the correct sides.
+		.square(@thickness);
+		transition: inherit;
+		// Using inherit adds unwanted cascade to animations
+		background-color: @inactiveColor;
+	}
 
 	&.Vertical {
+		// Center the element in the cross axis, around the declared position
 		width: @thickness;
 		margin-left: calc((-.5 * @thickness) ~" - " @borderThickness);
+
+		// Offset adjacent borders
 		margin-top: -@borderThickness;
 		padding: @borderThickness 0;
+
 		border-left: @border;
 		border-right: @border;
 		
 		&.Corner:before {
+			top: -.5 * @thickness;		// Cover the thickness of the adjoining connector, which is centered at our top
+			left: -@borderThickness;	// Cover the parent's outer border
 			border-top: @border;
-			padding-bottom: @borderThickness;
-			top: -.5 * @thickness;
-			left: -@borderThickness;
+			// Don't pad the edge facing our connector, 
+			// so that the connector's border can cover
+			// the pixel at the bend.
 		}
 
 		&.Corner.Left:before {
 			border-right: @border;
-			padding-left: @borderThickness;
+			padding-left: @borderThickness;	// Stretch over the adjoining connector's borders
 		}
 
 		&.Corner.Right:before {
@@ -178,25 +210,27 @@ input[type=checkbox] {
 	}
 
 	&.Horizontal {
+		// Center the element in the cross axis, around the declared position
 		height: @thickness;
 		margin-top: calc((-.5 * @thickness) ~" - " @borderThickness);
+
+		// Offset adjacent borders
 		margin-left: -@borderThickness;
 		padding: 0 @borderThickness;
+		
 		border-top: @border;
 		border-bottom: @border;
 		
 		&.Corner.Left:before {
+			left: -.5 * @thickness;	// Cover the thickness of the adjoining connector, which is centered at our left
+			top: -@borderThickness;	// Cover the parent's outer border
 			border-left: @border;
-			padding-right: @borderThickness;
-			left: -.5 * @thickness;
-			top: -@borderThickness;
 		}
 
 		&.Corner.Right:before {
+			right: -.5 * @thickness; // Cover the thickness of the adjoining connector, which is centered at our right
+			top: -@borderThickness;	 // Cover the parent's outer border
 			border-right: @border;
-			padding-left: @borderThickness;
-			right: -.5 * @thickness;
-			top: -@borderThickness;
 		}
 
 		&.Corner.Up:before {
@@ -209,28 +243,16 @@ input[type=checkbox] {
 			padding-bottom: @borderThickness;
 		}
 	}
-
-	&.Corner:before {
-		content: '';
-		display: block;
-		position: absolute;
-		box-sizing: inherit;
-		transition: inherit;
-		background-color: @inactiveColor;
-		.square(@thickness);
-	}
 }
 
-
 .Result {
-	overflow: hidden;
-	position: relative;
 	border-radius: @valueSize / 2;
 	.ValueBox();
 	.ValueContent();
 }
 
+// Applied to output values (.Result) when the logic gate evaluates to true.
 .On() {
 	background-color: @activeColor;
-	.ActiveValue();
+	.ActiveValueContent();
 }

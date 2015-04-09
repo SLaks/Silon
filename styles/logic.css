@@ -1,17 +1,14 @@
 ﻿:root {
   font-size: 16px;
-}
-* {
   box-sizing: border-box;
 }
 input[type=checkbox] {
-  -moz-appearance: none;
-  position: relative;
   width: 3rem;
   height: 3rem;
-  overflow: hidden;
   margin: 0;
   padding: 0;
+  position: relative;
+  overflow: hidden;
 }
 input[type=checkbox]:before {
   content: '';
@@ -89,7 +86,6 @@ input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector:before
 .Canvas {
   position: relative;
   overflow: visible;
-  box-sizing: content-box;
   margin: 0.5rem;
 }
 .Canvas:before {
@@ -107,11 +103,20 @@ input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector:before
   position: absolute !important;
 }
 .Connector {
-  z-index: 1;
   background: #e0e0e0;
   -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
   box-sizing: content-box;
+}
+.Connector.Corner:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  -webkit-transition: inherit;
+          transition: inherit;
+  background-color: #e0e0e0;
 }
 .Connector.Vertical {
   width: 0.5rem;
@@ -122,10 +127,9 @@ input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector:before
   border-right: 2px solid #ffa000;
 }
 .Connector.Vertical.Corner:before {
-  border-top: 2px solid #ffa000;
-  padding-bottom: 2px;
   top: -0.25rem;
   left: -2px;
+  border-top: 2px solid #ffa000;
 }
 .Connector.Vertical.Corner.Left:before {
   border-right: 2px solid #ffa000;
@@ -144,16 +148,14 @@ input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector:before
   border-bottom: 2px solid #ffa000;
 }
 .Connector.Horizontal.Corner.Left:before {
-  border-left: 2px solid #ffa000;
-  padding-right: 2px;
   left: -0.25rem;
   top: -2px;
+  border-left: 2px solid #ffa000;
 }
 .Connector.Horizontal.Corner.Right:before {
-  border-right: 2px solid #ffa000;
-  padding-left: 2px;
   right: -0.25rem;
   top: -2px;
+  border-right: 2px solid #ffa000;
 }
 .Connector.Horizontal.Corner.Up:before {
   border-bottom: 2px solid #ffa000;
@@ -163,20 +165,7 @@ input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector:before
   border-top: 2px solid #ffa000;
   padding-bottom: 2px;
 }
-.Connector.Corner:before {
-  content: '';
-  display: block;
-  position: absolute;
-  box-sizing: inherit;
-  -webkit-transition: inherit;
-          transition: inherit;
-  background-color: #e0e0e0;
-  width: 0.5rem;
-  height: 0.5rem;
-}
 .Result {
-  overflow: hidden;
-  position: relative;
   border-radius: 1.5rem;
   display: block;
   width: 3rem;
@@ -186,6 +175,8 @@ input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector:before
   border: 2px solid #ffa000;
   -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  position: relative;
+  overflow: hidden;
 }
 .Result:after {
   white-space: pre;
