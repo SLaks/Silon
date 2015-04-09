@@ -87,6 +87,20 @@ input[type=checkbox]:checked + .Connector + .Connector + .Connector:before {
   border-left: 2px solid #ffb300;
   border-right: 2px solid #ffb300;
 }
+.Connector.Vertical.Corner:before {
+  border-top: 2px solid #ffb300;
+  padding-bottom: 2px;
+  top: -0.25rem;
+  left: -2px;
+}
+.Connector.Vertical.Corner.Left:before {
+  border-right: 2px solid #ffb300;
+  padding-left: 2px;
+}
+.Connector.Vertical.Corner.Right:before {
+  border-left: 2px solid #ffb300;
+  padding-right: 2px;
+}
 .Connector.Horizontal {
   height: 0.5rem;
   margin-top: calc(-0.25rem  -  2px);

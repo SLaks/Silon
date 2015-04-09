@@ -123,6 +123,24 @@ input[type=checkbox] {
 		padding: @borderThickness 0;
 		border-left: @border;
 		border-right: @border;
+		
+		&.Corner:before {
+			border-top: @border;
+			padding-bottom: @borderThickness;
+			top: -.5 * @thickness;
+			left: -@borderThickness;
+		}
+
+		&.Corner.Left:before {
+			border-right: @border;
+			padding-left: @borderThickness;
+		}
+
+		&.Corner.Right:before {
+			border-left: @border;
+			padding-right: @borderThickness;
+		}
+
 	}
 
 	&.Horizontal {
