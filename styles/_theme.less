@@ -6,7 +6,10 @@
 
 @transitionDuration: cubic-bezier(.4, 0, .2, 1) .3s;
 
-@border: 2px solid @borderColor;
+@borderThickness: 2px;
+@border: @borderThickness solid @borderColor;
+
+@valueSize: 3rem;
 
 :root {
 	font-size: 16px; // Layout base unit
@@ -16,58 +19,166 @@
 	box-sizing: border-box;
 }
 
-.Canvas {
-	position: relative;
-	background-color: #FFF3E0;
-	border: 2px solid #FFB74D;
-	overflow: auto;
-	box-sizing: content-box;
-	padding: .25rem;
+.ValueBox() {
+	display: block;
+	.square(@valueSize);
+	box-sizing: border-box;
+	background-color: @inactiveColor;
+	border: @border;
+	transition: background @transitionDuration;
+}
 
-	> * {
+.ValueContent() {
+	&:after {
+		white-space: pre;
+		content: '0\00000a1';
+		font-size: 2rem;
+		display: block;
+		.square(@valueSize);
+		line-height: @valueSize;
+		text-align: center;
 		position: absolute;
+		top: 0;
+		transition: top @transitionDuration;
 	}
 }
 
+
+.ActiveValue() {
+	&:after {
+		top: -@valueSize;
+	}
+
+	+ .Connector,
+	+ .Connector + .Connector,
+	+ .Connector + .Connector + .Connector {
+		&, &:before {
+			background-color: @activeColor;
+		}
+	}
+}
+
+
 input[type=checkbox] {
-	@size: 3rem;
 	-moz-appearance: none;
 	position: relative;
-	.square(@size);
+	.square(@valueSize);
 	overflow: hidden;
+	margin: 0;
+	padding: 0;
 
 	&:before {
 		content: '';
-		display: block;
-		.square(@size);
-		box-sizing: border-box;
-		background-color: @inactiveColor;
-		border: @border;
-		transition: background @transitionDuration;
+		.ValueBox();
 	}
 
 	&:checked:before {
 		background-color: @activeColor;
 	}
 
-	&:after {
-		white-space: pre;
-		content: '0\00000a1';
-		font-size: 2rem;
+	.ValueContent();
+
+	&:checked {
+		.ActiveValue();
+	}
+}
+
+.Canvas {
+	@padding: .5rem;
+	position: relative;
+	overflow: visible;
+	box-sizing: content-box;
+	margin: @padding;
+
+	&:before {
+		content: '';
 		display: block;
-		.square(@size);
-		line-height: @size;
-		text-align: center;
+		background-color: #FFF3E0;
+		border: 2px solid #FFB74D;
 		position: absolute;
-		top: 0;
-		transition: top @transitionDuration;
+		top: -@padding;
+		left: -@padding;
+		right: -@padding;
+		bottom: -@padding;
 	}
 
-	&:checked:after {
-		top: -@size;
+	> * {
+		position: absolute !important;
 	}
 }
 
 .Connector {
+	z-index: 1;
 	background: @inactiveColor;
+	transition: background @transitionDuration;
+	// Use padding to add an additional pixel to the declared size to cover the adjacent borders.
+	box-sizing: content-box;
+
+	@thickness: .5rem;
+
+	&.Vertical {
+		width: @thickness;
+		margin-left: calc((-.5 * @thickness) ~" - " @borderThickness);
+		margin-top: -@borderThickness;
+		padding: @borderThickness 0;
+		border-left: @border;
+		border-right: @border;
+	}
+
+	&.Horizontal {
+		height: @thickness;
+		margin-top: calc((-.5 * @thickness) ~" - " @borderThickness);
+		margin-left: -@borderThickness;
+		padding: 0 @borderThickness;
+		border-top: @border;
+		border-bottom: @border;
+		
+		&.Corner.Left:before {
+			border-left: @border;
+			padding-right: @borderThickness;
+			left: -.5 * @thickness;
+			top: -@borderThickness;
+		}
+
+		&.Corner.Right:before {
+			border-right: @border;
+			padding-left: @borderThickness;
+			right: -.5 * @thickness;
+			top: -@borderThickness;
+		}
+
+		&.Corner.Up:before {
+			border-bottom: @border;
+			padding-top: @borderThickness;
+		}
+
+		&.Corner.Down:before {
+			border-top: @border;
+			padding-bottom: @borderThickness;
+		}
+	}
+
+	&.Corner:before {
+		content: '';
+		display: block;
+		position: absolute;
+		box-sizing: inherit;
+		transition: inherit;
+		background-color: @inactiveColor;
+		.square(@thickness);
+	}
+}
+
+
+.Result {
+	overflow: hidden;
+	position: relative;
+	border-radius: @valueSize / 2;
+	.ValueBox();
+	.ValueContent();
+}
+
+.On() {
+	background-color: @activeColor;
+	.ActiveValue();
 }
