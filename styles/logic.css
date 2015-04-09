@@ -20,7 +20,7 @@ input[type=checkbox]:before {
   height: 3rem;
   box-sizing: border-box;
   background-color: #e0e0e0;
-  border: 2px solid #ffb300;
+  border: 2px solid #ffa000;
   -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
@@ -51,6 +51,28 @@ input[type=checkbox]:checked + .Connector:before,
 input[type=checkbox]:checked + .Connector + .Connector:before,
 input[type=checkbox]:checked + .Connector + .Connector + .Connector:before {
   background-color: #ffc107;
+}
+input[type=checkbox]:hover:before {
+  background-color: #b3e5fc;
+}
+input[type=checkbox]:hover + .Connector,
+input[type=checkbox]:hover + .Connector + .Connector,
+input[type=checkbox]:hover + .Connector + .Connector + .Connector,
+input[type=checkbox]:hover + .Connector:before,
+input[type=checkbox]:hover + .Connector + .Connector:before,
+input[type=checkbox]:hover + .Connector + .Connector + .Connector:before {
+  background-color: #b3e5fc;
+}
+input[type=checkbox]:hover:checked:before {
+  background-color: #ffb300;
+}
+input[type=checkbox]:hover:checked + .Connector,
+input[type=checkbox]:hover:checked + .Connector + .Connector,
+input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector,
+input[type=checkbox]:hover:checked + .Connector:before,
+input[type=checkbox]:hover:checked + .Connector + .Connector:before,
+input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector:before {
+  background-color: #ffb300;
 }
 .Canvas {
   position: relative;
@@ -84,21 +106,21 @@ input[type=checkbox]:checked + .Connector + .Connector + .Connector:before {
   margin-left: calc(-0.25rem  -  2px);
   margin-top: -2px;
   padding: 2px 0;
-  border-left: 2px solid #ffb300;
-  border-right: 2px solid #ffb300;
+  border-left: 2px solid #ffa000;
+  border-right: 2px solid #ffa000;
 }
 .Connector.Vertical.Corner:before {
-  border-top: 2px solid #ffb300;
+  border-top: 2px solid #ffa000;
   padding-bottom: 2px;
   top: -0.25rem;
   left: -2px;
 }
 .Connector.Vertical.Corner.Left:before {
-  border-right: 2px solid #ffb300;
+  border-right: 2px solid #ffa000;
   padding-left: 2px;
 }
 .Connector.Vertical.Corner.Right:before {
-  border-left: 2px solid #ffb300;
+  border-left: 2px solid #ffa000;
   padding-right: 2px;
 }
 .Connector.Horizontal {
@@ -106,27 +128,27 @@ input[type=checkbox]:checked + .Connector + .Connector + .Connector:before {
   margin-top: calc(-0.25rem  -  2px);
   margin-left: -2px;
   padding: 0 2px;
-  border-top: 2px solid #ffb300;
-  border-bottom: 2px solid #ffb300;
+  border-top: 2px solid #ffa000;
+  border-bottom: 2px solid #ffa000;
 }
 .Connector.Horizontal.Corner.Left:before {
-  border-left: 2px solid #ffb300;
+  border-left: 2px solid #ffa000;
   padding-right: 2px;
   left: -0.25rem;
   top: -2px;
 }
 .Connector.Horizontal.Corner.Right:before {
-  border-right: 2px solid #ffb300;
+  border-right: 2px solid #ffa000;
   padding-left: 2px;
   right: -0.25rem;
   top: -2px;
 }
 .Connector.Horizontal.Corner.Up:before {
-  border-bottom: 2px solid #ffb300;
+  border-bottom: 2px solid #ffa000;
   padding-top: 2px;
 }
 .Connector.Horizontal.Corner.Down:before {
-  border-top: 2px solid #ffb300;
+  border-top: 2px solid #ffa000;
   padding-bottom: 2px;
 }
 .Connector.Corner:before {
@@ -149,7 +171,7 @@ input[type=checkbox]:checked + .Connector + .Connector + .Connector:before {
   height: 3rem;
   box-sizing: border-box;
   background-color: #e0e0e0;
-  border: 2px solid #ffb300;
+  border: 2px solid #ffa000;
   -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }

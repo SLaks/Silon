@@ -1,8 +1,10 @@
 ﻿@import "_mixins";
 
-@borderColor: #FFB300;
+@borderColor: #FFA000;
 @inactiveColor: #E0E0E0;
+@inactiveHoverColor: #B3E5FC;
 @activeColor: #FFC107;
+@activeHoverColor: #FFB300;
 
 @transitionDuration: cubic-bezier(.4, 0, .2, 1) .3s;
 
@@ -17,6 +19,16 @@
 
 * {
 	box-sizing: border-box;
+}
+
+.ConnectorsFor(@content) {
+	+ .Connector,
+	+ .Connector + .Connector,
+	+ .Connector + .Connector + .Connector {
+		&, &:before {
+			@content();
+		}
+	}
 }
 
 .ValueBox() {
@@ -49,13 +61,9 @@
 		top: -@valueSize;
 	}
 
-	+ .Connector,
-	+ .Connector + .Connector,
-	+ .Connector + .Connector + .Connector {
-		&, &:before {
-			background-color: @activeColor;
-		}
-	}
+	.ConnectorsFor({
+		background-color: @activeColor;
+	});
 }
 
 
@@ -80,6 +88,23 @@ input[type=checkbox] {
 
 	&:checked {
 		.ActiveValue();
+	}
+
+	&:hover {
+		&:before {
+			background-color: @inactiveHoverColor;
+		}
+		.ConnectorsFor({
+			background-color: @inactiveHoverColor;
+		});
+		&:checked {
+			&:before {
+				background-color: @activeHoverColor;
+			}
+			.ConnectorsFor({
+				background-color: @activeHoverColor;
+			});
+		}
 	}
 }
 
