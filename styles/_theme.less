@@ -21,12 +21,21 @@
 	box-sizing: border-box;
 }
 
+// Applies properties to all connectors that immediately follow the containing
+// element. Use this mixin to style connectors depending on the state of their 
+// connectee.  
 .ConnectorsFor(@content) {
-	+ .Connector,
-	+ .Connector + .Connector,
-	+ .Connector + .Connector + .Connector {
-		&, &:before {
-			@content();
+	.Recurse(3, {	// We currently only ever have three levels of connectors
+		&, &:before { @content(); }
+	});
+
+	.Recurse(@count, @content) {
+		+ .Connector { @content(); }
+	}
+
+	.Recurse(@count, @content) when (@count > 1) {
+		+ .Connector {	
+			.Recurse(@count - 1, @content);
 		}
 	}
 }
