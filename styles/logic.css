@@ -2,7 +2,7 @@
   font-size: 16px;
   box-sizing: border-box;
 }
-input[type=checkbox] {
+.Canvas input[type=checkbox] {
   width: 3rem;
   height: 3rem;
   margin: 0;
@@ -10,7 +10,7 @@ input[type=checkbox] {
   position: relative;
   overflow: hidden;
 }
-input[type=checkbox]:before {
+.Canvas input[type=checkbox]:before {
   content: '';
   display: block;
   width: 3rem;
@@ -21,10 +21,10 @@ input[type=checkbox]:before {
   -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
-input[type=checkbox]:checked:before {
+.Canvas input[type=checkbox]:checked:before {
   background-color: #ffc107;
 }
-input[type=checkbox]:after {
+.Canvas input[type=checkbox]:after {
   white-space: pre;
   content: '0\00000a1';
   font-size: 2rem;
@@ -38,49 +38,49 @@ input[type=checkbox]:after {
   -webkit-transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
-input[type=checkbox]:checked:after {
+.Canvas input[type=checkbox]:checked:after {
   top: -3rem;
 }
-input[type=checkbox]:checked + .Connector,
-input[type=checkbox]:checked + .Connector:before {
+.Canvas input[type=checkbox]:checked + .Connector,
+.Canvas input[type=checkbox]:checked + .Connector:before {
   background-color: #ffc107;
 }
-input[type=checkbox]:checked + .Connector + .Connector,
-input[type=checkbox]:checked + .Connector + .Connector:before {
+.Canvas input[type=checkbox]:checked + .Connector + .Connector,
+.Canvas input[type=checkbox]:checked + .Connector + .Connector:before {
   background-color: #ffc107;
 }
-input[type=checkbox]:checked + .Connector + .Connector + .Connector,
-input[type=checkbox]:checked + .Connector + .Connector + .Connector:before {
+.Canvas input[type=checkbox]:checked + .Connector + .Connector + .Connector,
+.Canvas input[type=checkbox]:checked + .Connector + .Connector + .Connector:before {
   background-color: #ffc107;
 }
-input[type=checkbox]:hover:before {
+.Canvas input[type=checkbox]:hover:before {
   background-color: #b3e5fc;
 }
-input[type=checkbox]:hover + .Connector,
-input[type=checkbox]:hover + .Connector:before {
+.Canvas input[type=checkbox]:hover + .Connector,
+.Canvas input[type=checkbox]:hover + .Connector:before {
   background-color: #b3e5fc;
 }
-input[type=checkbox]:hover + .Connector + .Connector,
-input[type=checkbox]:hover + .Connector + .Connector:before {
+.Canvas input[type=checkbox]:hover + .Connector + .Connector,
+.Canvas input[type=checkbox]:hover + .Connector + .Connector:before {
   background-color: #b3e5fc;
 }
-input[type=checkbox]:hover + .Connector + .Connector + .Connector,
-input[type=checkbox]:hover + .Connector + .Connector + .Connector:before {
+.Canvas input[type=checkbox]:hover + .Connector + .Connector + .Connector,
+.Canvas input[type=checkbox]:hover + .Connector + .Connector + .Connector:before {
   background-color: #b3e5fc;
 }
-input[type=checkbox]:hover:checked:before {
+.Canvas input[type=checkbox]:hover:checked:before {
   background-color: #ffb300;
 }
-input[type=checkbox]:hover:checked + .Connector,
-input[type=checkbox]:hover:checked + .Connector:before {
+.Canvas input[type=checkbox]:hover:checked + .Connector,
+.Canvas input[type=checkbox]:hover:checked + .Connector:before {
   background-color: #ffb300;
 }
-input[type=checkbox]:hover:checked + .Connector + .Connector,
-input[type=checkbox]:hover:checked + .Connector + .Connector:before {
+.Canvas input[type=checkbox]:hover:checked + .Connector + .Connector,
+.Canvas input[type=checkbox]:hover:checked + .Connector + .Connector:before {
   background-color: #ffb300;
 }
-input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector,
-input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector:before {
+.Canvas input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector,
+.Canvas input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector:before {
   background-color: #ffb300;
 }
 .Canvas {
@@ -91,7 +91,7 @@ input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector:before
 .Canvas:before {
   content: '';
   display: block;
-  background-color: #FFF3E0;
+  background-color: #fff3e0;
   border: 2px solid #FFB74D;
   position: absolute;
   top: -0.5rem;
@@ -107,6 +107,7 @@ input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector:before
   -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
   box-sizing: content-box;
+  z-index: 1;
 }
 .Connector.Corner:before {
   content: '';
@@ -191,6 +192,76 @@ input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector:before
   top: 0;
   -webkit-transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+.Gate-XOR,
+.Gate-OR {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  z-index: 0;
+  margin-top: -0.3rem;
+  overflow: hidden;
+}
+.Gate-XOR:after,
+.Gate-OR:after {
+  content: '';
+  display: block;
+  height: 1rem;
+  background-color: #e0e0e0;
+  border-left: 2px solid #ffa000;
+  border-right: 2px solid #ffa000;
+}
+.Gate-XOR:before,
+.Gate-OR:before {
+  content: '';
+  display: block;
+  width: 7.2rem;
+  height: 7.2rem;
+  left: -1.6rem;
+  top: -6.48rem;
+  box-sizing: border-box;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #fff3e0;
+  border: 2px solid #ffa000;
+}
+.Gate-XOR span,
+.Gate-OR span {
+  display: block;
+  position: absolute;
+  top: 1rem;
+  height: 3rem;
+  width: 2rem;
+  overflow: hidden;
+}
+.Gate-XOR span:before,
+.Gate-OR span:before {
+  content: '';
+  display: block;
+  background-color: #e0e0e0;
+  border-bottom: 2px solid #ffa000;
+  position: absolute;
+  height: 3rem;
+  width: 4rem;
+}
+.Gate-XOR span:first-child,
+.Gate-OR span:first-child {
+  left: 0;
+}
+.Gate-XOR span:first-child:before,
+.Gate-OR span:first-child:before {
+  border-left: 2px solid #ffa000;
+  border-bottom-left-radius: 4rem 4.2rem;
+}
+.Gate-XOR span + span,
+.Gate-OR span + span {
+  right: 0;
+}
+.Gate-XOR span + span:before,
+.Gate-OR span + span:before {
+  right: 0;
+  border-right: 2px solid #ffa000;
+  border-bottom-right-radius: 4rem 4.2rem;
 }
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-result,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-result {

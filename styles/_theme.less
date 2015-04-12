@@ -1,5 +1,6 @@
 ﻿@import "_mixins";
 
+@background: #FFF3E0;
 @borderColor: #FFA000;
 @inactiveColor: #E0E0E0;
 @inactiveHoverColor: #B3E5FC;
@@ -79,7 +80,7 @@
 	});
 }
 
-input[type=checkbox] {
+.Canvas input[type=checkbox] {
 	.square(@valueSize);
 	margin: 0;
 	padding: 0;
@@ -116,6 +117,7 @@ input[type=checkbox] {
 	}
 }
 
+
 .Canvas {
 	@padding: .5rem;
 	position: relative;
@@ -129,7 +131,7 @@ input[type=checkbox] {
 	&:before {
 		content: '';
 		display: block;
-		background-color: #FFF3E0;
+		background-color: @background;
 		border: 2px solid #FFB74D;
 		position: absolute;
 		top: -@padding;
@@ -154,6 +156,7 @@ input[type=checkbox] {
 	// Add padding to the cross axis to cover
 	// the border of the connected elements.
 	box-sizing: content-box;
+	z-index: 1;	 // Cover the borders of subsequent connectors.
 
 	@thickness: .5rem; // The length in the cross axis
 
@@ -255,4 +258,85 @@ input[type=checkbox] {
 .On() {
 	background-color: @activeColor;
 	.ActiveValueContent();
+}
+
+.Gate-XOR, .Gate-OR {
+	@straightHeight: 1rem;
+	@tipHeight: 3rem;
+	@width: 4rem;
+	@tipRadii: @width @tipHeight * 1.4;
+	@cutoutDiameter: @width * 1.8;
+
+	position: relative;
+	width: @width;
+	height: @straightHeight + @tipHeight;
+	z-index: 0;
+	margin-top: -0.3rem;
+	overflow: hidden; // Hide the rest of the concave circle (see below)
+	// The straight portion is a separate element,
+	// because it is shorter than the full parent.
+	&:after {
+		content: '';
+		display: block;
+		height: @straightHeight;
+		background-color: @inactiveColor;
+		border-left: @border;
+		border-right: @border;
+	}
+	// The concave curve on the top is implemented
+	// as a large circle with the background color
+	// to cover the top part of the straight part.
+	&:before {
+		content: '';
+		display: block;
+		.square(@cutoutDiameter);
+		left: -(@cutoutDiameter - @width) / 2;
+		top: -@cutoutDiameter * .9;
+		box-sizing: border-box;
+		border-radius: 50%;
+		position: absolute;
+		background-color: @background;
+		border: @border;
+	}
+	// To make the lower curve stop at an angle,
+	// I make two curves that cover the complete
+	// width of the element, and cut off half of
+	// each one so that they meet in the middle.
+	span {
+		display: block;
+		position: absolute;
+		top: @straightHeight;
+		height: @tipHeight;
+		width: @width / 2;
+		overflow: hidden;
+
+		&:before {
+			content: '';
+			display: block;
+			background-color: @inactiveColor;
+			border-bottom: @border;
+			position: absolute;
+			height: @tipHeight;
+			width: @width;
+		}
+	}
+
+	span:first-child {
+		left: 0;
+
+		&:before {
+			border-left: @border;
+			border-bottom-left-radius: @tipRadii;
+		}
+	}
+
+	span + span {
+		right: 0;
+
+		&:before {
+			right: 0;
+			border-right: @border;
+			border-bottom-right-radius: @tipRadii;
+		}
+	}
 }
