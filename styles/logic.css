@@ -17,7 +17,7 @@
   height: 3rem;
   box-sizing: border-box;
   background-color: #e0e0e0;
-  border: 2px solid #ffa000;
+  border: 0.125rem solid #ffa000;
   -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
@@ -53,6 +53,10 @@
 .Canvas input[type=checkbox]:checked + .Connector + .Connector + .Connector:before {
   background-color: #ffc107;
 }
+.Canvas input[type=checkbox]:checked + .Connector + .Connector + .Connector + .Connector,
+.Canvas input[type=checkbox]:checked + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
 .Canvas input[type=checkbox]:hover:before {
   background-color: #b3e5fc;
 }
@@ -68,6 +72,10 @@
 .Canvas input[type=checkbox]:hover + .Connector + .Connector + .Connector:before {
   background-color: #b3e5fc;
 }
+.Canvas input[type=checkbox]:hover + .Connector + .Connector + .Connector + .Connector,
+.Canvas input[type=checkbox]:hover + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #b3e5fc;
+}
 .Canvas input[type=checkbox]:hover:checked:before {
   background-color: #ffb300;
 }
@@ -81,6 +89,10 @@
 }
 .Canvas input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector,
 .Canvas input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector:before {
+  background-color: #ffb300;
+}
+.Canvas input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector + .Connector,
+.Canvas input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector + .Connector:before {
   background-color: #ffb300;
 }
 .Canvas {
@@ -121,50 +133,93 @@
 }
 .Connector.Vertical {
   width: 0.5rem;
-  margin-left: calc(-0.25rem  -  2px);
-  margin-top: -2px;
-  padding: 2px 0;
-  border-left: 2px solid #ffa000;
-  border-right: 2px solid #ffa000;
+  margin-left: -0.375rem;
+  margin-top: -0.125rem;
+  padding: 0.125rem 0;
+  border-left: 0.125rem solid #ffa000;
+  border-right: 0.125rem solid #ffa000;
 }
 .Connector.Vertical.Corner:before {
   top: -0.25rem;
-  left: -2px;
-  border-top: 2px solid #ffa000;
+  left: -0.125rem;
+  border-top: 0.125rem solid #ffa000;
 }
 .Connector.Vertical.Corner.Left:before {
-  border-right: 2px solid #ffa000;
-  padding-left: 2px;
+  border-right: 0.125rem solid #ffa000;
+  padding-left: 0.125rem;
 }
 .Connector.Vertical.Corner.Right:before {
-  border-left: 2px solid #ffa000;
-  padding-right: 2px;
+  border-left: 0.125rem solid #ffa000;
+  padding-right: 0.125rem;
+}
+.Connector.Vertical.Convex {
+  overflow: hidden;
+  background: none !important;
+  border: none;
+  padding: 0 0.125rem;
+  margin-top: 0.125rem;
+  height: 1rem;
+}
+.Connector.Vertical.Convex:before {
+  content: '';
+  display: block;
+  width: 7.2rem;
+  height: 7.2rem;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #e0e0e0;
+  -webkit-transition: inherit;
+          transition: inherit;
+  margin: 0 0.375rem;
+  top: -6.92706703rem;
+}
+.Connector.Vertical.Convex.Left:before {
+  left: -2.6rem;
+}
+.Connector.Vertical.Convex.Right:before {
+  right: -2.6rem;
+}
+.Connector.Vertical.Convex:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0.625rem;
+  width: 1.375rem;
+  height: 0.20576441rem;
+}
+.Connector.Vertical.Convex.Left:after {
+  right: 0;
+  border-right: 0.125rem solid #ffa000;
+}
+.Connector.Vertical.Convex.Right:after {
+  left: 0;
+  border-left: 0.125rem solid #ffa000;
 }
 .Connector.Horizontal {
   height: 0.5rem;
-  margin-top: calc(-0.25rem  -  2px);
-  margin-left: -2px;
-  padding: 0 2px;
-  border-top: 2px solid #ffa000;
-  border-bottom: 2px solid #ffa000;
+  margin-top: -0.375rem;
+  margin-left: -0.125rem;
+  padding: 0 0.125rem;
+  border-top: 0.125rem solid #ffa000;
+  border-bottom: 0.125rem solid #ffa000;
 }
 .Connector.Horizontal.Corner.Left:before {
   left: -0.25rem;
-  top: -2px;
-  border-left: 2px solid #ffa000;
+  top: -0.125rem;
+  border-left: 0.125rem solid #ffa000;
 }
 .Connector.Horizontal.Corner.Right:before {
   right: -0.25rem;
-  top: -2px;
-  border-right: 2px solid #ffa000;
+  top: -0.125rem;
+  border-right: 0.125rem solid #ffa000;
 }
 .Connector.Horizontal.Corner.Up:before {
-  border-bottom: 2px solid #ffa000;
-  padding-top: 2px;
+  border-bottom: 0.125rem solid #ffa000;
+  padding-top: 0.125rem;
 }
 .Connector.Horizontal.Corner.Down:before {
-  border-top: 2px solid #ffa000;
-  padding-bottom: 2px;
+  border-top: 0.125rem solid #ffa000;
+  padding-bottom: 0.125rem;
 }
 .Result {
   border-radius: 1.5rem;
@@ -173,7 +228,7 @@
   height: 3rem;
   box-sizing: border-box;
   background-color: #e0e0e0;
-  border: 2px solid #ffa000;
+  border: 0.125rem solid #ffa000;
   -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
   position: relative;
@@ -199,7 +254,7 @@
   width: 4rem;
   height: 4rem;
   z-index: 0;
-  margin-top: -0.3rem;
+  margin-top: -0.32206703rem;
   overflow: hidden;
 }
 .Gate-XOR:after,
@@ -208,8 +263,8 @@
   display: block;
   height: 1rem;
   background-color: #e0e0e0;
-  border-left: 2px solid #ffa000;
-  border-right: 2px solid #ffa000;
+  border-left: 0.125rem solid #ffa000;
+  border-right: 0.125rem solid #ffa000;
 }
 .Gate-XOR:before,
 .Gate-OR:before {
@@ -223,7 +278,7 @@
   border-radius: 50%;
   position: absolute;
   background-color: #fff3e0;
-  border: 2px solid #ffa000;
+  border: 0.125rem solid #ffa000;
 }
 .Gate-XOR span,
 .Gate-OR span {
@@ -239,7 +294,7 @@
   content: '';
   display: block;
   background-color: #e0e0e0;
-  border-bottom: 2px solid #ffa000;
+  border-bottom: 0.125rem solid #ffa000;
   position: absolute;
   height: 3rem;
   width: 4rem;
@@ -250,7 +305,7 @@
 }
 .Gate-XOR span:first-child:before,
 .Gate-OR span:first-child:before {
-  border-left: 2px solid #ffa000;
+  border-left: 0.125rem solid #ffa000;
   border-bottom-left-radius: 4rem 4.2rem;
 }
 .Gate-XOR span + span,
@@ -260,7 +315,7 @@
 .Gate-XOR span + span:before,
 .Gate-OR span + span:before {
   right: 0;
-  border-right: 2px solid #ffa000;
+  border-right: 0.125rem solid #ffa000;
   border-bottom-right-radius: 4rem 4.2rem;
 }
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-result,
@@ -289,6 +344,12 @@
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-result + .Connector + .Connector + .Connector:before {
   background-color: #ffc107;
 }
+#simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-result + .Connector + .Connector + .Connector + .Connector,
+#simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-result + .Connector + .Connector + .Connector + .Connector,
+#simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-result + .Connector + .Connector + .Connector + .Connector:before,
+#simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-result + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
  #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-result {
   background-color: #ffc107;
 }
@@ -305,6 +366,10 @@
 }
  #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-result + .Connector + .Connector + .Connector,
  #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-result + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+ #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-result + .Connector + .Connector + .Connector + .Connector,
+ #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-result + .Connector + .Connector + .Connector + .Connector:before {
   background-color: #ffc107;
 }
  #simple-or-a:checked ~ #simple-or-result {
@@ -325,6 +390,10 @@
  #simple-or-a:checked ~ #simple-or-result + .Connector + .Connector + .Connector:before {
   background-color: #ffc107;
 }
+ #simple-or-a:checked ~ #simple-or-result + .Connector + .Connector + .Connector + .Connector,
+ #simple-or-a:checked ~ #simple-or-result + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
  #simple-or-b:checked ~ #simple-or-result {
   background-color: #ffc107;
 }
@@ -341,6 +410,10 @@
 }
  #simple-or-b:checked ~ #simple-or-result + .Connector + .Connector + .Connector,
  #simple-or-b:checked ~ #simple-or-result + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+ #simple-or-b:checked ~ #simple-or-result + .Connector + .Connector + .Connector + .Connector,
+ #simple-or-b:checked ~ #simple-or-result + .Connector + .Connector + .Connector + .Connector:before {
   background-color: #ffc107;
 }
  #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~  #simple-and-a:checked ~ #simple-and-b:checked ~ #compound-result,
@@ -367,6 +440,12 @@
  #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~  #simple-and-a:checked ~ #simple-and-b:checked ~ #compound-result + .Connector + .Connector + .Connector,
  #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~  #simple-and-a:checked ~ #simple-and-b:checked ~ #compound-result + .Connector + .Connector + .Connector:before,
  #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~  #simple-and-a:checked ~ #simple-and-b:checked ~ #compound-result + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+ #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~  #simple-and-a:checked ~ #simple-and-b:checked ~ #compound-result + .Connector + .Connector + .Connector + .Connector,
+ #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~  #simple-and-a:checked ~ #simple-and-b:checked ~ #compound-result + .Connector + .Connector + .Connector + .Connector,
+ #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~  #simple-and-a:checked ~ #simple-and-b:checked ~ #compound-result + .Connector + .Connector + .Connector + .Connector:before,
+ #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~  #simple-and-a:checked ~ #simple-and-b:checked ~ #compound-result + .Connector + .Connector + .Connector + .Connector:before {
   background-color: #ffc107;
 }
 /*# sourceMappingURL=logic.css.map */

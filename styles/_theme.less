@@ -16,6 +16,29 @@
 
 @valueSize: 3rem;
 
+@connectorThickness: .5rem;					// The length in the cross axis
+@connectorCenterOffset: .5 * @connectorThickness + @borderThickness;	// The distance from the left/top edge to the center
+
+@gateWidth: 4rem;							// The width of the entire gate object
+@gateConcaveRadius: @gateWidth * .9;		// The radius of the circle carving out the concave part of OR/XOR gates
+@gateInputOffset: 1rem;						// The distance from the edge of the gate to the center of the input connector.  Must match declared coordinates in the HTML.
+@gateConcaveY: -@gateConcaveRadius * 1.8;	// The Y coordinate of the concave circle, relative to the gate
+@gateConcaveX: @gateWidth / 2 - @gateConcaveRadius;	// The X coordinate of the concave circle, relative to the gate
+
+@gateConcaveCenterY: -@gateConcaveY - @gateConcaveRadius;				// The distance from the center of the concave circle to the top of the gate
+@gateConnectorNearOffset: @gateInputOffset - @connectorCenterOffset;	// The distance from the outer edge of the gate to the closest edge of the input connectors
+@gateConnectorFarOffset: @gateInputOffset + @connectorCenterOffset;		// The distance from the outer edge of the gate to the far edge of the input connectors
+
+// The offset of the entire gate object, from its
+// declared Y coordinate.
+// This is calculated to make sure that the outer 
+// (away from the center of the gate) edge of the
+// connector is flush with the circle.
+@gateOffset: sqrt(pow(@gateConcaveRadius, 2)
+				- pow(@gateWidth / 2 - @gateConnectorNearOffset, 2))
+	- @gateConcaveCenterY	
+	- @borderThickness;
+
 :root {
 	font-size: @remSize; // Layout base unit
 	box-sizing: border-box;
@@ -25,7 +48,7 @@
 // element. Use this mixin to style connectors depending on the state of their 
 // connectee.  
 .ConnectorsFor(@content) {
-	.Recurse(3, {	// We currently only ever have three levels of connectors
+	.Recurse(4, {	// We currently only ever have four levels of connectors
 		&, &:before { @content(); }
 	});
 
@@ -160,9 +183,6 @@
 	box-sizing: content-box;
 	z-index: 1;	 // Cover the borders of subsequent connectors.
 
-	@thickness: .5rem; // The length in the cross axis
-	@centerOffset: .5 * @thickness + @borderThickness;	// The distance from the left edge to the center
-
 	// Corners cover the joint between two connectors,
 	// as a class applied to the second element.  They
 	// are centered around the overlapping centers for
@@ -176,7 +196,7 @@
 		// The corner must have the same dimensions as
 		// the connectors.  Borders are added by every
 		// direction separately for the correct sides.
-		.square(@thickness);
+		.square(@connectorThickness);
 		transition: inherit;
 		// Using inherit adds unwanted cascade to animations
 		background-color: @inactiveColor;
@@ -184,8 +204,8 @@
 
 	&.Vertical {
 		// Center the element in the cross axis, around the declared position
-		width: @thickness;
-		margin-left: -@centerOffset;
+		width: @connectorThickness;
+		margin-left: -@connectorCenterOffset;
 
 		// Offset adjacent borders
 		margin-top: -@borderThickness;
@@ -195,7 +215,7 @@
 		border-right: @border;
 		
 		&.Corner:before {
-			top: -.5 * @thickness;		// Cover the thickness of the adjoining connector, which is centered at our top
+			top: -.5 * @connectorThickness;		// Cover the thickness of the adjoining connector, which is centered at our top
 			left: -@borderThickness;	// Cover the parent's outer border
 			border-top: @border;
 			// Don't pad the edge facing our connector, 
@@ -213,12 +233,76 @@
 			padding-right: @borderThickness;
 		}
 
+		// A convex connector contains a chopped-off circle 
+		// to match the concave curve at the top of a gate.
+		// Because of the overflow: hidden, these cannot be
+		// combined with corner connectors.
+		&.Convex {
+			overflow: hidden;
+			// The main element just serves as a container to 
+			// chop off the sides of the circle.
+			background: none !important;	
+			border: none;
+			padding: 0 @borderThickness;	// Add padding to match the connector's border
+			margin-top: @borderThickness;	// Start after the connector's extension
+			height: 1rem;	// Must be at least as tall as the visible part of the circle
+
+
+			&:before {
+				content: '';
+				display: block;
+				.square(2 * @gateConcaveRadius);
+				border-radius: 50%;
+				position: absolute;
+				// Using inherit adds unwanted cascade to animations
+				background-color: @inactiveColor;
+				transition: inherit;
+
+				// Shift back to the center of the connector (see
+				// Connector's negative margin, which centers the
+				// visible portion)
+				margin: 0 @connectorCenterOffset;	
+				top: @gateConcaveY - @gateOffset - @borderThickness;
+			}
+			&.Left:before {
+				left: @gateConcaveX - @gateInputOffset;
+			}
+			&.Right:before {
+				right: @gateConcaveX - @gateInputOffset;
+			}
+
+			// Add a border on the inner side of the connector
+			// to cover the additional height (from the deeper
+			// part of the concave circle)
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				width: @gateWidth / 2 - @gateConnectorFarOffset;
+				width: @gateConnectorFarOffset;
+				// Distance from center to inner part of circle 
+				// minus distance from center to the outer part
+				// of the circle.
+				height: sqrt(pow(@gateConcaveRadius, 2)
+						   - pow(@gateWidth / 2 - @gateConnectorFarOffset, 2))
+					 - (-@gateConcaveY + @gateOffset - @gateConcaveRadius)
+					 - @borderThickness * 1.1;
+			}
+			&.Left:after {
+				right: 0;
+				border-right: @border;
+			}
+			&.Right:after {
+				left: 0;
+				border-left: @border;
+			}
+		}
 	}
 
 	&.Horizontal {
 		// Center the element in the cross axis, around the declared position
-		height: @thickness;
-		margin-top: -@centerOffset;
+		height: @connectorThickness;
+		margin-top: -@connectorCenterOffset;
 
 		// Offset adjacent borders
 		margin-left: -@borderThickness;
@@ -228,13 +312,13 @@
 		border-bottom: @border;
 		
 		&.Corner.Left:before {
-			left: -.5 * @thickness;	// Cover the thickness of the adjoining connector, which is centered at our left
+			left: -.5 * @connectorThickness;	// Cover the thickness of the adjoining connector, which is centered at our left
 			top: -@borderThickness;	// Cover the parent's outer border
 			border-left: @border;
 		}
 
 		&.Corner.Right:before {
-			right: -.5 * @thickness; // Cover the thickness of the adjoining connector, which is centered at our right
+			right: -.5 * @connectorThickness; // Cover the thickness of the adjoining connector, which is centered at our right
 			top: -@borderThickness;	 // Cover the parent's outer border
 			border-right: @border;
 		}
@@ -266,15 +350,13 @@
 .Gate-XOR, .Gate-OR {
 	@straightHeight: 1rem;
 	@tipHeight: 3rem;
-	@width: 4rem;
-	@tipRadii: @width @tipHeight * 1.4;
-	@cutoutDiameter: @width * 1.8;
+	@tipRadii: @gateWidth @tipHeight * 1.4;
 
 	position: relative;
-	width: @width;
+	width: @gateWidth;
 	height: @straightHeight + @tipHeight;
 	z-index: 0;
-	margin-top: -0.3rem;
+	margin-top: -@gateOffset;
 	overflow: hidden; // Hide the rest of the concave circle (see below)
 	// The straight portion is a separate element,
 	// because it is shorter than the full parent.
@@ -292,9 +374,9 @@
 	&:before {
 		content: '';
 		display: block;
-		.square(@cutoutDiameter);
-		left: -(@cutoutDiameter - @width) / 2;
-		top: -@cutoutDiameter * .9;
+		.square(2 * @gateConcaveRadius);
+		left: @gateConcaveX;
+		top: @gateConcaveY;
 		box-sizing: border-box;
 		border-radius: 50%;
 		position: absolute;
@@ -310,7 +392,7 @@
 		position: absolute;
 		top: @straightHeight;
 		height: @tipHeight;
-		width: @width / 2;
+		width: @gateWidth / 2;
 		overflow: hidden;
 
 		&:before {
@@ -320,7 +402,7 @@
 			border-bottom: @border;
 			position: absolute;
 			height: @tipHeight;
-			width: @width;
+			width: @gateWidth;
 		}
 	}
 
