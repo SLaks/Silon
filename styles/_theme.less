@@ -1,5 +1,7 @@
 ﻿@import "_mixins";
 
+@remSize: 16px;
+
 @background: #FFF3E0;
 @borderColor: #FFA000;
 @inactiveColor: #E0E0E0;
@@ -9,13 +11,13 @@
 
 @transitionDuration: cubic-bezier(.4, 0, .2, 1) .3s;
 
-@borderThickness: 2px;
+@borderThickness: 2px / @remSize * 1rem;
 @border: @borderThickness solid @borderColor;
 
 @valueSize: 3rem;
 
 :root {
-	font-size: 16px; // Layout base unit
+	font-size: @remSize; // Layout base unit
 	box-sizing: border-box;
 }
 
@@ -159,6 +161,7 @@
 	z-index: 1;	 // Cover the borders of subsequent connectors.
 
 	@thickness: .5rem; // The length in the cross axis
+	@centerOffset: .5 * @thickness + @borderThickness;	// The distance from the left edge to the center
 
 	// Corners cover the joint between two connectors,
 	// as a class applied to the second element.  They
@@ -182,7 +185,7 @@
 	&.Vertical {
 		// Center the element in the cross axis, around the declared position
 		width: @thickness;
-		margin-left: calc((-.5 * @thickness) ~" - " @borderThickness);
+		margin-left: -@centerOffset;
 
 		// Offset adjacent borders
 		margin-top: -@borderThickness;
@@ -215,7 +218,7 @@
 	&.Horizontal {
 		// Center the element in the cross axis, around the declared position
 		height: @thickness;
-		margin-top: calc((-.5 * @thickness) ~" - " @borderThickness);
+		margin-top: -@centerOffset;
 
 		// Offset adjacent borders
 		margin-left: -@borderThickness;
