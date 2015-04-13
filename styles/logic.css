@@ -158,9 +158,9 @@
 }
 .Connector.Vertical.Convex:before {
   content: '';
-  display: block;
   width: 7.2rem;
   height: 7.2rem;
+  display: block;
   border-radius: 50%;
   position: absolute;
   background-color: #e0e0e0;
@@ -243,8 +243,7 @@
   -webkit-transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
-.Gate-XOR,
-.Gate-OR {
+.Gate.OR {
   position: relative;
   width: 4rem;
   height: 4rem;
@@ -252,8 +251,7 @@
   margin-top: -0.44706703rem;
   overflow: hidden;
 }
-.Gate-XOR:after,
-.Gate-OR:after {
+.Gate.OR:after {
   content: '';
   display: block;
   height: 1rem;
@@ -261,22 +259,20 @@
   border-left: 0.125rem solid #ffa000;
   border-right: 0.125rem solid #ffa000;
 }
-.Gate-XOR:before,
-.Gate-OR:before {
+.Gate.OR:before {
   content: '';
-  display: block;
   width: 7.2rem;
   height: 7.2rem;
-  left: -1.6rem;
-  top: -6.48rem;
-  box-sizing: border-box;
+  display: block;
   border-radius: 50%;
   position: absolute;
+  left: -1.6rem;
+  box-sizing: border-box;
   background-color: #fff3e0;
   border: 0.125rem solid #ffa000;
+  top: -6.48rem;
 }
-.Gate-XOR span,
-.Gate-OR span {
+.Gate.OR span {
   display: block;
   position: absolute;
   top: 1rem;
@@ -284,8 +280,7 @@
   width: 2rem;
   overflow: hidden;
 }
-.Gate-XOR span:before,
-.Gate-OR span:before {
+.Gate.OR span:before {
   content: '';
   display: block;
   background-color: #e0e0e0;
@@ -294,24 +289,100 @@
   height: 3rem;
   width: 4rem;
 }
-.Gate-XOR span:first-child,
-.Gate-OR span:first-child {
+.Gate.OR span:first-child {
   left: 0;
 }
-.Gate-XOR span:first-child:before,
-.Gate-OR span:first-child:before {
+.Gate.OR span:first-child:before {
   border-left: 0.125rem solid #ffa000;
   border-bottom-left-radius: 4rem 4.2rem;
 }
-.Gate-XOR span + span,
-.Gate-OR span + span {
+.Gate.OR span + span {
   right: 0;
 }
-.Gate-XOR span + span:before,
-.Gate-OR span + span:before {
+.Gate.OR span + span:before {
   right: 0;
   border-right: 0.125rem solid #ffa000;
   border-bottom-right-radius: 4rem 4.2rem;
+}
+.Gate.XOR {
+  position: relative;
+  width: 4rem;
+  height: 5rem;
+  z-index: 0;
+  margin-top: -0.44706703rem;
+  overflow: hidden;
+}
+.Gate.XOR:after {
+  content: '';
+  display: block;
+  height: 2rem;
+  background-color: #e0e0e0;
+  border-left: 0.125rem solid #ffa000;
+  border-right: 0.125rem solid #ffa000;
+}
+.Gate.XOR:before {
+  content: '';
+  width: 7.2rem;
+  height: 7.2rem;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  left: -1.6rem;
+  box-sizing: border-box;
+  background-color: #fff3e0;
+  border: 0.125rem solid #ffa000;
+  top: -6.48rem;
+}
+.Gate.XOR span {
+  display: block;
+  position: absolute;
+  top: 2rem;
+  height: 3rem;
+  width: 2rem;
+  overflow: hidden;
+}
+.Gate.XOR span:before {
+  content: '';
+  display: block;
+  background-color: #e0e0e0;
+  border-bottom: 0.125rem solid #ffa000;
+  position: absolute;
+  height: 3rem;
+  width: 4rem;
+}
+.Gate.XOR span:first-child {
+  left: 0;
+}
+.Gate.XOR span:first-child:before {
+  border-left: 0.125rem solid #ffa000;
+  border-bottom-left-radius: 4rem 4.2rem;
+}
+.Gate.XOR span + span {
+  right: 0;
+}
+.Gate.XOR span + span:before {
+  right: 0;
+  border-right: 0.125rem solid #ffa000;
+  border-bottom-right-radius: 4rem 4.2rem;
+}
+.Gate.XOR:after {
+  margin-top: 0.75rem;
+  height: 1.25rem;
+}
+.Gate.XOR:before {
+  z-index: 2;
+}
+.Gate.XOR div {
+  width: 7.2rem;
+  height: 7.2rem;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  left: -1.6rem;
+  box-sizing: border-box;
+  background-color: #fff3e0;
+  border: 0.125rem solid #ffa000;
+  top: -5.73rem;
 }
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-result,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-result {

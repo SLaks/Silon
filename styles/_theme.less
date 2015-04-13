@@ -92,6 +92,14 @@
 	}
 }
 
+// The size of concave circle atop OR and XOR gates.
+.GateCircle() {
+	.square(2 * @gateConcaveRadius);
+	display: block;
+	border-radius: 50%;
+	position: absolute;
+}
+
 
 // Applies active styles to a .ValueContent() element
 .ActiveValueContent() {
@@ -241,10 +249,7 @@
 
 			&:before {
 				content: '';
-				display: block;
-				.square(2 * @gateConcaveRadius);
-				border-radius: 50%;
-				position: absolute;
+				.GateCircle();
 				// Using inherit adds unwanted cascade to animations
 				background-color: @inactiveColor;
 				transition: inherit;
@@ -335,8 +340,7 @@
 	.ActiveValueContent();
 }
 
-.Gate-XOR, .Gate-OR {
-	@straightHeight: 1rem;
+.OrGate(@straightHeight) {
 	@tipHeight: 3rem;
 	@tipRadii: @gateWidth @tipHeight * 1.4;
 
@@ -361,16 +365,17 @@
 	// to cover the top part of the straight part.
 	&:before {
 		content: '';
-		display: block;
-		.square(2 * @gateConcaveRadius);
-		left: @gateConcaveX;
+		.BlockingGateCircle();
 		top: @gateConcaveY;
+	}
+	.BlockingGateCircle() {
+		.GateCircle();
+		left: @gateConcaveX;
 		box-sizing: border-box;
-		border-radius: 50%;
-		position: absolute;
 		background-color: @background;
 		border: @border;
 	}
+
 	// To make the lower curve stop at an angle,
 	// I make two curves that cover the complete
 	// width of the element, and cut off half of
@@ -411,5 +416,33 @@
 			border-right: @border;
 			border-bottom-right-radius: @tipRadii;
 		}
+	}
+}
+
+.Gate.OR {
+	.OrGate(1rem);
+}
+
+.Gate.XOR {
+	@curveGap: .75rem; // The gap between the upper curve and the rest of the gate.
+	@straightHeight: 2rem - @curveGap;
+	.OrGate(@straightHeight + @curveGap);
+
+	&:after {
+		margin-top: @curveGap;
+		height: @straightHeight;
+	}
+
+	// The original circle from .OrGate() is now the upper 
+	// curve, and is aligned to incoming connectors
+	&:before {
+		z-index: 2;	// This must be above the lower curve, or the border will be covered
+	}
+
+	// Add a second circle for the lower curve (the top of
+	// the gate body)
+	div {
+		.BlockingGateCircle();
+		top: @gateConcaveY + @curveGap;
 	}
 }
