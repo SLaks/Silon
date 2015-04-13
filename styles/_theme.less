@@ -446,3 +446,12 @@
 		top: @gateConcaveY + @curveGap;
 	}
 }
+
+.Gate.AND {
+	width: @gateWidth;
+	height: 5rem + 2 * @borderThickness;
+	margin: -@borderThickness 0;	// Expand vertically so the connectors cover our border
+	border-radius: 0 0 @gateWidth @gateWidth;
+	background: @inactiveColor;
+	border: @border;
+}

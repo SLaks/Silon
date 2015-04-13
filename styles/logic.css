@@ -384,6 +384,14 @@
   border: 0.125rem solid #ffa000;
   top: -5.73rem;
 }
+.Gate.AND {
+  width: 4rem;
+  height: 5.25rem;
+  margin: -0.125rem 0;
+  border-radius: 0 0 4rem 4rem;
+  background: #e0e0e0;
+  border: 0.125rem solid #ffa000;
+}
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-result,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-result {
   background-color: #ffc107;
