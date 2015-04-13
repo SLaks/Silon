@@ -14,7 +14,7 @@
 @borderThickness: 2px / @remSize * 1rem;
 @border: @borderThickness solid @borderColor;
 
-@valueSize: 3rem;
+@valueSize: 3rem + 2 * @borderThickness;	// The size of an input or output box.  Add a border thickness on each side to be covered by adjacent connectors.
 
 @connectorThickness: .5rem;					// The length in the cross axis
 @connectorCenterOffset: .5 * @connectorThickness + @borderThickness;	// The distance from the left/top edge to the center
@@ -36,8 +36,7 @@
 // connector is flush with the circle.
 @gateOffset: sqrt(pow(@gateConcaveRadius, 2)
 				- pow(@gateWidth / 2 - @gateConnectorNearOffset, 2))
-	- @gateConcaveCenterY	
-	- @borderThickness;
+	- @gateConcaveCenterY;
 
 :root {
 	font-size: @remSize; // Layout base unit
@@ -107,7 +106,7 @@
 
 .Canvas input[type=checkbox] {
 	.square(@valueSize);
-	margin: 0;
+	margin: -@borderThickness;
 	padding: 0;
 
 	&:before {
@@ -178,9 +177,6 @@
 .Connector {
 	background: @inactiveColor;
 	transition: background @transitionDuration;
-	// Add padding to the cross axis to cover
-	// the border of the connected elements.
-	box-sizing: content-box;
 	z-index: 1;	 // Cover the borders of subsequent connectors.
 
 	// Corners cover the joint between two connectors,
@@ -207,16 +203,12 @@
 		width: @connectorThickness;
 		margin-left: -@connectorCenterOffset;
 
-		// Offset adjacent borders
-		margin-top: -@borderThickness;
-		padding: @borderThickness 0;
-
 		border-left: @border;
 		border-right: @border;
 		
 		&.Corner:before {
-			top: -.5 * @connectorThickness;		// Cover the thickness of the adjoining connector, which is centered at our top
-			left: -@borderThickness;	// Cover the parent's outer border
+			top: -@connectorCenterOffset;	// Cover the thickness of the adjoining connector, which is centered at our top
+			left: -@borderThickness;		// Cover the parent's outer border
 			border-top: @border;
 			// Don't pad the edge facing our connector, 
 			// so that the connector's border can cover
@@ -244,7 +236,6 @@
 			background: none !important;	
 			border: none;
 			padding: 0 @borderThickness;	// Add padding to match the connector's border
-			margin-top: @borderThickness;	// Start after the connector's extension
 			height: 1rem;	// Must be at least as tall as the visible part of the circle
 
 
@@ -262,7 +253,7 @@
 				// Connector's negative margin, which centers the
 				// visible portion)
 				margin: 0 @connectorCenterOffset;	
-				top: @gateConcaveY - @gateOffset - @borderThickness;
+				top: @gateConcaveY - @gateOffset;
 			}
 			&.Left:before {
 				left: @gateConcaveX - @gateInputOffset;
@@ -286,7 +277,7 @@
 				height: sqrt(pow(@gateConcaveRadius, 2)
 						   - pow(@gateWidth / 2 - @gateConnectorFarOffset, 2))
 					 - (-@gateConcaveY + @gateOffset - @gateConcaveRadius)
-					 - @borderThickness * 1.1;
+					 - @borderThickness * .15;	// Subtract a pixel so the near edge of the border doesn't stretch beyond the curve
 			}
 			&.Left:after {
 				right: 0;
@@ -303,23 +294,19 @@
 		// Center the element in the cross axis, around the declared position
 		height: @connectorThickness;
 		margin-top: -@connectorCenterOffset;
-
-		// Offset adjacent borders
-		margin-left: -@borderThickness;
-		padding: 0 @borderThickness;
 		
 		border-top: @border;
 		border-bottom: @border;
 		
 		&.Corner.Left:before {
-			left: -.5 * @connectorThickness;	// Cover the thickness of the adjoining connector, which is centered at our left
-			top: -@borderThickness;	// Cover the parent's outer border
+			left: -@connectorCenterOffset;	// Cover the thickness of the adjoining connector, which is centered at our left
+			top: -@borderThickness;			// Cover the parent's outer border
 			border-left: @border;
 		}
 
 		&.Corner.Right:before {
-			right: -.5 * @connectorThickness; // Cover the thickness of the adjoining connector, which is centered at our right
-			top: -@borderThickness;	 // Cover the parent's outer border
+			right: -@connectorCenterOffset; // Cover the thickness of the adjoining connector, which is centered at our right
+			top: -@borderThickness;			// Cover the parent's outer border
 			border-right: @border;
 		}
 
@@ -337,6 +324,7 @@
 
 .Result {
 	border-radius: @valueSize / 2;
+	margin: -@borderThickness;
 	.ValueBox();
 	.ValueContent();
 }
