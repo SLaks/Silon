@@ -337,6 +337,11 @@
 // Applied to output values (.Result) when the logic gate evaluates to true.
 .On() {
 	background-color: @activeColor;
+	&.Gate.OR, &.Gate.XOR {
+		span:before, &:after {
+			background-color: @activeColor;
+		}
+	}
 	.ActiveValueContent();
 }
 
@@ -357,6 +362,7 @@
 			pow(@gateWidth, 2)
 		  - pow(@gateWidth / 2 + @connectorThickness / 2, 2)));
 
+	background-color: transparent !important;	// Override .On()
 	position: relative;
 	width: @gateWidth;
 	height: @straightHeight + @tipRadius;
