@@ -246,7 +246,7 @@
 .Gate.OR {
   position: relative;
   width: 4rem;
-  height: 4rem;
+  height: 5.13987789rem;
   z-index: 0;
   margin-top: -0.44706703rem;
   overflow: hidden;
@@ -254,7 +254,7 @@
 .Gate.OR:after {
   content: '';
   display: block;
-  height: 1rem;
+  height: 1.13987789rem;
   background-color: #e0e0e0;
   border-left: 0.125rem solid #ffa000;
   border-right: 0.125rem solid #ffa000;
@@ -275,8 +275,8 @@
 .Gate.OR span {
   display: block;
   position: absolute;
-  top: 1rem;
-  height: 3rem;
+  top: 1.13987789rem;
+  height: 4rem;
   width: 2rem;
   overflow: hidden;
 }
@@ -286,7 +286,7 @@
   background-color: #e0e0e0;
   border-bottom: 0.125rem solid #ffa000;
   position: absolute;
-  height: 3rem;
+  height: 4rem;
   width: 4rem;
 }
 .Gate.OR span:first-child {
@@ -294,7 +294,7 @@
 }
 .Gate.OR span:first-child:before {
   border-left: 0.125rem solid #ffa000;
-  border-bottom-left-radius: 4rem 4.2rem;
+  border-bottom-left-radius: 4rem;
 }
 .Gate.OR span + span {
   right: 0;
@@ -302,12 +302,12 @@
 .Gate.OR span + span:before {
   right: 0;
   border-right: 0.125rem solid #ffa000;
-  border-bottom-right-radius: 4rem 4.2rem;
+  border-bottom-right-radius: 4rem;
 }
 .Gate.XOR {
   position: relative;
   width: 4rem;
-  height: 5rem;
+  height: 6.13987789rem;
   z-index: 0;
   margin-top: -0.44706703rem;
   overflow: hidden;
@@ -315,7 +315,7 @@
 .Gate.XOR:after {
   content: '';
   display: block;
-  height: 2rem;
+  height: 2.13987789rem;
   background-color: #e0e0e0;
   border-left: 0.125rem solid #ffa000;
   border-right: 0.125rem solid #ffa000;
@@ -336,8 +336,8 @@
 .Gate.XOR span {
   display: block;
   position: absolute;
-  top: 2rem;
-  height: 3rem;
+  top: 2.13987789rem;
+  height: 4rem;
   width: 2rem;
   overflow: hidden;
 }
@@ -347,7 +347,7 @@
   background-color: #e0e0e0;
   border-bottom: 0.125rem solid #ffa000;
   position: absolute;
-  height: 3rem;
+  height: 4rem;
   width: 4rem;
 }
 .Gate.XOR span:first-child {
@@ -355,7 +355,7 @@
 }
 .Gate.XOR span:first-child:before {
   border-left: 0.125rem solid #ffa000;
-  border-bottom-left-radius: 4rem 4.2rem;
+  border-bottom-left-radius: 4rem;
 }
 .Gate.XOR span + span {
   right: 0;
@@ -363,11 +363,11 @@
 .Gate.XOR span + span:before {
   right: 0;
   border-right: 0.125rem solid #ffa000;
-  border-bottom-right-radius: 4rem 4.2rem;
+  border-bottom-right-radius: 4rem;
 }
 .Gate.XOR:after {
   margin-top: 0.75rem;
-  height: 1.25rem;
+  height: 1.69706703rem;
 }
 .Gate.XOR:before {
   z-index: 2;

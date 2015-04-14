@@ -340,13 +340,26 @@
 	.ActiveValueContent();
 }
 
-.OrGate(@straightHeight) {
-	@tipHeight: 3rem;
-	@tipRadii: @gateWidth @tipHeight * 1.4;
+.OrGate(@baseStraightHeight) {
+	// The height of the entire tip portion, as expected
+	// in element positions. The outgoing connector will
+	// align to this height.  This height is not used in
+	// the actual gate layout other than that alignment.
+	@formalTipHeight: 3rem;			
+	@tipRadius: @gateWidth;
+
+	// Expand the straight portion to compensate for the negative margin,
+	// then again to align the tip to the output connector. We calculate
+	// the Y coordinate of the point along the curve where the connector
+	// border reaches the tip.
+	@straightHeight: @baseStraightHeight + @gateOffset
+		+ (@formalTipHeight - sqrt(
+			pow(@gateWidth, 2)
+		  - pow(@gateWidth / 2 + @connectorThickness / 2, 2)));
 
 	position: relative;
 	width: @gateWidth;
-	height: @straightHeight + @tipHeight;
+	height: @straightHeight + @tipRadius;
 	z-index: 0;
 	margin-top: -@gateOffset;
 	overflow: hidden; // Hide the rest of the concave circle (see below)
@@ -384,7 +397,7 @@
 		display: block;
 		position: absolute;
 		top: @straightHeight;
-		height: @tipHeight;
+		height: @tipRadius;
 		width: @gateWidth / 2;
 		overflow: hidden;
 
@@ -394,7 +407,7 @@
 			background-color: @inactiveColor;
 			border-bottom: @border;
 			position: absolute;
-			height: @tipHeight;
+			height: @tipRadius;
 			width: @gateWidth;
 		}
 	}
@@ -404,7 +417,7 @@
 
 		&:before {
 			border-left: @border;
-			border-bottom-left-radius: @tipRadii;
+			border-bottom-left-radius: @tipRadius;
 		}
 	}
 
@@ -414,7 +427,7 @@
 		&:before {
 			right: 0;
 			border-right: @border;
-			border-bottom-right-radius: @tipRadii;
+			border-bottom-right-radius: @tipRadius;
 		}
 	}
 }
@@ -430,7 +443,7 @@
 
 	&:after {
 		margin-top: @curveGap;
-		height: @straightHeight;
+		height: @straightHeight + @gateOffset;
 	}
 
 	// The original circle from .OrGate() is now the upper 
