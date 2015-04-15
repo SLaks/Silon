@@ -243,6 +243,10 @@
   -webkit-transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
+.Result:after {
+  margin-left: -0.125rem;
+  margin-top: -0.125rem;
+}
 .Gate.OR {
   position: relative;
   width: 4rem;

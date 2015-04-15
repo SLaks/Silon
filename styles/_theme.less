@@ -333,6 +333,12 @@
 	margin: -@borderThickness;
 	.ValueBox();
 	.ValueContent();
+
+	// Make the text element cover the parent border
+	&:after {
+		margin-left: -@borderThickness;
+		margin-top: -@borderThickness;
+	}
 }
 
 // Applied to gates when the logic gate evaluates to true.
