@@ -10,7 +10,7 @@
 @activeColor: #FFC107;
 @activeHoverColor: #FFB300;
 
-@transitionDuration: @easing .3s;
+@transitionDuration: @easing @duration;
 
 @borderThickness: 2px / @remSize * 1rem;
 @border: @borderThickness solid @borderColor;
@@ -121,6 +121,7 @@
 	.square(@valueSize);
 	margin: -@borderThickness;
 	padding: 0;
+	cursor: pointer;
 
 	&:before {
 		content: '';

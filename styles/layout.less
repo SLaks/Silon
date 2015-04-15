@@ -45,7 +45,9 @@ nav {
 			left: 0;
 			top: -@indicatorHeight;
 			bottom: @tabHeight;
-			transition: bottom .3s @easing, top .4s @easing;
+			opacity: 0;
+			// This transition applies when leaving active state
+			transition: bottom @duration @easing, top @duration @easing, opacity @duration @easing;
 		}
 	}
 
@@ -55,20 +57,38 @@ nav {
 		&:before {
 			top: @tabHeight - @indicatorHeight;
 			bottom: 0;
+			opacity: 1;
+			// This transition applies when entering active state; do not animate the opacity.
+			transition: bottom @duration @easing, top .4s @easing;
 		}
 	}
 
+	@contentSlideDistance: 96px;
 	> section {
 		position: absolute;
 		top: @tabHeight;
 		bottom: 0;
 		left: 0;
 		right: 0;
-		display: none;
 		padding: 48px;
+
+		// Changing the display property breaks transitions, so I hide it this way instead.
+		opacity: 0;
+		pointer-events: none;
+
+		transition: margin-left @duration @easing, opacity @duration;
+		// When a tab that precedes the active tab deactivates, slide left
+		margin-left: -@contentSlideDistance;
+	}
+
+	> a:target + section ~ section {
+		// When a tab that follows the active tab deactivates, slide right
+		margin-left: @contentSlideDistance;
 	}
 
 	> a:target + section {
-		display: block;
+		pointer-events: auto;
+		opacity: 1;
+		margin: 0;
 	}
 }
