@@ -99,7 +99,7 @@
 .Canvas {
   position: relative;
   overflow: visible;
-  margin: 0.5rem;
+  margin: 1rem;
 }
 .Canvas:before {
   content: '';
@@ -107,10 +107,10 @@
   background-color: #fff3e0;
   border: 2px solid #FFB74D;
   position: absolute;
-  top: -0.5rem;
-  left: -0.5rem;
-  right: -0.5rem;
-  bottom: -0.5rem;
+  top: -1rem;
+  left: -1rem;
+  right: -1rem;
+  bottom: -1rem;
 }
 .Canvas > * {
   position: absolute !important;
