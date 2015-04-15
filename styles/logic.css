@@ -262,6 +262,8 @@
   background-color: #e0e0e0;
   border-left: 0.125rem solid #ffa000;
   border-right: 0.125rem solid #ffa000;
+  -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+          transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
 .Gate.OR:before {
   content: '';
@@ -292,6 +294,8 @@
   position: absolute;
   height: 4rem;
   width: 4rem;
+  -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+          transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
 .Gate.OR span:first-child {
   left: 0;
@@ -323,6 +327,8 @@
   background-color: #e0e0e0;
   border-left: 0.125rem solid #ffa000;
   border-right: 0.125rem solid #ffa000;
+  -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+          transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
 .Gate.XOR:before {
   content: '';
@@ -353,6 +359,8 @@
   position: absolute;
   height: 4rem;
   width: 4rem;
+  -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+          transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
 .Gate.XOR span:first-child {
   left: 0;
@@ -395,6 +403,8 @@
   border-radius: 0 0 4rem 4rem;
   background: #e0e0e0;
   border: 0.125rem solid #ffa000;
+  -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+          transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate.Gate.OR span:before,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate.Gate.OR span:before,

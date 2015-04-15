@@ -390,6 +390,7 @@
 		background-color: @inactiveColor;
 		border-left: @border;
 		border-right: @border;
+		transition: background @transitionDuration;
 	}
 	// The concave curve on the top is implemented
 	// as a large circle with the background color
@@ -427,6 +428,7 @@
 			position: absolute;
 			height: @tipRadius;
 			width: @gateWidth;
+			transition: background @transitionDuration;
 		}
 	}
 
@@ -485,4 +487,5 @@
 	border-radius: 0 0 @gateWidth @gateWidth;
 	background: @inactiveColor;
 	border: @border;
+	transition: background @transitionDuration;
 }
