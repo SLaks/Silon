@@ -1,0 +1,74 @@
+﻿@import "_variables";
+
+body, *:before, *:after {
+	font-family: 'PT Sans', sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
+nav {
+	@tabHeight: 64px;
+	@indicatorHeight: 2px;
+
+	background-color: #3F51B5;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.14),0 4px 8px rgba(0, 0, 0, 0.28);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+	> a {
+		display: flex;
+		align-items: center;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: rgba(255,255,255, .54) !important;
+		height: @tabHeight;
+		font-weight: bold;
+		font-size: 14px;
+		padding: 0 24px;
+		position: relative;
+		transition: color .2s @easing;
+
+		&:hover {
+			color: rgba(255,255,255, .87) !important;
+		}
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			background-color: #FFC107;
+			width: 100%;
+			left: 0;
+			top: -@indicatorHeight;
+			bottom: @tabHeight;
+			transition: bottom .3s @easing, top .4s @easing;
+		}
+	}
+
+	> a:target {
+		color: white !important;
+
+		&:before {
+			top: @tabHeight - @indicatorHeight;
+			bottom: 0;
+		}
+	}
+
+	> section {
+		position: absolute;
+		top: @tabHeight;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: none;
+		padding: 48px;
+	}
+
+	> a:target + section {
+		display: block;
+	}
+}

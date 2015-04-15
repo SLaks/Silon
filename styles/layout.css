@@ -1,0 +1,77 @@
+﻿body,
+*:before,
+*:after {
+  font-family: 'PT Sans', sans-serif;
+}
+body {
+  margin: 0;
+}
+nav {
+  background-color: #3F51B5;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+nav > a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.54) !important;
+  height: 64px;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 0 24px;
+  position: relative;
+  -webkit-transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+nav > a:hover {
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+nav > a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #FFC107;
+  width: 100%;
+  left: 0;
+  top: -2px;
+  bottom: 64px;
+  -webkit-transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1), top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1), top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+nav > a:target {
+  color: white !important;
+}
+nav > a:target:before {
+  top: 62px;
+  bottom: 0;
+}
+nav > section {
+  position: absolute;
+  top: 64px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  padding: 48px;
+}
+nav > a:target + section {
+  display: block;
+}
+/*# sourceMappingURL=layout.css.map */

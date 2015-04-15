@@ -2,43 +2,44 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title>Silon &ndash; Adders &amp; Logic Gates in Pure CSS</title>
+	<link href="//fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css" />
 	<link href="styles/logic.css" rel="stylesheet" />
+	<link href="styles/layout.css" rel="stylesheet" />
 </head>
 <body>
-	<div class="Group">
-		<h1>Simple Circuits</h1>
-		<div class="Canvas" style="width: 24rem; height: 20rem;">
+	<nav>
+		<a href="#gates" id="gates">Logic Gates</a>
+		<section>
+			<div class="Canvas" style="width: 24rem; height: 20rem;">
+				<input type="checkbox" id="simple-xor-a" style="top: 0; left: 0;" />
+				<div class="Connector Vertical" style="top: 3rem; left: 1.5rem; height: 4rem;"></div>
+				<div class="Connector Horizontal Corner Left Up" style="top: 7rem; left: 1.5rem; width: 2rem;"></div>
+				<div class="Connector Vertical Corner Left" style="top: 7rem; left: 3.5rem; height: 2rem;"></div>
+				<div class="Connector Vertical Convex Left" style="top: 9rem; left: 3.5rem;"></div>
 
-			<input type="checkbox" id="simple-xor-a" style="top: 0; left: 0;" />
-			<div class="Connector Vertical" style="top: 3rem; left: 1.5rem; height: 4rem;"></div>
-			<div class="Connector Horizontal Corner Left Up" style="top: 7rem; left: 1.5rem; width: 2rem;"></div>
-			<div class="Connector Vertical Corner Left" style="top: 7rem; left: 3.5rem; height: 2rem;"></div>
-			<div class="Connector Vertical Convex Left" style="top: 9rem; left: 3.5rem;"></div>
+				<input type="checkbox" id="simple-xor-b" style="top: 0; left: 6rem;" />
+				<div class="Connector Vertical" style="top: 3rem; left: 7.5rem; height: 4rem;"></div>
+				<div class="Connector Horizontal Corner Right Up" style="top: 7rem; left: 5.5rem; width: 2rem;"></div>
+				<div class="Connector Vertical Corner Right" style="top: 7rem; left: 5.5rem; height: 2rem;"></div>
+				<div class="Connector Vertical Convex Right" style="top: 9rem; left: 5.5rem;"></div>
 
-			<input type="checkbox" id="simple-xor-b" style="top: 0; left: 6rem;" />
-			<div class="Connector Vertical" style="top: 3rem; left: 7.5rem; height: 4rem;"></div>
-			<div class="Connector Horizontal Corner Right Up" style="top: 7rem; left: 5.5rem; width: 2rem;"></div>
-			<div class="Connector Vertical Corner Right" style="top: 7rem; left: 5.5rem; height: 2rem;"></div>
-			<div class="Connector Vertical Convex Right" style="top: 9rem; left: 5.5rem;"></div>
-
-			<div id="simple-xor-gate" class="Gate XOR" style="left: 2.5rem; top: 9rem;">
-				<span></span>
-				<span></span>
-				<div></div>
+				<div id="simple-xor-gate" class="Gate XOR" style="left: 2.5rem; top: 9rem;">
+					<span></span>
+					<span></span>
+					<div></div>
+				</div>
+				<div class="Connector Vertical" style="top: 14rem; left: 4.5rem; height: 2rem;"></div>
+				<div class="Result" style="left: 3rem; top: 16rem;"></div>
 			</div>
-			<div class="Connector Vertical" style="top: 14rem; left: 4.5rem; height: 2rem;"></div>
-			<div class="Result" style="left: 3rem; top: 16rem;"></div>
-		</div>
-		<input type="checkbox" id="simple-and-a" />
-		<input type="checkbox" id="simple-and-b" />
-		<div id="simple-and-result" class="Result"></div>
-
-		<input type="checkbox" id="simple-or-a" />
-		<input type="checkbox" id="simple-or-b" />
-		<div id="simple-or-result" class="Result"></div>
-
-		<div id="compound-result" class="Result"></div>
-
-	</div>
+		</section>
+		<a href="#half-adder" id="half-adder">Half Adder</a>
+		<section>Coming soon...</section>
+		<a href="#full-adder" id="full-adder">Full Adder</a>
+		<section>Coming soon...</section>
+		<a href="#chained-adder" id="chained-adder">Chained Adder</a>
+		<section>Coming soon...</section>
+		<a href="#decimal-adder" id="decimal-adder">Decimal Adder</a>
+		<section>Coming soon...</section>
+	</nav>
 </body>
 </html>
