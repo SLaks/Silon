@@ -8,24 +8,13 @@
 });
 
 .and(~'#simple-and-a', ~'#simple-and-b', {
-	~ #simple-and-result {
+	~ #simple-and-gate {
 		.On();
 	}
 });
 
 .or(~'#simple-or-a', ~'#simple-or-b', {
-	~ #simple-or-result {
+	~ #simple-or-gate {
 		.On();
 	}
 });
-
-.and(
-	{ .xor(~'#simple-xor-a', ~'#simple-xor-b'); }, 
-	{ .and(~'#simple-and-a', ~'#simple-and-b'); }, 
-	{
-		~ #compound-result {
-			.On();
-		}
-	}
-);
-

@@ -350,6 +350,9 @@
 			background-color: @activeColor;
 		}
 	}
+	&.Gate.AND {
+		background-color: @activeColor;
+	}
 	.ColorizeConnectors(@activeColor);
 	// Colorize any result connected to the gate.
 	.ConnectorsFor({
@@ -484,8 +487,8 @@
 
 .Gate.AND {
 	width: @gateWidth;
-	height: 5rem + 2 * @borderThickness;
-	margin: -@borderThickness 0;	// Expand vertically so the connectors cover our border
+	height: 5rem;
+	margin: -@borderThickness;	// Expand vertically so the connectors cover our border
 	border-radius: 0 0 @gateWidth @gateWidth;
 	background: @inactiveColor;
 	border: @border;
