@@ -87,4 +87,21 @@ nav > a:target + section {
   opacity: 1;
   margin: 0;
 }
+ul.CanvasList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+ul.CanvasList li {
+  text-align: center;
+  display: block;
+  margin: 0 48px 48px 0;
+}
 /*# sourceMappingURL=layout.css.map */

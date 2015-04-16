@@ -64,6 +64,7 @@ nav {
 	}
 
 	@contentSlideDistance: 96px;
+
 	> section {
 		position: absolute;
 		top: @tabHeight;
@@ -71,11 +72,9 @@ nav {
 		left: 0;
 		right: 0;
 		padding: 48px;
-
 		// Changing the display property breaks transitions, so I hide it this way instead.
 		opacity: 0;
 		pointer-events: none;
-
 		transition: margin-left @duration @easing, opacity @duration;
 		// When a tab that precedes the active tab deactivates, slide left
 		margin-left: -@contentSlideDistance;
@@ -90,5 +89,19 @@ nav {
 		pointer-events: auto;
 		opacity: 1;
 		margin: 0;
+	}
+}
+
+ul.CanvasList {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+
+	li {
+		text-align: center;
+		display: block;
+		margin: 0 48px 48px 0;
 	}
 }
