@@ -313,6 +313,11 @@
   border-right: 0.125rem solid #ffa000;
   -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  font-size: 21px;
+  text-align: center;
+  line-height: 4.13987789rem;
+  position: relative;
+  z-index: 1;
 }
 .Gate.OR:before {
   content: '';
@@ -326,6 +331,7 @@
   background-color: #fff3e0;
   border: 0.125rem solid #ffa000;
   top: -6.48rem;
+  z-index: 2;
 }
 .Gate.OR span {
   display: block;
@@ -361,6 +367,9 @@
   border-right: 0.125rem solid #ffa000;
   border-bottom-right-radius: 4rem;
 }
+.Gate.OR:after {
+  content: 'OR';
+}
 .Gate.XOR {
   position: relative;
   width: 4rem;
@@ -378,6 +387,11 @@
   border-right: 0.125rem solid #ffa000;
   -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  font-size: 21px;
+  text-align: center;
+  line-height: 5.13987789rem;
+  position: relative;
+  z-index: 1;
 }
 .Gate.XOR:before {
   content: '';
@@ -391,6 +405,7 @@
   background-color: #fff3e0;
   border: 0.125rem solid #ffa000;
   top: -6.48rem;
+  z-index: 2;
 }
 .Gate.XOR span {
   display: block;
@@ -429,9 +444,11 @@
 .Gate.XOR:after {
   margin-top: 0.75rem;
   height: 1.69706703rem;
+  content: 'XOR';
+  line-height: 3.49rem;
 }
 .Gate.XOR:before {
-  z-index: 2;
+  z-index: 3;
 }
 .Gate.XOR div {
   width: 7.2rem;
@@ -444,6 +461,7 @@
   background-color: #fff3e0;
   border: 0.125rem solid #ffa000;
   top: -5.73rem;
+  z-index: 2;
 }
 .Gate.AND {
   width: 4rem;
@@ -454,6 +472,13 @@
   border: 0.125rem solid #ffa000;
   -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+.Gate.AND:after {
+  display: block;
+  content: 'AND';
+  line-height: 4.2rem;
+  font-size: 21px;
+  text-align: center;
 }
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate.Gate.OR span:before,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate.Gate.OR span:before,

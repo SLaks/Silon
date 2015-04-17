@@ -363,6 +363,11 @@
 	});
 }
 
+.GateLabel() {
+	font-size: 21px;
+	text-align: center;
+}
+
 .OrGate(@baseStraightHeight) {
 	// The height of the entire tip portion, as expected
 	// in element positions. The outgoing connector will
@@ -388,6 +393,8 @@
 	overflow: hidden; // Hide the rest of the concave circle (see below)
 	// The straight portion is a separate element,
 	// because it is shorter than the full parent.
+	// This element also contains the label, which
+	// extends into the bottom part.
 	&:after {
 		content: '';
 		display: block;
@@ -396,6 +403,11 @@
 		border-left: @border;
 		border-right: @border;
 		transition: background @transitionDuration;
+
+		.GateLabel();
+		line-height: @straightHeight + @tipRadius * .75;
+		position: relative;
+		z-index: 1;	// Cover the :before
 	}
 	// The concave curve on the top is implemented
 	// as a large circle with the background color
@@ -404,6 +416,7 @@
 		content: '';
 		.BlockingGateCircle();
 		top: @gateConcaveY;
+		z-index: 2;	// Cover the :after
 	}
 	.BlockingGateCircle() {
 		.GateCircle();
@@ -459,6 +472,9 @@
 
 .Gate.OR {
 	.OrGate(1rem);
+	&:after {
+		content: 'OR';
+	}
 }
 
 .Gate.XOR {
@@ -469,12 +485,14 @@
 	&:after {
 		margin-top: @curveGap;
 		height: @straightHeight + @gateOffset;
+		content: 'XOR';
+		line-height: @straightHeight + @tipRadius * .56;
 	}
 
 	// The original circle from .OrGate() is now the upper 
 	// curve, and is aligned to incoming connectors
 	&:before {
-		z-index: 2;	// This must be above the lower curve, or the border will be covered
+		z-index: 3;	// This must be above the lower curve, or the border will be covered
 	}
 
 	// Add a second circle for the lower curve (the top of
@@ -482,6 +500,7 @@
 	div {
 		.BlockingGateCircle();
 		top: @gateConcaveY + @curveGap;
+		z-index: 2;	// THe must go between the :after (the staight part) and the :before (the upper curve)
 	}
 }
 
@@ -493,4 +512,11 @@
 	background: @inactiveColor;
 	border: @border;
 	transition: background @transitionDuration;
+
+	&:after {
+		display: block;
+		content: 'AND';
+		line-height: 5rem - @gateWidth / 5;
+		.GateLabel();
+	}
 }
