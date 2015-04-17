@@ -13,17 +13,19 @@
 
 .and(@first, @second, @content: @content) {
 	#private.call(~'', @first, {
-		#private.call(~'~', @second, @content);
+		#private.call(~' ~ ', @second, @content);
 	});
 }
 
+// Calls a selector (as a string or a nested ruleset),
+// inside the context that this selector was called in
 #private {
 	.call(@combinator, @selector, @content) when (isString(@selector)), (isKeyword(@selector)) {
-		@{combinator} @{selector}:checked { @content(); }
+		&@{combinator}@{selector}:checked { @content(); }
 	}
 
 	.call(@combinator, @selector, @content) when(default()) {	// isruleset(@selector) doesn't work
-		@{combinator} {
+		&@{combinator} {
 			@selector();
 		}
 	}
