@@ -1,9 +1,11 @@
 ﻿
 .xor(@first, @second, @content: @content) {
-	@{first}:not(:checked) ~ @{second}:checked,
-	@{first}:checked ~ @{second}:not(:checked) {
-		@content();
-	}
+	#private.callInverted(~'', @first, {
+		#private.call(~' ~ ', @second, @content);
+	});
+	#private.call(~'', @first, {
+		#private.callInverted(~' ~ ', @second, @content);
+	});
 }
 
 .or(@first, @second, @content: @content) {
@@ -28,5 +30,8 @@
 		&@{combinator} {
 			@selector();
 		}
+	}
+	.callInverted(@combinator, @selector, @content) when (isString(@selector)), (isKeyword(@selector)) {
+		&@{combinator}@{selector}:not(:checked) { @content(); }
 	}
 }
