@@ -327,6 +327,20 @@
 			border-top: @border;
 			padding-bottom: @borderThickness;
 		}
+
+		// A junction covers the portion of the borders
+		// that stick into the adjoining connector
+		&.Junction.Right:before {
+			content: '';
+			display: block;
+			background: @inactiveColor;
+			transition: inherit;
+			position: absolute;
+			right: 0;
+			top: -@borderThickness;			// Cover the parent's outer border
+			width: @connectorThickness / 2;
+			height: @connectorThickness + 2 * @borderThickness;
+		}
 	}
 }
 

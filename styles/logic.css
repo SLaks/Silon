@@ -264,6 +264,18 @@
   border-top: 0.125rem solid #ffa000;
   padding-bottom: 0.125rem;
 }
+.Connector.Horizontal.Junction.Right:before {
+  content: '';
+  display: block;
+  background: #e0e0e0;
+  -webkit-transition: inherit;
+          transition: inherit;
+  position: absolute;
+  right: 0;
+  top: -0.125rem;
+  width: 0.25rem;
+  height: 0.75rem;
+}
 .Result {
   border-radius: 1.625rem;
   margin: -0.125rem;
