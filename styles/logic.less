@@ -32,3 +32,16 @@
 		.On();
 	}
 });
+
+// Full adder
+.and(~'#full-adder-a', ~'#full-adder-b', {
+	~#full-adder-and-gate-input {
+		.On();
+	}
+});
+
+.xor(~'#full-adder-a', ~'#full-adder-b', {
+	~#full-adder-xor-gate-input {
+		.On();
+	}
+});
