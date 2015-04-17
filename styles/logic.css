@@ -58,6 +58,22 @@
 .Canvas input[type=checkbox]:checked + .Connector + .Connector + .Connector + .Connector:before {
   background-color: #ffc107;
 }
+.Canvas input[type=checkbox]:checked + .Connector + .Connector + .Connector + .Connector + .Connector,
+.Canvas input[type=checkbox]:checked + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+.Canvas input[type=checkbox]:checked + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+.Canvas input[type=checkbox]:checked + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+.Canvas input[type=checkbox]:checked + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+.Canvas input[type=checkbox]:checked + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+.Canvas input[type=checkbox]:checked + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+.Canvas input[type=checkbox]:checked + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
 .Canvas input[type=checkbox]:hover:before {
   background-color: #b3e5fc;
 }
@@ -77,6 +93,22 @@
 .Canvas input[type=checkbox]:hover + .Connector + .Connector + .Connector + .Connector:before {
   background-color: #b3e5fc;
 }
+.Canvas input[type=checkbox]:hover + .Connector + .Connector + .Connector + .Connector + .Connector,
+.Canvas input[type=checkbox]:hover + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #b3e5fc;
+}
+.Canvas input[type=checkbox]:hover + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+.Canvas input[type=checkbox]:hover + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #b3e5fc;
+}
+.Canvas input[type=checkbox]:hover + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+.Canvas input[type=checkbox]:hover + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #b3e5fc;
+}
+.Canvas input[type=checkbox]:hover + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+.Canvas input[type=checkbox]:hover + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #b3e5fc;
+}
 .Canvas input[type=checkbox]:hover:checked:before {
   background-color: #ffb300;
 }
@@ -94,6 +126,22 @@
 }
 .Canvas input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector + .Connector,
 .Canvas input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffb300;
+}
+.Canvas input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector + .Connector + .Connector,
+.Canvas input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffb300;
+}
+.Canvas input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+.Canvas input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffb300;
+}
+.Canvas input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+.Canvas input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffb300;
+}
+.Canvas input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+.Canvas input[type=checkbox]:hover:checked + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
   background-color: #ffb300;
 }
 .Canvas {
@@ -445,6 +493,30 @@
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector:before {
   background-color: #ffc107;
 }
+#simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector,
+#simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector,
+#simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector:before,
+#simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before,
+#simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before,
+#simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before,
+#simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Result,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Result {
   background-color: #ffc107;
@@ -477,6 +549,38 @@
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Result:after {
   top: -3.25rem;
 }
+#simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
+#simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
+#simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
+#simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
+#simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
+#simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
+#simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
+#simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
+#simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
  #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate.Gate.OR span:before,
  #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate.Gate.XOR span:before,
  #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate.Gate.OR:after,
@@ -502,6 +606,22 @@
  #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector:before {
   background-color: #ffc107;
 }
+ #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector,
+ #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+ #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+ #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+ #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+ #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+ #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+ #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
  #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Result {
   background-color: #ffc107;
 }
@@ -524,6 +644,30 @@
   background-color: #ffc107;
 }
  #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+ #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+ #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+ #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+ #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+ #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+ #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+ #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+ #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
   top: -3.25rem;
 }
  #simple-or-a:checked ~ #simple-or-gate.Gate.OR span:before,
@@ -551,6 +695,22 @@
  #simple-or-a:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector:before {
   background-color: #ffc107;
 }
+ #simple-or-a:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector,
+ #simple-or-a:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+ #simple-or-a:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+ #simple-or-a:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+ #simple-or-a:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+ #simple-or-a:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+ #simple-or-a:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+ #simple-or-a:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
  #simple-or-a:checked ~ #simple-or-gate + .Connector + .Result {
   background-color: #ffc107;
 }
@@ -573,6 +733,30 @@
   background-color: #ffc107;
 }
  #simple-or-a:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+ #simple-or-a:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+ #simple-or-a:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+ #simple-or-a:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+ #simple-or-a:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+ #simple-or-a:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+ #simple-or-a:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+ #simple-or-a:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+ #simple-or-a:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
   top: -3.25rem;
 }
  #simple-or-b:checked ~ #simple-or-gate.Gate.OR span:before,
@@ -600,6 +784,22 @@
  #simple-or-b:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector:before {
   background-color: #ffc107;
 }
+ #simple-or-b:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector,
+ #simple-or-b:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+ #simple-or-b:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+ #simple-or-b:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+ #simple-or-b:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+ #simple-or-b:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+ #simple-or-b:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+ #simple-or-b:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
  #simple-or-b:checked ~ #simple-or-gate + .Connector + .Result {
   background-color: #ffc107;
 }
@@ -622,6 +822,245 @@
   background-color: #ffc107;
 }
  #simple-or-b:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+ #simple-or-b:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+ #simple-or-b:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+ #simple-or-b:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+ #simple-or-b:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+ #simple-or-b:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+ #simple-or-b:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+ #simple-or-b:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+ #simple-or-b:checked ~ #simple-or-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate.Gate.OR span:before,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate.Gate.OR span:before,
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate.Gate.XOR span:before,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate.Gate.XOR span:before,
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate.Gate.OR:after,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate.Gate.OR:after,
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate.Gate.XOR:after,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate.Gate.XOR:after {
+  background-color: #ffc107;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate.Gate.AND,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate.Gate.AND {
+  background-color: #ffc107;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector,
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector:before,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector:before {
+  background-color: #ffc107;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector,
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector:before,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector,
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector:before,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector,
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector:before,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector,
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector:before,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Result,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Result {
+  background-color: #ffc107;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Result:after,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Result,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Result:after,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Result,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Result:after,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Result,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Result:after,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate.Gate.OR span:before,
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate.Gate.XOR span:before,
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate.Gate.OR:after,
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate.Gate.XOR:after {
+  background-color: #ffc107;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate.Gate.AND {
+  background-color: #ffc107;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector,
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector:before {
+  background-color: #ffc107;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector,
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector,
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector,
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector,
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Result {
+  background-color: #ffc107;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Result:after {
+  top: -3.25rem;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+ #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
   top: -3.25rem;
 }
 /*# sourceMappingURL=logic.css.map */

@@ -1,6 +1,7 @@
 ﻿@import "_theme";
 @import "_combinators";
 
+// Simple Gates
 .xor(~'#simple-xor-a', ~'#simple-xor-b', {
 	~#simple-xor-gate {
 		.On();
@@ -15,6 +16,19 @@
 
 .or(~'#simple-or-a', ~'#simple-or-b', {
 	~ #simple-or-gate {
+		.On();
+	}
+});
+
+// Half Adder
+.xor(~'#half-adder-a', ~'#half-adder-b', {
+	~#half-adder-xor-gate {
+		.On();
+	}
+});
+
+.and(~'#half-adder-a', ~'#half-adder-b', {
+	~#half-adder-and-gate {
 		.On();
 	}
 });
