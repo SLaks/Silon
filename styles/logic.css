@@ -1916,4 +1916,360 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
   top: -3.25rem;
 }
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry.Gate.OR span:before,
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry.Gate.XOR span:before,
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry.Gate.OR:after,
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry.Gate.XOR:after {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry.Gate.AND {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector,
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector,
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector,
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector,
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector,
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry.Gate.OR span:before,
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry.Gate.XOR span:before,
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry.Gate.OR:after,
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry.Gate.XOR:after {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry.Gate.AND {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector,
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector,
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector,
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector,
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector,
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry.Gate.OR span:before,
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry.Gate.XOR span:before,
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry.Gate.OR:after,
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry.Gate.XOR:after {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry.Gate.AND {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector,
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector,
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector,
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector,
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector,
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry.Gate.OR span:before,
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry.Gate.XOR span:before,
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry.Gate.OR:after,
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry.Gate.XOR:after {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry.Gate.AND {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector,
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector,
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector,
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector,
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector,
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
+  background-color: #ffc107;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
+  top: -3.25rem;
+}
 /*# sourceMappingURL=logic.css.map */

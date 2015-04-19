@@ -1,5 +1,14 @@
-﻿
-.op(@first, @operation, @second, @content: @content) when (@operation = xor) {
+﻿// This overload is called by the outermost operation,
+// as opposed to operations passed as detached ruleset 
+// parameters).  It sets @invertCombinator, and passes
+// @content as a scoped variable. This is necessary to
+// prevent errors from the when() clauses.
+.op(@first, @operation, @second, @content)  {
+	@invertCombinator: false;
+	.op(@first, @operation, @second);
+}
+
+.op(@first, @operation, @second) when (@operation = xor) and not (@invertCombinator) {
 	#private.callInverted(~'', @first, {
 		#private.call(~' ~ ', @second, @content);
 	});
@@ -7,21 +16,38 @@
 		#private.callInverted(~' ~ ', @second, @content);
 	});
 }
-
-.op(@first, @operation, @second, @content: @content) when (@operation = or) {
-	#private.call(~'', @first, @content);
-	#private.call(~'', @second, @content);
-}
-
-.op(@first, @operation, @second, @content: @content) when (@operation = and) {
+.op(@first, @operation, @second) when (@operation = xor) and (@invertCombinator) {
+	#private.callInverted(~'', @first, {
+		#private.callInverted(~' ~ ', @second, @content);
+	});
 	#private.call(~'', @first, {
 		#private.call(~' ~ ', @second, @content);
 	});
 }
 
-// Calls a selector (as a string or a nested ruleset),
-// inside the context that this selector was called in
+.op(@first, @operation, @second) when (@operation = or) and not (@invertCombinator) {
+	#private.call(~'', @first, @content);
+	#private.call(~'', @second, @content);
+}
+.op(@first, @operation, @second) when (@operation = or) and (@invertCombinator) {
+	#private.callInverted(~'', @first, {
+		#private.callInverted(~' ~ ', @second, @content);
+	});
+}
+
+.op(@first, @operation, @second) when (@operation = and) and not (@invertCombinator) {
+	#private.call(~'', @first, {
+		#private.call(~' ~ ', @second, @content);
+	});
+}
+.op(@first, @operation, @second) when (@operation = and) and (@invertCombinator) {
+	#private.callInverted(~'', @first, @content);
+	#private.callInverted(~'', @second, @content);
+}
+
 #private {
+	// Calls a selector (as a string or a nested ruleset),
+	// inside the context that this selector was called in
 	.call(@combinator, @selector, @content) when (isString(@selector)), (isKeyword(@selector)) {
 		&@{combinator}@{selector}:checked { @content(); }
 	}
@@ -32,7 +58,16 @@
 		}
 	}
 
+	// Same as above, but passes @invertCombinator
+	// to invert the result of the combinator.
 	.callInverted(@combinator, @selector, @content) when (isString(@selector)), (isKeyword(@selector)) {
 		&@{combinator}@{selector}:not(:checked) { @content(); }
+	}
+
+	.callInverted(@combinator, @selector, @content) when (default()) {	// isruleset(@selector) doesn't work
+		&@{combinator} {
+			@invertCombinator: true;
+			@selector();
+		}
 	}
 }

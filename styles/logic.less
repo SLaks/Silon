@@ -68,3 +68,12 @@
 		}
 	}
 );
+
+.op(
+	~'#full-adder-carry', xor,
+	{ .op(~'#full-adder-a', xor, ~'#full-adder-b'); }, {
+		~#full-adder-xor-gate-carry {
+			.On();
+		}
+	}
+);
