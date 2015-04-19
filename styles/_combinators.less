@@ -1,5 +1,5 @@
 ﻿
-.xor(@first, @second, @content: @content) {
+.op(@first, @operation, @second, @content: @content) when (@operation = xor) {
 	#private.callInverted(~'', @first, {
 		#private.call(~' ~ ', @second, @content);
 	});
@@ -8,12 +8,12 @@
 	});
 }
 
-.or(@first, @second, @content: @content) {
+.op(@first, @operation, @second, @content: @content) when (@operation = or) {
 	#private.call(~'', @first, @content);
 	#private.call(~'', @second, @content);
 }
 
-.and(@first, @second, @content: @content) {
+.op(@first, @operation, @second, @content: @content) when (@operation = and) {
 	#private.call(~'', @first, {
 		#private.call(~' ~ ', @second, @content);
 	});
@@ -26,11 +26,12 @@
 		&@{combinator}@{selector}:checked { @content(); }
 	}
 
-	.call(@combinator, @selector, @content) when(default()) {	// isruleset(@selector) doesn't work
+	.call(@combinator, @selector, @content) when (default()) {	// isruleset(@selector) doesn't work
 		&@{combinator} {
 			@selector();
 		}
 	}
+
 	.callInverted(@combinator, @selector, @content) when (isString(@selector)), (isKeyword(@selector)) {
 		&@{combinator}@{selector}:not(:checked) { @content(); }
 	}

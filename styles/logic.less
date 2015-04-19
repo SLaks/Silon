@@ -2,45 +2,45 @@
 @import "_combinators";
 
 // Simple Gates
-.xor(~'#simple-xor-a', ~'#simple-xor-b', {
+.op(~'#simple-xor-a', xor, ~'#simple-xor-b', {
 	~#simple-xor-gate {
 		.On();
 	}
 });
 
-.and(~'#simple-and-a', ~'#simple-and-b', {
+.op(~'#simple-and-a', and, ~'#simple-and-b', {
 	~ #simple-and-gate {
 		.On();
 	}
 });
 
-.or(~'#simple-or-a', ~'#simple-or-b', {
+.op(~'#simple-or-a', or, ~'#simple-or-b', {
 	~ #simple-or-gate {
 		.On();
 	}
 });
 
 // Half Adder
-.xor(~'#half-adder-a', ~'#half-adder-b', {
+.op(~'#half-adder-a', xor, ~'#half-adder-b', {
 	~#half-adder-xor-gate {
 		.On();
 	}
 });
 
-.and(~'#half-adder-a', ~'#half-adder-b', {
+.op(~'#half-adder-a', and, ~'#half-adder-b', {
 	~#half-adder-and-gate {
 		.On();
 	}
 });
 
 // Full adder
-.and(~'#full-adder-a', ~'#full-adder-b', {
+.op(~'#full-adder-a', and, ~'#full-adder-b', {
 	~#full-adder-and-gate-input {
 		.On();
 	}
 });
 
-.xor(~'#full-adder-a', ~'#full-adder-b', {
+.op(~'#full-adder-a', xor, ~'#full-adder-b', {
 	~#full-adder-xor-gate-input {
 		.On();
 	}
