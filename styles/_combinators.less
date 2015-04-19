@@ -1,14 +1,26 @@
-﻿// This overload is called by the outermost operation,
+﻿// The .op() mixin calls its @content callback iff the
+// specified logical operation evaluates to true.  The
+// input parameters (@first and @second) can either be
+// selectors to combine (typically :checked selectors)
+// or detached rulesets containing further .op() calls
+// to chain.
+// To pass a .op() call, use the following syntax:
+// { .c(@c) { .op(@c, blah, xor, blah); } }
+// This is necessary to pass invertCombinator from the
+// outer call (for xor); see 
+// https://github.com/less/less.js/issues/2558
+
+// This overload is called by the outermost operation,
 // as opposed to operations passed as detached ruleset 
-// parameters).  It sets @invertCombinator, and passes
-// @content as a scoped variable. This is necessary to
-// prevent errors from the when() clauses.
-.op(@first, @operation, @second, @content)  {
-	@invertCombinator: false;
-	.op(@first, @operation, @second);
+// parameters.  It calls the actual overloads with the
+// default invertCombinator value, passing @content as
+// a scoped variable.
+.op(@first, @operation, @second, @content) when (isKeyword(@operation))  {
+	.op(false, @first, @operation, @second);	// Pass @content via scope
 }
 
-.op(@first, @operation, @second) when (@operation = xor) and not (@invertCombinator) {
+// These overloads are called in detached rulesets when chaining
+.op(@invertCombinator, @first, @operation, @second) when (@operation = xor) and not (@invertCombinator) {
 	#private.callInverted(~'', @first, {
 		#private.call(~' ~ ', @second, @content);
 	});
@@ -16,7 +28,7 @@
 		#private.callInverted(~' ~ ', @second, @content);
 	});
 }
-.op(@first, @operation, @second) when (@operation = xor) and (@invertCombinator) {
+.op(@invertCombinator, @first, @operation, @second) when (@operation = xor) and (@invertCombinator) {
 	#private.callInverted(~'', @first, {
 		#private.callInverted(~' ~ ', @second, @content);
 	});
@@ -25,22 +37,22 @@
 	});
 }
 
-.op(@first, @operation, @second) when (@operation = or) and not (@invertCombinator) {
+.op(@invertCombinator, @first, @operation, @second) when (@operation = or) and not (@invertCombinator) {
 	#private.call(~'', @first, @content);
 	#private.call(~'', @second, @content);
 }
-.op(@first, @operation, @second) when (@operation = or) and (@invertCombinator) {
+.op(@invertCombinator, @first, @operation, @second) when (@operation = or) and (@invertCombinator) {
 	#private.callInverted(~'', @first, {
 		#private.callInverted(~' ~ ', @second, @content);
 	});
 }
 
-.op(@first, @operation, @second) when (@operation = and) and not (@invertCombinator) {
+.op(@invertCombinator, @first, @operation, @second) when (@operation = and) and not (@invertCombinator) {
 	#private.call(~'', @first, {
 		#private.call(~' ~ ', @second, @content);
 	});
 }
-.op(@first, @operation, @second) when (@operation = and) and (@invertCombinator) {
+.op(@invertCombinator, @first, @operation, @second) when (@operation = and) and (@invertCombinator) {
 	#private.callInverted(~'', @first, @content);
 	#private.callInverted(~'', @second, @content);
 }
@@ -55,6 +67,7 @@
 	.call(@combinator, @selector, @content) when (default()) {	// isruleset(@selector) doesn't work
 		&@{combinator} {
 			@selector();
+			.c(false);
 		}
 	}
 
@@ -66,8 +79,8 @@
 
 	.callInverted(@combinator, @selector, @content) when (default()) {	// isruleset(@selector) doesn't work
 		&@{combinator} {
-			@invertCombinator: true;
 			@selector();
+			.c(true);
 		}
 	}
 }

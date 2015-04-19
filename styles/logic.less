@@ -48,7 +48,7 @@
 
 .op(
 	~'#full-adder-carry', and,
-	{ .op(~'#full-adder-a', xor, ~'#full-adder-b'); }, {
+	{ .c(@c) { .op(@c, ~'#full-adder-a', xor, ~'#full-adder-b'); } }, {
 		~#full-adder-and-gate-sum {
 			.On();
 		}
@@ -56,13 +56,13 @@
 );
 
 .op(
-	{ .op(~'#full-adder-a', and, ~'#full-adder-b') },
+	{ .c(@c) { .op(@c, ~'#full-adder-a', and, ~'#full-adder-b') } },
 	or,
-	{ .op(
+	{ .c(@c) { .op(@c,
 		~'#full-adder-carry',
 		and,
-		{ .op(~'#full-adder-a', xor, ~'#full-adder-b'); }
-	); }, {
+		{ .c(@c) { .op(@c, ~'#full-adder-a', xor, ~'#full-adder-b'); } }
+	); } }, {
 		~#full-adder-or-gate-carry-out {
 			.On();
 		}
@@ -71,7 +71,7 @@
 
 .op(
 	~'#full-adder-carry', xor,
-	{ .op(~'#full-adder-a', xor, ~'#full-adder-b'); }, {
+	{ .c(@c) { .op(@c, ~'#full-adder-a', xor, ~'#full-adder-b'); } }, {
 		~#full-adder-xor-gate-carry {
 			.On();
 		}
