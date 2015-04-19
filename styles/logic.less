@@ -45,3 +45,26 @@
 		.On();
 	}
 });
+
+.op(
+	~'#full-adder-carry', and,
+	{ .op(~'#full-adder-a', xor, ~'#full-adder-b'); }, {
+		~#full-adder-and-gate-sum {
+			.On();
+		}
+	}
+);
+
+.op(
+	{ .op(~'#full-adder-a', and, ~'#full-adder-b') },
+	or,
+	{ .op(
+		~'#full-adder-carry',
+		and,
+		{ .op(~'#full-adder-a', xor, ~'#full-adder-b'); }
+	); }, {
+		~#full-adder-or-gate-carry-out {
+			.On();
+		}
+	}
+);
