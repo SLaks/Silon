@@ -11,28 +11,20 @@
 .coloredOp(~'#half-adder-a', and, ~'#half-adder-b', half-adder-and-gate);
 
 // Full adder
-.coloredOp(~'#full-adder-a', and, ~'#full-adder-b', full-adder-and-gate-input);
-.coloredOp(~'#full-adder-a', xor, ~'#full-adder-b', full-adder-xor-gate-input);
-
 .coloredOp(
-	~'#full-adder-carry', and,
-	{ .c(@c) { .op(@c, ~'#full-adder-a', xor, ~'#full-adder-b'); } }, 
-	full-adder-and-gate-sum
-);
-
-.coloredOp(
-	{ .c(@c) { .op(@c, ~'#full-adder-a', and, ~'#full-adder-b') } },
+	{ .c(@c) { .coloredOp(@c, ~'#full-adder-a', and, ~'#full-adder-b', full-adder-and-gate-input) } },
 	or,
-	{ .c(@c) { .op(@c,
+	{ .c(@c) { .coloredOp(@c,
 		~'#full-adder-carry',
 		and,
-		{ .c(@c) { .op(@c, ~'#full-adder-a', xor, ~'#full-adder-b'); } }
+		{ .c(@c) { .coloredOp(@c, ~'#full-adder-a', xor, ~'#full-adder-b', full-adder-xor-gate-input); } },
+		full-adder-and-gate-sum
 	); } }, 
 	full-adder-or-gate-carry-out
 );
 
 .coloredOp(
 	~'#full-adder-carry', xor,
-	{ .c(@c) { .op(@c, ~'#full-adder-a', xor, ~'#full-adder-b'); } },
+	{ .c(@c) { .coloredOp(@c, ~'#full-adder-a', xor, ~'#full-adder-b', none); } },
 	full-adder-xor-gate-carry
 );

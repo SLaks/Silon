@@ -702,7 +702,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
   background-color: #ffc107;
 }
-.ActiveGate.Connectors + .Connector + .Result,
+.ActiveGate.Result + .Connector + .Result,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Result,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Result,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Result,
@@ -711,11 +711,6 @@
 #half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Result,
 #half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Result,
 #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Result,
-#full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-and-gate-input + .Connector + .Result,
-#full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-input + .Connector + .Result,
-#full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-input + .Connector + .Result,
-#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-and-gate-sum + .Connector + .Result,
-#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-and-gate-sum + .Connector + .Result,
 #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Result,
 #full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Result,
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-or-gate-carry-out + .Connector + .Result,
@@ -725,7 +720,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Result {
   background-color: #ffc107;
 }
-.ActiveGate.Connectors + .Connector + .Result:after,
+.ActiveGate.Result + .Connector + .Result:after,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Result:after,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Result:after,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Result:after,
@@ -734,11 +729,6 @@
 #half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Result:after,
 #half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Result:after,
 #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Result:after,
-#full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-and-gate-input + .Connector + .Result:after,
-#full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-input + .Connector + .Result:after,
-#full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-input + .Connector + .Result:after,
-#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-and-gate-sum + .Connector + .Result:after,
-#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-and-gate-sum + .Connector + .Result:after,
 #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Result:after,
 #full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Result:after,
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-or-gate-carry-out + .Connector + .Result:after,
@@ -748,7 +738,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Result:after {
   top: -3.25rem;
 }
-.ActiveGate.Connectors + .Connector + .Connector + .Result,
+.ActiveGate.Result + .Connector + .Connector + .Result,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Result,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Result,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Result,
@@ -757,11 +747,6 @@
 #half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Result,
 #half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Result,
 #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Result,
-#full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-and-gate-input + .Connector + .Connector + .Result,
-#full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-input + .Connector + .Connector + .Result,
-#full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-input + .Connector + .Connector + .Result,
-#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-and-gate-sum + .Connector + .Connector + .Result,
-#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-and-gate-sum + .Connector + .Connector + .Result,
 #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Result,
 #full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Result,
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Result,
@@ -771,7 +756,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Result {
   background-color: #ffc107;
 }
-.ActiveGate.Connectors + .Connector + .Connector + .Result:after,
+.ActiveGate.Result + .Connector + .Connector + .Result:after,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Result:after,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Result:after,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Result:after,
@@ -780,11 +765,6 @@
 #half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Result:after,
 #half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Result:after,
 #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Result:after,
-#full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-and-gate-input + .Connector + .Connector + .Result:after,
-#full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-input + .Connector + .Connector + .Result:after,
-#full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-input + .Connector + .Connector + .Result:after,
-#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-and-gate-sum + .Connector + .Connector + .Result:after,
-#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-and-gate-sum + .Connector + .Connector + .Result:after,
 #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Result:after,
 #full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Result:after,
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Result:after,
@@ -794,7 +774,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Result:after {
   top: -3.25rem;
 }
-.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Result,
+.ActiveGate.Result + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Result,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Result,
@@ -803,11 +783,6 @@
 #half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Result,
 #half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Result,
 #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Result,
-#full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-and-gate-input + .Connector + .Connector + .Connector + .Result,
-#full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Result,
-#full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Result,
-#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Result,
-#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Result,
 #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Result,
 #full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Result,
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Result,
@@ -817,7 +792,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Result {
   background-color: #ffc107;
 }
-.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Result:after,
+.ActiveGate.Result + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Result:after,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Result:after,
@@ -826,11 +801,6 @@
 #half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Result:after,
 #half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Result:after,
 #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-and-gate-input + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Result:after,
 #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Result:after,
 #full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Result:after,
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Result:after,
@@ -840,7 +810,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Result:after {
   top: -3.25rem;
 }
-.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Result,
+.ActiveGate.Result + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Result,
@@ -849,11 +819,6 @@
 #half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Result,
 #half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Result,
 #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-and-gate-input + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Connector + .Result,
 #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Result,
 #full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Result,
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Result,
@@ -863,7 +828,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Result {
   background-color: #ffc107;
 }
-.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Result:after,
+.ActiveGate.Result + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Result:after,
@@ -872,11 +837,6 @@
 #half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-and-gate-input + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Result:after,
@@ -886,7 +846,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Result:after {
   top: -3.25rem;
 }
-.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
+.ActiveGate.Result + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
@@ -895,11 +855,6 @@
 #half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-and-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
@@ -909,7 +864,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
   background-color: #ffc107;
 }
-.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
+.ActiveGate.Result + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
@@ -918,11 +873,6 @@
 #half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-and-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
@@ -932,7 +882,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
   top: -3.25rem;
 }
-.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
+.ActiveGate.Result + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
@@ -941,11 +891,6 @@
 #half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-and-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
@@ -955,7 +900,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
   background-color: #ffc107;
 }
-.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
+.ActiveGate.Result + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
@@ -964,11 +909,6 @@
 #half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-and-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
@@ -978,7 +918,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
   top: -3.25rem;
 }
-.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
+.ActiveGate.Result + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
@@ -987,11 +927,6 @@
 #half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-and-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
@@ -1001,7 +936,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
   background-color: #ffc107;
 }
-.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
+.ActiveGate.Result + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
@@ -1010,11 +945,6 @@
 #half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-and-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
@@ -1024,7 +954,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
   top: -3.25rem;
 }
-.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
+.ActiveGate.Result + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
@@ -1033,11 +963,6 @@
 #half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-and-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
-#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
@@ -1047,7 +972,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
   background-color: #ffc107;
 }
-.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
+.ActiveGate.Result + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
@@ -1056,11 +981,6 @@
 #half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-and-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-input + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
-#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-and-gate-sum + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-or-gate-carry-out + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
