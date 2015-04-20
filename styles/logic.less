@@ -2,78 +2,37 @@
 @import "_combinators";
 
 // Simple Gates
-.op(~'#simple-xor-a', xor, ~'#simple-xor-b', {
-	~#simple-xor-gate {
-		.On();
-	}
-});
-
-.op(~'#simple-and-a', and, ~'#simple-and-b', {
-	~ #simple-and-gate {
-		.On();
-	}
-});
-
-.op(~'#simple-or-a', or, ~'#simple-or-b', {
-	~ #simple-or-gate {
-		.On();
-	}
-});
+.coloredOp(~'#simple-xor-a', xor, ~'#simple-xor-b', simple-xor-gate);
+.coloredOp(~'#simple-and-a', and, ~'#simple-and-b', simple-and-gate);
+.coloredOp(~'#simple-or-a', or, ~'#simple-or-b', simple-or-gate);
 
 // Half Adder
-.op(~'#half-adder-a', xor, ~'#half-adder-b', {
-	~#half-adder-xor-gate {
-		.On();
-	}
-});
-
-.op(~'#half-adder-a', and, ~'#half-adder-b', {
-	~#half-adder-and-gate {
-		.On();
-	}
-});
+.coloredOp(~'#half-adder-a', xor, ~'#half-adder-b', half-adder-xor-gate);
+.coloredOp(~'#half-adder-a', and, ~'#half-adder-b', half-adder-and-gate);
 
 // Full adder
-.op(~'#full-adder-a', and, ~'#full-adder-b', {
-	~#full-adder-and-gate-input {
-		.On();
-	}
-});
+.coloredOp(~'#full-adder-a', and, ~'#full-adder-b', full-adder-and-gate-input);
+.coloredOp(~'#full-adder-a', xor, ~'#full-adder-b', full-adder-xor-gate-input);
 
-.op(~'#full-adder-a', xor, ~'#full-adder-b', {
-	~#full-adder-xor-gate-input {
-		.On();
-	}
-});
-
-.op(
+.coloredOp(
 	~'#full-adder-carry', and,
-	{ .c(@c) { .op(@c, ~'#full-adder-a', xor, ~'#full-adder-b'); } }, {
-		~#full-adder-and-gate-sum {
-			.On();
-		}
-	}
+	{ .c(@c) { .op(@c, ~'#full-adder-a', xor, ~'#full-adder-b'); } }, 
+	full-adder-and-gate-sum
 );
 
-.op(
+.coloredOp(
 	{ .c(@c) { .op(@c, ~'#full-adder-a', and, ~'#full-adder-b') } },
 	or,
 	{ .c(@c) { .op(@c,
 		~'#full-adder-carry',
 		and,
 		{ .c(@c) { .op(@c, ~'#full-adder-a', xor, ~'#full-adder-b'); } }
-	); } }, {
-		~#full-adder-or-gate-carry-out {
-			.On();
-		}
-	}
+	); } }, 
+	full-adder-or-gate-carry-out
 );
 
-.op(
+.coloredOp(
 	~'#full-adder-carry', xor,
-	{ .c(@c) { .op(@c, ~'#full-adder-a', xor, ~'#full-adder-b'); } }, {
-		~#full-adder-xor-gate-carry {
-			.On();
-		}
-	}
+	{ .c(@c) { .op(@c, ~'#full-adder-a', xor, ~'#full-adder-b'); } },
+	full-adder-xor-gate-carry
 );

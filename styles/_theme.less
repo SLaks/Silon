@@ -1,5 +1,6 @@
 ﻿@import "_mixins";
 @import "_variables";
+@import "_combinators";
 
 @remSize: 16px;
 
@@ -361,15 +362,16 @@
 .On() {
 	&:extend(.OnContent all);
 }
-.OnContent {
-	&.Gate.OR, &.Gate.XOR {
-		span:before, &:after {
-			background-color: @activeColor;
-		}
-	}
-	&.Gate.AND {
+
+&.ActiveGate.OR {
+	span:before, &:after {
 		background-color: @activeColor;
 	}
+}
+&.ActiveGate.AND {
+	background-color: @activeColor;
+}
+.OnContent {
 	.ColorizeConnectors(@activeColor);
 	// Colorize any result connected to the gate.
 	.ConnectorsFor({
@@ -536,4 +538,13 @@
 		line-height: 5rem - @gateWidth / 5;
 		.GateLabel();
 	}
+}
+
+.coloredOp(@first, @operation, @second, @result) {
+	@combinatedResult: %(~'~ #%s', @result);
+	.op(@first, @operation, @second, {
+		@{combinatedResult}:extend(.OnContent all) { }
+		@{combinatedResult}:extend(.ActiveGate.AND all) when (@operation = and) {}
+		@{combinatedResult}:extend(.ActiveGate.OR all) when (@operation = or), (@operation = xor) {}
+	});
 }
