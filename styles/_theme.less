@@ -359,6 +359,9 @@
 
 // Applied to gates when the logic gate evaluates to true.
 .On() {
+	&:extend(.OnContent all);
+}
+.OnContent {
 	&.Gate.OR, &.Gate.XOR {
 		span:before, &:after {
 			background-color: @activeColor;
