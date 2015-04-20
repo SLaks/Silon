@@ -350,8 +350,8 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-and-gate-sum {
   background-color: #ffc107;
 }
-.OnContent + .Connector,
-.OnContent + .Connector:before,
+.ActiveGate.Connectors + .Connector,
+.ActiveGate.Connectors + .Connector:before,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector:before,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector,
@@ -394,8 +394,8 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector:before {
   background-color: #ffc107;
 }
-.OnContent + .Connector + .Connector,
-.OnContent + .Connector + .Connector:before,
+.ActiveGate.Connectors + .Connector + .Connector,
+.ActiveGate.Connectors + .Connector + .Connector:before,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector:before,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector,
@@ -438,8 +438,8 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector:before {
   background-color: #ffc107;
 }
-.OnContent + .Connector + .Connector + .Connector,
-.OnContent + .Connector + .Connector + .Connector:before,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector:before,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector:before,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector,
@@ -482,8 +482,8 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector:before {
   background-color: #ffc107;
 }
-.OnContent + .Connector + .Connector + .Connector + .Connector,
-.OnContent + .Connector + .Connector + .Connector + .Connector:before,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector:before,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector:before,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector,
@@ -526,8 +526,8 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector:before {
   background-color: #ffc107;
 }
-.OnContent + .Connector + .Connector + .Connector + .Connector + .Connector,
-.OnContent + .Connector + .Connector + .Connector + .Connector + .Connector:before,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector:before,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector:before,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector,
@@ -570,8 +570,8 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector:before {
   background-color: #ffc107;
 }
-.OnContent + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
-.OnContent + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
@@ -614,8 +614,8 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
   background-color: #ffc107;
 }
-.OnContent + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
-.OnContent + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
@@ -658,8 +658,8 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
   background-color: #ffc107;
 }
-.OnContent + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
-.OnContent + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector,
@@ -702,7 +702,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector:before {
   background-color: #ffc107;
 }
-.OnContent + .Connector + .Result,
+.ActiveGate.Connectors + .Connector + .Result,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Result,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Result,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Result,
@@ -725,7 +725,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Result {
   background-color: #ffc107;
 }
-.OnContent + .Connector + .Result:after,
+.ActiveGate.Connectors + .Connector + .Result:after,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Result:after,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Result:after,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Result:after,
@@ -748,7 +748,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Result:after {
   top: -3.25rem;
 }
-.OnContent + .Connector + .Connector + .Result,
+.ActiveGate.Connectors + .Connector + .Connector + .Result,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Result,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Result,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Result,
@@ -771,7 +771,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Result {
   background-color: #ffc107;
 }
-.OnContent + .Connector + .Connector + .Result:after,
+.ActiveGate.Connectors + .Connector + .Connector + .Result:after,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Result:after,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Result:after,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Result:after,
@@ -794,7 +794,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Result:after {
   top: -3.25rem;
 }
-.OnContent + .Connector + .Connector + .Connector + .Result,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Result,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Result,
@@ -817,7 +817,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Result {
   background-color: #ffc107;
 }
-.OnContent + .Connector + .Connector + .Connector + .Result:after,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Result:after,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Result:after,
@@ -840,7 +840,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Result:after {
   top: -3.25rem;
 }
-.OnContent + .Connector + .Connector + .Connector + .Connector + .Result,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Result,
@@ -863,7 +863,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Result {
   background-color: #ffc107;
 }
-.OnContent + .Connector + .Connector + .Connector + .Connector + .Result:after,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Result:after,
@@ -886,7 +886,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Result:after {
   top: -3.25rem;
 }
-.OnContent + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
@@ -909,7 +909,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
   background-color: #ffc107;
 }
-.OnContent + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
@@ -932,7 +932,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
   top: -3.25rem;
 }
-.OnContent + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
@@ -955,7 +955,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
   background-color: #ffc107;
 }
-.OnContent + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
@@ -978,7 +978,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
   top: -3.25rem;
 }
-.OnContent + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
@@ -1001,7 +1001,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
   background-color: #ffc107;
 }
-.OnContent + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
@@ -1024,7 +1024,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after {
   top: -3.25rem;
 }
-.OnContent + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result,
@@ -1047,7 +1047,7 @@
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result {
   background-color: #ffc107;
 }
-.OnContent + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
+.ActiveGate.Connectors + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,
 #simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Connector + .Result:after,

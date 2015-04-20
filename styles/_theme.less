@@ -371,7 +371,7 @@
 &.ActiveGate.AND {
 	background-color: @activeColor;
 }
-.OnContent {
+.ActiveGate.Connectors {
 	.ColorizeConnectors(@activeColor);
 	// Colorize any result connected to the gate.
 	.ConnectorsFor({
@@ -543,7 +543,7 @@
 .coloredOp(@first, @operation, @second, @result) {
 	@combinatedResult: %(~'~ #%s', @result);
 	.op(@first, @operation, @second, {
-		@{combinatedResult}:extend(.OnContent all) { }
+		@{combinatedResult}:extend(.ActiveGate.Connectors all) { }
 		@{combinatedResult}:extend(.ActiveGate.AND all) when (@operation = and) {}
 		@{combinatedResult}:extend(.ActiveGate.OR all) when (@operation = or), (@operation = xor) {}
 	});
