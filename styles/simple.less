@@ -1,0 +1,41 @@
+﻿@import '_combinators.less';
+
+body, *:before, *:after {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 24px;
+}
+
+input {
+	height: 32px;
+	width: 32px;
+}
+
+.Result:after {
+	content: '0';
+}
+
+
+.op(
+	{ .c(@c) { .op(@c, ~'#full-adder-a', and, ~'#full-adder-b') } },
+	or,
+	{ .c(@c) { .op(@c,
+		~'#full-adder-carry',
+		and,
+		{ .c(@c) { .op(@c, ~'#full-adder-a', xor, ~'#full-adder-b'); } }
+	); } }, {
+		~ #full-adder-result-carry:after {
+			content: '1';
+			font-weight: bold;
+		}
+	}
+);
+
+.op(
+	~'#full-adder-carry', xor,
+	{ .c(@c) { .op(@c, ~'#full-adder-a', xor, ~'#full-adder-b'); } }, {
+		~ #full-adder-result-sum:after {
+			content: '1';
+			font-weight: bold;
+		}
+	}
+);

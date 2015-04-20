@@ -1,0 +1,42 @@
+﻿body,
+*:before,
+*:after {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 24px;
+}
+input {
+  height: 32px;
+  width: 32px;
+}
+.Result:after {
+  content: '0';
+}
+#full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-result-carry:after {
+  content: '1';
+  font-weight: bold;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-result-carry:after {
+  content: '1';
+  font-weight: bold;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-result-carry:after {
+  content: '1';
+  font-weight: bold;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-result-sum:after {
+  content: '1';
+  font-weight: bold;
+}
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-result-sum:after {
+  content: '1';
+  font-weight: bold;
+}
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:not(:checked) ~ #full-adder-result-sum:after {
+  content: '1';
+  font-weight: bold;
+}
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-result-sum:after {
+  content: '1';
+  font-weight: bold;
+}
+/*# sourceMappingURL=simple.css.map */
