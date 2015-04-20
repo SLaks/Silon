@@ -45,32 +45,6 @@
 	box-sizing: border-box;
 }
 
-// Applies properties to all connectors that immediately follow the containing
-// element. Use this mixin to style connectors depending on the state of their 
-// connectee.  
-.ConnectorsFor(@content) {
-	.Recurse(8, {	// We currently only ever have four levels of connectors
-		@content();
-	});
-
-	.Recurse(@count, @content) {
-		+ .Connector { @content(); }
-	}
-
-	.Recurse(@count, @content) when (@count > 1) {
-		+ .Connector {	
-			.Recurse(@count - 1, @content);
-		}
-	}
-}
-
-.ColorizeConnectors(@background) {
-	.ConnectorsFor({ 
-		&, &:before {
-			background-color: @background;
-		}
-	});
-}
 
 // Draws a box around a value (input or computed result).  The caller 
 // must apply background-color: @activeColor when the value is active
@@ -110,9 +84,20 @@
 	position: absolute;
 }
 
+.ColorizeConnectors(@color) {
+	+ div > .Connector {
+		&, &:before {
+			background-color: @color;
+		}
+	}
+}
+
+.Connectors.InactiveHover	{ .ColorizeConnectors(@inactiveHoverColor);	}
+.Connectors.Active			{ .ColorizeConnectors(@activeColor);		}
+.Connectors.ActiveHover		{ .ColorizeConnectors(@activeHoverColor);	}
 
 // Applies active styles to a .ValueContent() element
-.ActiveValueContent() {
+.ActiveValueContent {
 	&:after {
 		top: -@valueSize;
 	}
@@ -134,21 +119,21 @@
 
 	.ValueContent();
 	&:checked {
-		.ActiveValueContent();
-		.ColorizeConnectors(@activeColor);
+		&:extend(ActiveValueContent all);
+		&:extend(.Connectors.Active all);
 	}
 
 	&:hover {
 		&:before {
 			background-color: @inactiveHoverColor;
 		}
-		.ColorizeConnectors(@inactiveHoverColor);
+		&:extend(.Connectors.Hover all);
 
 		&:checked {
 			&:before {
 				background-color: @activeHoverColor;
 			}
-			.ColorizeConnectors(@activeHoverColor);
+			&:extend(.Connectors.ActiveHover all);
 		}
 	}
 }
@@ -176,8 +161,11 @@
 		bottom: -@padding;
 	}
 
-	> * {
+	> *, > .Group > * {
 		position: absolute !important;	// Override position: relative from checkboxes
+	}
+	> .Group {
+		position: static !important;
 	}
 }
 
@@ -371,16 +359,11 @@
 &.ActiveGate.AND {
 	background-color: @activeColor;
 }
-.ActiveGate.Connectors {
-	.ColorizeConnectors(@activeColor);
-}
 .ActiveGate.Result {
-	.ConnectorsFor({
-		+ .Result {
-			background-color: @activeColor;
-			.ActiveValueContent();
-		}
-	});
+	+ div > .Result {
+		background-color: @activeColor;
+		&:extend(.ActiveValueContent all);
+	}
 }
 
 .GateLabel() {
@@ -556,7 +539,7 @@
 	#private.callProbe(@first);
 	#private.callProbe(@second);
 	.op(@first, @operation, @second, {
-		@{combinatedResult}:extend(.ActiveGate.Connectors all) { }
+		@{combinatedResult}:extend(.Connectors.Active all) { }
 		@{combinatedResult}:extend(.ActiveGate.Result all) when (@isFinal) { }
 		@{combinatedResult}:extend(.ActiveGate.AND all) when (@operation = and) {}
 		@{combinatedResult}:extend(.ActiveGate.OR all) when (@operation = or), (@operation = xor) {}
