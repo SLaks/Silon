@@ -65,7 +65,8 @@ nav {
 
 	@contentSlideDistance: 96px;
 
-	> section {
+	// The .DefaultTab, which must be last, will be shown if no other tab is active.
+	> section, > a:target ~ section.DefaultTab {
 		position: absolute;
 		top: @tabHeight;
 		bottom: 0;
@@ -94,7 +95,7 @@ nav {
 		margin-left: @contentSlideDistance;
 	}
 
-	> a:target + section {
+	> a:target + section, section.DefaultTab {
 		pointer-events: auto;
 		opacity: 1;
 		margin: 0;
@@ -113,4 +114,21 @@ ul.CanvasList {
 		display: block;
 		margin: 0 48px 48px 0;
 	}
+}
+
+h1 {
+	font-weight: normal;
+	font-size: 40px;
+	margin-bottom: 0;
+}
+
+h2 {
+	font-weight: normal;
+	font-style: italic;
+	font-size: 20px;
+	margin-top: 0;
+}
+h1, h2, p {
+	width: 90%;
+	max-width: 600px;
 }
