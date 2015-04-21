@@ -108,6 +108,7 @@
 	margin: -@borderThickness;
 	padding: 0;
 	cursor: pointer;
+	transition: box-shadow @transitionDuration;
 
 	&:before {
 		content: '';
@@ -115,6 +116,10 @@
 	}
 	&:checked:before {
 		background-color: @activeColor;
+	}
+	&:focus {
+		box-shadow: 0 0 5px 2px #E65100;
+		outline: none;
 	}
 
 	.ValueContent();

@@ -84,6 +84,8 @@
   margin: -0.125rem;
   padding: 0;
   cursor: pointer;
+  -webkit-transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+          transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
   position: relative;
   overflow: hidden;
 }
@@ -100,6 +102,10 @@
 }
 .Canvas input[type=checkbox]:checked:before {
   background-color: #ffc107;
+}
+.Canvas input[type=checkbox]:focus {
+  box-shadow: 0 0 5px 2px #E65100;
+  outline: none;
 }
 .Canvas input[type=checkbox]:after {
   white-space: pre;
