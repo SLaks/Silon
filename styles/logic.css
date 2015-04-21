@@ -59,6 +59,7 @@
   background-color: #ffb300;
 }
 .ActiveValueContent:after,
+.Canvas input[type=checkbox]:checked:after,
 .ActiveGate.Result + div > .Result:after,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + div > .Result:after,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + div > .Result:after,
