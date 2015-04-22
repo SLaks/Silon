@@ -5,6 +5,7 @@
 }
 body {
   margin: 0;
+  font-size: 16px;
 }
 nav {
   background-color: #3F51B5;
@@ -40,6 +41,11 @@ nav > a {
   position: relative;
   -webkit-transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
           transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (max-width: 680px) {
+  nav > a {
+    font-size: 12px;
+  }
 }
 nav > a:hover {
   color: rgba(255, 255, 255, 0.87) !important;
@@ -107,6 +113,11 @@ nav > section > div {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media (max-width: 640px) {
+  nav > section > div {
+    padding: 16px;
+  }
+}
 nav > section > div > * {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
@@ -152,7 +163,7 @@ h2 {
 h1,
 h2,
 p {
-  width: 90%;
+  width: 100%;
   max-width: 600px;
 }
 /*# sourceMappingURL=layout.css.map */

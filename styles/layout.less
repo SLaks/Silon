@@ -6,6 +6,7 @@ body, *:before, *:after {
 
 body {
 	margin: 0;
+	font-size: 16px;
 }
 
 nav {
@@ -29,6 +30,9 @@ nav {
 		height: @tabHeight;
 		font-weight: bold;
 		font-size: 14px;
+		@media (max-width: 680px) {
+			font-size: 12px;
+		}
 		padding: 0 24px;
 		position: relative;
 		transition: color .2s @easing;
@@ -91,7 +95,9 @@ nav {
 	> section > div {
 		padding: 48px;
 		overflow: auto;
-
+		@media (max-width: 640px) {
+			padding: 16px;
+		}
 		min-height: 100%;			// Forces vertical centering via flex
 		min-width: max-content;		// Forces a horizontal scrollbar, instead of the flex centering being cut off.
 		box-sizing: border-box;		// Includes the padding in the min-height 
@@ -144,6 +150,6 @@ h2 {
 	margin-top: 0;
 }
 h1, h2, p {
-	width: 90%;
+	width: 100%;	// Stretch on mobile, but center the entire box on larger screens
 	max-width: 600px;
 }

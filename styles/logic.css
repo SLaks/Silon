@@ -2,6 +2,11 @@
   font-size: 16px;
   box-sizing: border-box;
 }
+@media (max-width: 480px) {
+  :root {
+    font-size: 8px;
+  }
+}
 .Connectors.InactiveHover + div > .Connector,
 .Connectors.InactiveHover + div > .Connector:before {
   background-color: #b3e5fc;
@@ -136,7 +141,7 @@
   content: '';
   display: block;
   background-color: #fff3e0;
-  border: 2px solid #FFB74D;
+  border: 0.125rem solid #ffb74d;
   position: absolute;
   top: -1rem;
   left: -1rem;
@@ -372,7 +377,7 @@
   border-right: 0.125rem solid #ffa000;
   -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-  font-size: 21px;
+  font-size: 1.4rem;
   text-align: center;
   line-height: 4.13987789rem;
   position: relative;
@@ -446,7 +451,7 @@
   border-right: 0.125rem solid #ffa000;
   -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-  font-size: 21px;
+  font-size: 1.4rem;
   text-align: center;
   line-height: 5.13987789rem;
   position: relative;
@@ -536,7 +541,7 @@
   display: block;
   content: 'AND';
   line-height: 4.2rem;
-  font-size: 21px;
+  font-size: 1.4rem;
   text-align: center;
 }
 /*# sourceMappingURL=logic.css.map */
