@@ -18,6 +18,7 @@ nav {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: auto;
 }
 nav > a {
   display: -webkit-box;
@@ -73,11 +74,30 @@ nav > a:target ~ section.DefaultTab {
   bottom: 0;
   left: 0;
   right: 0;
+  overflow: auto;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
+          transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
+  margin-left: -96px;
+}
+nav > section > div {
   padding: 48px;
+  overflow: auto;
+  min-height: 100%;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -86,19 +106,8 @@ nav > a:target ~ section.DefaultTab {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
-          transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
-  margin-left: -96px;
 }
-nav > section > *,
-nav > a:target ~ section.DefaultTab > * {
+nav > section > div > * {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
@@ -127,7 +136,7 @@ ul.CanvasList {
 ul.CanvasList li {
   text-align: center;
   display: block;
-  margin: 0 48px 48px 0;
+  margin: 24px;
 }
 h1 {
   font-weight: normal;

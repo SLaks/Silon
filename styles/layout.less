@@ -17,6 +17,7 @@ nav {
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	overflow: auto;
 
 	> a {
 		display: flex;
@@ -72,15 +73,9 @@ nav {
 		bottom: 0;
 		left: 0;
 		right: 0;
-		padding: 48px;
 
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		> * {
-			flex-shrink: 0;
-		}
+		// The section contains the scrollbars around the content
+		overflow: auto;
 
 		// Changing the display property breaks transitions, so I hide it this way instead.
 		opacity: 0;
@@ -88,6 +83,26 @@ nav {
 		transition: margin-left @duration @easing, opacity @duration;
 		// When a tab that precedes the active tab deactivates, slide left
 		margin-left: -@contentSlideDistance;
+	}
+
+	// The section has a single child that pads and centers the content.
+	// Merging these two elements will break the centering.  The padding
+	// and minimum size must be within the scroll container.
+	> section > div {
+		padding: 48px;
+		overflow: auto;
+
+		min-height: 100%;			// Forces vertical centering via flex
+		min-width: max-content;		// Forces a horizontal scrollbar, instead of the flex centering being cut off.
+		box-sizing: border-box;		// Includes the padding in the min-height 
+
+		display: flex;				// Center the content and flow vertically
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		> * {
+			flex-shrink: 0;
+		}
 	}
 
 	> a:target + section ~ section {
@@ -112,7 +127,7 @@ ul.CanvasList {
 	li {
 		text-align: center;
 		display: block;
-		margin: 0 48px 48px 0;
+		margin: 24px;
 	}
 }
 
