@@ -109,6 +109,10 @@ nav {
 		> * {
 			flex-shrink: 0;
 		}
+
+		&.ShrinkWrap {
+			min-width: 0;		// Remove the max-width to force the contents to wrap within the viewport.
+		}
 	}
 
 	> a:target + section ~ section {

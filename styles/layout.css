@@ -123,6 +123,9 @@ nav > section > div > * {
       -ms-flex-negative: 0;
           flex-shrink: 0;
 }
+nav > section > div.ShrinkWrap {
+  min-width: 0;
+}
 nav > a:target + section ~ section {
   margin-left: 96px;
 }
