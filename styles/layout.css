@@ -159,14 +159,19 @@ h1 {
 }
 h2 {
   font-weight: normal;
-  font-style: italic;
   font-size: 20px;
   margin-top: 0;
+}
+h1 + h2 {
+  font-style: italic;
 }
 h1,
 h2,
 p {
   width: 100%;
   max-width: 600px;
+}
+p + .Canvas {
+  margin-top: 3rem;
 }
 /*# sourceMappingURL=layout.css.map */
