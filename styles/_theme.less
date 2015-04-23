@@ -235,6 +235,14 @@
 			padding-right: @borderThickness;
 		}
 
+		&.Corner.Bottom:before {
+			top: auto;
+			bottom: -@connectorCenterOffset;	// Cover the thickness of the adjoining connector, which is centered at our right
+			left: -@borderThickness;			// Cover the parent's outer border
+			border-bottom: @border;
+			border-top: none;
+		}
+
 		// A convex connector contains a chopped-off circle 
 		// to match the concave curve at the top of a gate.
 		// Because of the overflow: hidden, these cannot be
@@ -294,6 +302,20 @@
 				left: 0;
 				border-left: @border;
 			}
+		}
+
+		// A junction covers the portion of the borders
+		// that stick into the adjoining connector
+		&.Junction.Top:before {
+			content: '';
+			display: block;
+			background: @inactiveColor;
+			transition: inherit;
+			position: absolute;
+			top: 0;
+			right: -@borderThickness;			// Cover the parent's outer border
+			width: @connectorThickness + 2 * @borderThickness;
+			height: @connectorThickness / 2;	// Cover the distance from the center of the adjoining connector (our edge) to its border
 		}
 	}
 
