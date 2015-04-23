@@ -15,7 +15,7 @@
 // parameters.  It calls the actual overloads with the
 // default invertCombinator value, passing @content as
 // a scoped variable.
-.op(@first, @operation, @second, @content) when (isKeyword(@operation))  {
+.op(@first, @operation, @second, @content) when (@operation = and), (@operation = xor), (@operation = or)  {
 	.op(false, @first, @operation, @second);	// Pass @content via scope
 }
 
@@ -60,8 +60,11 @@
 #private {
 	// Calls a selector (as a string or a nested ruleset),
 	// inside the context that this selector was called in
-	.call(@combinator, @selector, @content) when (isString(@selector)), (isKeyword(@selector)) {
+	.call(@combinator, @selector, @content) when (isString(@selector)) {
 		&@{combinator}@{selector}:checked { @content(); }
+	}
+	.call(@combinator, @selector, @content) when  (isKeyword(@selector)) {
+		&@{combinator}#@{selector}:checked { @content(); }
 	}
 
 	.call(@combinator, @selector, @content) when (default()) {	// isruleset(@selector) doesn't work
@@ -73,8 +76,11 @@
 
 	// Same as above, but passes @invertCombinator
 	// to invert the result of the combinator.
-	.callInverted(@combinator, @selector, @content) when (isString(@selector)), (isKeyword(@selector)) {
+	.callInverted(@combinator, @selector, @content) when (isString(@selector)) {
 		&@{combinator}@{selector}:not(:checked) { @content(); }
+	}
+	.callInverted(@combinator, @selector, @content) when (isKeyword(@selector)) {
+		&@{combinator}#@{selector}:not(:checked) { @content(); }
 	}
 
 	.callInverted(@combinator, @selector, @content) when (default()) {	// isruleset(@selector) doesn't work

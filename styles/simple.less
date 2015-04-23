@@ -16,12 +16,12 @@ input {
 
 
 .op(
-	{ .c(@c) { .op(@c, ~'#full-adder-a', and, ~'#full-adder-b') } },
+	{ .c(@c) { .op(@c, full-adder-a, and, full-adder-b) } },
 	or,
 	{ .c(@c) { .op(@c,
-		~'#full-adder-carry',
+		full-adder-carry,
 		and,
-		{ .c(@c) { .op(@c, ~'#full-adder-a', xor, ~'#full-adder-b'); } }
+		{ .c(@c) { .op(@c, full-adder-a, xor, full-adder-b); } }
 	); } }, {
 		~ #full-adder-result-carry:after {
 			content: '1';
@@ -31,8 +31,8 @@ input {
 );
 
 .op(
-	~'#full-adder-carry', xor,
-	{ .c(@c) { .op(@c, ~'#full-adder-a', xor, ~'#full-adder-b'); } }, {
+	full-adder-carry, xor,
+	{ .c(@c) { .op(@c, full-adder-a, xor, full-adder-b); } }, {
 		~ #full-adder-result-sum:after {
 			content: '1';
 			font-weight: bold;
