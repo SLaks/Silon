@@ -545,7 +545,7 @@
 
 // This is called for the outermost layer.
 .coloredOp(@first, @operation, @second, @result, @isFinal: true) when (@operation = and), (@operation = xor), (@operation = or) {
-	@combinatedResult: %(~'~ #%s', @result);
+	@combinatedResult: %(~'~ #%s', replace(@result, '^#', ''));
 	#private.callProbe(@first);
 	#private.callProbe(@second);
 	.op(@first, @operation, @second, {
@@ -566,6 +566,9 @@
 // disambiguate.
 .coloredOp(@mode, @first, @operation, @second, @result) when (@mode = probe) and not (@result = none) {
 	.coloredOp(@first, @operation, @second, @result, false);
+}
+.coloredOp(@mode, @first, @operation, @second, @result) when (@mode = root) {
+	.coloredOp(@first, @operation, @second, @result, true);
 }
 .coloredOp(@mode, @first, @operation, @second, @result) when (@mode = true), (@mode = false) {
 	.op(@mode, @first, @operation, @second);
