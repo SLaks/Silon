@@ -1,4 +1,4 @@
-﻿body,
+body,
 *:before,
 *:after {
   font-family: 'PT Sans', sans-serif;
@@ -39,4 +39,5 @@ input {
   content: '1';
   font-weight: bold;
 }
+
 /*# sourceMappingURL=simple.css.map */

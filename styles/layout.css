@@ -1,4 +1,4 @@
-﻿body,
+body,
 *:before,
 *:after {
   font-family: 'PT Sans', sans-serif;
@@ -174,4 +174,5 @@ p {
 p + .Canvas {
   margin-top: 3rem;
 }
+
 /*# sourceMappingURL=layout.css.map */
