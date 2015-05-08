@@ -592,7 +592,7 @@
 .coloredOp(@mode, @first, @operation, @second, @result) when (@mode = root) {
 	.coloredOp(@first, @operation, @second, @result, true);
 }
-.coloredOp(@mode, @first, @operation, @second, @result) when (@mode = true), (@mode = false) {
+.coloredOp(@mode, @first, @operation, @second, @result) when (length(@mode) > 1) {
 	.op(@mode, @first, @operation, @second);
 }
 
