@@ -20,7 +20,7 @@
 }
 
 .op(@c, @first, @operation, @second) when (length(@c) > 1) {
-	.op(@first, @operation, @second, extract(@c, 1), @content);
+	.op(@first, @operation, @second, extract(@c, 1), extract(@c, 2));
 }
 
 // These overloads are called in detached rulesets when chaining
