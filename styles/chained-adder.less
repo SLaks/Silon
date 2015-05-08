@@ -1,0 +1,17 @@
+﻿@import "_combinators";
+@import (reference) "_theme";
+
+.fullAdder(root, 
+	chained-adder-4,
+	{ .c(@c) { .fullAdder(@c,
+		chained-adder-3,
+		{ .c(@c) { .fullAdder(@c,
+			chained-adder-2,
+			{ .c(@c) { 
+				.coloredOp(@c, chained-adder-1-a, and, chained-adder-1-b, chained-adder-1-gate-carry-out); 
+			} }
+		); } }
+	); } }
+);
+
+.coloredOp(chained-adder-1-a, xor, chained-adder-1-b, chained-adder-1-xor-gate-sum);

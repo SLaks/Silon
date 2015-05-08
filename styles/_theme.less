@@ -602,3 +602,27 @@
 		.c(probe);
 	}
 }
+
+.fullAdder(@c, @prefix, @carryIn) {
+	@prefixFormat: %(~'#%s-%%s', @prefix);
+	.coloredOp(@c,
+		{ .c(@c) { .coloredOp(@c, %(@prefixFormat, a), and, %(@prefixFormat, b), %(@prefixFormat, and-gate-input)) } },
+		or,
+		{ .c(@c) { .coloredOp(@c,
+			@carryIn,
+			and,
+			{ .c(@c) { .coloredOp(@c, %(@prefixFormat, a), xor, %(@prefixFormat, b), %(@prefixFormat, xor-gate-input)); } },
+			%(@prefixFormat, and-gate-sum)
+		); } }, 
+		%(@prefixFormat, or-gate-carry-out)
+	);
+}
+
+.fullAdder(@mode, @prefix, @carryIn) when (@mode = root), (@mode = probe) {
+	@prefixFormat: %(~'#%s-%%s', @prefix);
+	.coloredOp(
+		@carryIn, xor,
+		{ .c(@c) { .coloredOp(@c, %(@prefixFormat, a), xor, %(@prefixFormat, b), none); } },
+		%(@prefixFormat, xor-gate-carry)
+	);
+}
