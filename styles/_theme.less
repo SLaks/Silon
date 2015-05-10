@@ -566,15 +566,15 @@
 // extra selector set.
 
 // This is called for the outermost layer.
-.coloredOp(@first, @operation, @second, @result, @isFinal: true) when (@operation = and), (@operation = xor), (@operation = or) {
-	@combinatedResult: %(~'~ #%s', replace(@result, '^#', ''));
+.coloredOp(@first, @operation, @second, @output, @result: hasResult) when (@operation = and), (@operation = xor), (@operation = or) {
+	@combinatedOutput: %(~'~ #%s', replace(@output, '^#', ''));
 	#private.callProbe(@first);
 	#private.callProbe(@second);
 	.op(@first, @operation, @second, {
-		@{combinatedResult}:extend(.Connectors.Active all) { }
-		@{combinatedResult}:extend(.ActiveGate.Result all) when (@isFinal) { }
-		@{combinatedResult}:extend(.ActiveGate.AND all) when (@operation = and) {}
-		@{combinatedResult}:extend(.ActiveGate.OR all) when (@operation = or), (@operation = xor) {}
+		@{combinatedOutput}:extend(.Connectors.Active all) { }
+		@{combinatedOutput}:extend(.ActiveGate.Result all) when (@result = hasResult) { }
+		@{combinatedOutput}:extend(.ActiveGate.AND all) when (@operation = and) {}
+		@{combinatedOutput}:extend(.ActiveGate.OR all) when (@operation = or), (@operation = xor) {}
 	});
 }
 
@@ -586,13 +586,13 @@
 // passes through to the actual .op(). I
 // reuse the @c parameter passthrough to
 // disambiguate.
-.coloredOp(@mode, @first, @operation, @second, @result) when (@mode = probe) and not (@result = none) {
-	.coloredOp(@first, @operation, @second, @result, false);
+.coloredOp(probe, @first, @operation, @second, @output) when not (@output = none) {
+	.coloredOp(@first, @operation, @second, @output, noResult);
 }
-.coloredOp(@mode, @first, @operation, @second, @result) when (@mode = root) {
-	.coloredOp(@first, @operation, @second, @result, true);
+.coloredOp(root, @first, @operation, @second, @output) {
+	.coloredOp(@first, @operation, @second, @output, hasResult);
 }
-.coloredOp(@mode, @first, @operation, @second, @result) when (length(@mode) > 1) {
+.coloredOp(@mode, @first, @operation, @second, @output) when (length(@mode) > 1) {
 	.op(@mode, @first, @operation, @second);
 }
 
