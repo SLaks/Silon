@@ -23,73 +23,63 @@
 	.op(@first, @operation, @second, extract(@c, 1), extract(@c, 2));
 }
 
+@tilde: ~'~ ';
 // These overloads are called in detached rulesets when chaining
 .op(@first, xor, @second, normal, @content) {
-	#private.callInverted(~'', @first, {
-		#private.call(~' ~ ', @second, @content);
-	});
-	#private.call(~'', @first, {
-		#private.callInverted(~' ~ ', @second, @content);
-	});
+	.callSelector(@first, invert, { @{tilde} {
+		.callSelector(@second, normal, @content);
+	}});
+	.callSelector(@first, normal, { @{tilde} {
+		.callSelector(@second, invert, @content);
+	}});
 }
 .op(@first, xor, @second, invert, @content) {
-	#private.callInverted(~'', @first, {
-		#private.callInverted(~' ~ ', @second, @content);
-	});
-	#private.call(~'', @first, {
-		#private.call(~' ~ ', @second, @content);
-	});
+	.callSelector(@first, invert, { @{tilde} {
+		.callSelector(@second, invert, @content);
+	}});
+	.callSelector(@first, normal, { @{tilde} {
+		.callSelector(@second, normal, @content);
+	}});
 }
 
 .op(@first, or, @second, normal, @content) {
-	#private.call(~'', @first, @content);
-	#private.call(~'', @second, @content);
+	.callSelector(@first, normal, @content);
+	.callSelector(@second, normal, @content);
 }
 .op(@first, or, @second, invert, @content) {
-	#private.callInverted(~'', @first, {
-		#private.callInverted(~' ~ ', @second, @content);
-	});
+	.callSelector(@first, invert, { @{tilde} {
+		.callSelector(@second, invert, @content);
+	}});
 }
 
 .op(@first, and, @second, normal, @content) {
-	#private.call(~'', @first, {
-		#private.call(~' ~ ', @second, @content);
-	});
+	.callSelector(@first, normal, { @{tilde} {
+		.callSelector(@second, normal, @content);
+	}});
 }
 .op(@first, and, @second, invert, @content) {
-	#private.callInverted(~'', @first, @content);
-	#private.callInverted(~'', @second, @content);
+	.callSelector(@first, invert, @content);
+	.callSelector(@second, invert, @content);
 }
 
 // Calls a selector (as a string or a nested ruleset),
 // passing a context for inversion and target content.
 // This should only be used for .op() chaining.
-.callSelector(@c, @selector) when (isKeyword(@selector)) {
-	.callSelector(@c, %(~'#%s', @selector));
+// The @mode, @content parameters ought to be a single
+// list, but http://github.com/less/less.js/issues/2587
+.callSelector(@selector, @mode, @content) when (isKeyword(@selector)) {
+	.callSelector(%(~'#%s', @selector), @mode, @content);
 }
-.callSelector(@c, @selector, @mode: extract(@c, 1), @content: extract(@c, 2)) when (isString(@selector)) {
+.callSelector(@selector, @mode, @content) when (isString(@selector)) {
 	&@{selector}:checked		when(@mode = normal) { @content(); }
 	&@{selector}:not(:checked)	when(@mode = invert) { @content(); }
 }
-.callSelector(@c, @selector) when (default()) {  // isruleset(@selector) doesn't work
+.callSelector(@selector, @mode, @content) when (default()) {  // isruleset(@selector) doesn't work
 	@selector();
-	.c(@c);
+	.c(@mode @content);
 }
 
-#private {
-	// Calls a selector (as a string or a nested ruleset),
-	// inside the context that this selector was called in
-	.call(@combinator, @selector, @content) {
-		&@{combinator} {
-			.callSelector(normal @content, @selector);
-		}
-	}
-
-	// Same as above, but passes @invertCombinator
-	// to invert the result of the combinator.
-	.callInverted(@combinator, @selector, @content) {
-		&@{combinator} {
-			.callSelector(invert @content, @selector);
-		}
-	}
+// Expand the @c parameter pack for direct calls.
+.callSelector(@selector, @c) {
+	.callSelector(@selector, extract(@c, 1), extract(@c, 2));
 }
