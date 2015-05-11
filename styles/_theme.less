@@ -620,21 +620,11 @@
 
 .fullAdder(@mode, @prefix, @carryIn) when (@mode = root), (@mode = probe) {
 	@prefixFormat: %(~'#%s-%%s', @prefix);
-	& when (isKeyword(@carryIn)) {
-		.coloredOp(
-			@carryIn,
-			xor,
-			{ .c(@c) { .coloredOp(@c, %(@prefixFormat, a), xor, %(@prefixFormat, b), none); } },
-			%(@prefixFormat, xor-gate-carry)
-		);
-	}
-	& when not (isKeyword(@carryIn)) {
-		.coloredOp(
-			// When passing a nested selector as the carryIn, don't probe it a second time.
-			{ .c(@c) when not (@c = probe) { @carryIn(); .c(@c); } },
-			xor,
-			{ .c(@c) { .coloredOp(@c, %(@prefixFormat, a), xor, %(@prefixFormat, b), none); } },
-			%(@prefixFormat, xor-gate-carry)
-		);
-	}
+	.coloredOp(
+		// When passing a nested selector as the carryIn, don't probe it a second time.
+		{ .c(@c) when not (@c = probe) { .callSelector(@c, @carryIn); } },
+		xor,
+		{ .c(@c) { .coloredOp(@c, %(@prefixFormat, a), xor, %(@prefixFormat, b), none); } },
+		%(@prefixFormat, xor-gate-carry)
+	);
 }
