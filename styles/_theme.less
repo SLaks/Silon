@@ -606,14 +606,14 @@
 .fullAdder(@c, @prefix, @carryIn) {
 	@prefixFormat: %(~'#%s-%%s', @prefix);
 	.coloredOp(@c,
-		{ .c(@c) { .coloredOp(@c, %(@prefixFormat, a), and, %(@prefixFormat, b), %(@prefixFormat, and-gate-input)) } },
-		or,
 		{ .c(@c) { .coloredOp(@c,
 			@carryIn,
 			and,
 			{ .c(@c) { .coloredOp(@c, %(@prefixFormat, a), xor, %(@prefixFormat, b), %(@prefixFormat, xor-gate-input)); } },
 			%(@prefixFormat, and-gate-sum)
-		); } }, 
+		); } },
+		or,
+		{ .c(@c) { .coloredOp(@c, %(@prefixFormat, a), and, %(@prefixFormat, b), %(@prefixFormat, and-gate-input)) } },
 		%(@prefixFormat, or-gate-carry-out)
 	);
 }
