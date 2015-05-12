@@ -256,8 +256,8 @@
 		<section>
 			<div>
 				<p>
-					Here are multiple full adders chained together, adding a number of binary digits into a single sum.
-				</p>
+					Here are four full adders chained together. These adders add two four-digit binary numbers (0 &ndash; 15), formed by the upper row of inputs and the lower row of inputs, resulting in the five digit binary number (which will always be &le; 30) formed by the row of outputs at the bottom.
+				</p><p> The carry-out of each adder connects to the carry-in of the next adder, forming the chain (as opposed to the single full-adder, where both the carry-in and the carry-out are directly drawn).  The right-most adder is a simple half-adder, since there is no carry-in to incorporate.  The carry-out from the left-most adder is drawn directly as the most significant digit of the output, since there is no further adder to carry to.</p>
 				<div class="Canvas" style="width: 75rem; height: 44rem;">
 					<input type="checkbox" id="chained-adder-1-a" style="top: 0; left: 68.5rem;" />
 					<div class="Group">
