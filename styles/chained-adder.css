@@ -754,5 +754,3 @@
 #chained-adder-1-a:checked ~ #chained-adder-1-b:not(:checked) ~ #chained-adder-1-xor-gate-sum + div > .Result {
   background-color: #ffc107;
 }
-
-/*# sourceMappingURL=chained-adder.css.map */
