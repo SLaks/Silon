@@ -171,6 +171,9 @@ p {
   width: 100%;
   max-width: 600px;
 }
+p {
+  text-align: justify;
+}
 p + .Canvas {
   margin-top: 3rem;
 }
