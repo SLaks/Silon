@@ -136,12 +136,17 @@
   display: block;
   width: 3.25rem;
   height: 3.25rem;
-  line-height: 3.25rem;
+  line-height: 52px;
   text-align: center;
   position: absolute;
   top: 0;
   -webkit-transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+@media (max-width: 480px) {
+  .Canvas input[type=checkbox] + label:after {
+    line-height: 26px;
+  }
 }
 .Canvas input[type=checkbox] + label:hover {
   background-color: #b3e5fc;
@@ -330,12 +335,17 @@
   display: block;
   width: 3.25rem;
   height: 3.25rem;
-  line-height: 3.25rem;
+  line-height: 52px;
   text-align: center;
   position: absolute;
   top: 0;
   -webkit-transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+}
+@media (max-width: 480px) {
+  .Result:after {
+    line-height: 26px;
+  }
 }
 .ActiveGate.OR span:before,
 .ActiveGate.OR:after,
@@ -398,9 +408,14 @@
           transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
   font-size: 1.4rem;
   text-align: center;
-  line-height: 4.13987789rem;
+  line-height: 66.23804621px;
   position: relative;
   z-index: 1;
+}
+@media (max-width: 480px) {
+  .Gate.OR:after {
+    line-height: 33.1190231px;
+  }
 }
 .Gate.OR:before {
   content: '';
@@ -472,9 +487,14 @@
           transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
   font-size: 1.4rem;
   text-align: center;
-  line-height: 5.13987789rem;
+  line-height: 82.23804621px;
   position: relative;
   z-index: 1;
+}
+@media (max-width: 480px) {
+  .Gate.XOR:after {
+    line-height: 41.1190231px;
+  }
 }
 .Gate.XOR:before {
   content: '';
@@ -528,7 +548,12 @@
   margin-top: 0.75rem;
   height: 1.69706703rem;
   content: 'XOR';
-  line-height: 3.49rem;
+  line-height: 55.84px;
+}
+@media (max-width: 480px) {
+  .Gate.XOR:after {
+    line-height: 27.92px;
+  }
 }
 .Gate.XOR:before {
   z-index: 3;
@@ -559,9 +584,14 @@
 .Gate.AND:after {
   display: block;
   content: 'AND';
-  line-height: 4.2rem;
+  line-height: 67.2px;
   font-size: 1.4rem;
   text-align: center;
+}
+@media (max-width: 480px) {
+  .Gate.AND:after {
+    line-height: 33.6px;
+  }
 }
 
 /*# sourceMappingURL=logic.css.map */

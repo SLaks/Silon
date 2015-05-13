@@ -40,16 +40,22 @@
 				- pow(@gateWidth / 2 - @gateConnectorNearOffset, 2))
 	- @gateConcaveCenterY;
 
+// Applies a value at the current scale.
+// This is used to set the base REM size
+// and to work around an IE bug with REM
+// values in line-heights for :after.
+.scaleValue(@property, @value) {
+	@{property}: unit(@value) * @remSize;
+	@media (max-width: 480px) {
+		@{property}: 8px * unit(@value);
+	}
+}
+
 :root {
-	font-size: @remSize; // Layout base unit
+	.scaleValue(font-size, 1);
 	box-sizing: border-box;
 }
 
-@media (max-width: 480px) {
-	:root {
-		font-size: 8px;
-	}
-}
 
 // Draws a boxed a value (input or computed result).  The
 // caller must extend .ActiveValueBox when active.
@@ -74,7 +80,7 @@
 		font-size: 2rem;
 		display: block;
 		.square(@valueSize);
-		line-height: @valueSize;
+		.scaleValue(line-height, @valueSize);
 		text-align: center;
 		position: absolute;
 		top: 0;
@@ -423,7 +429,7 @@
 		transition: background @transitionDuration;
 
 		.GateLabel();
-		line-height: @straightHeight + @tipRadius * .75;
+		.scaleValue(line-height, @straightHeight + @tipRadius * .75);
 		position: relative;
 		z-index: 1;	// Cover the :before
 	}
@@ -504,7 +510,7 @@
 		margin-top: @curveGap;
 		height: @straightHeight + @gateOffset;
 		content: 'XOR';
-		line-height: @straightHeight + @tipRadius * .56;
+		.scaleValue(line-height, @straightHeight + @tipRadius * .56);
 	}
 
 	// The original circle from .OrGate() is now the upper 
@@ -534,7 +540,7 @@
 	&:after {
 		display: block;
 		content: 'AND';
-		line-height: 5rem - @gateWidth / 5;
+		.scaleValue(line-height, 5rem - @gateWidth / 5);
 		.GateLabel();
 	}
 }
