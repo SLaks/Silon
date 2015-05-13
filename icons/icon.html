@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<style>
+		.Gate.OR {
+			position: relative;
+			width: 4rem;
+			height: 5.13987789rem;
+			z-index: 0;
+			margin-top: -0.44706703rem;
+			overflow: hidden;
+		}
+
+			.Gate.OR:after {
+				content: '';
+				display: block;
+				height: 1.13987789rem;
+				background-color: #e0e0e0;
+				border-left: 0.125rem solid #ffa000;
+				border-right: 0.125rem solid #ffa000;
+				-webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+				transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+				font-size: 1.4rem;
+				text-align: center;
+				line-height: 66.23804621px;
+				position: relative;
+				z-index: 1;
+			}
+
+		@media (max-width: 480px) {
+			.Gate.OR:after {
+				line-height: 33.1190231px;
+			}
+		}
+
+		.Gate.OR:before {
+			content: '';
+			width: 7.2rem;
+			height: 7.2rem;
+			display: block;
+			border-radius: 50%;
+			position: absolute;
+			left: -1.6rem;
+			box-sizing: border-box;
+			background-color: #fff3e0;
+			border: 0.125rem solid #ffa000;
+			top: -6.48rem;
+			z-index: 2;
+		}
+
+		.Gate.OR span {
+			display: block;
+			position: absolute;
+			top: 1.13987789rem;
+			height: 4rem;
+			width: 2rem;
+			overflow: hidden;
+		}
+
+			.Gate.OR span:before {
+				content: '';
+				display: block;
+				background-color: #e0e0e0;
+				border-bottom: 0.125rem solid #ffa000;
+				position: absolute;
+				height: 4rem;
+				width: 4rem;
+				-webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+				transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+			}
+
+			.Gate.OR span:first-child {
+				left: 0;
+			}
+
+				.Gate.OR span:first-child:before {
+					border-left: 0.125rem solid #ffa000;
+					border-bottom-left-radius: 4rem;
+				}
+
+			.Gate.OR span + span {
+				right: 0;
+			}
+
+				.Gate.OR span + span:before {
+					right: 0;
+					border-right: 0.125rem solid #ffa000;
+					border-bottom-right-radius: 4rem;
+				}
+
+
+			.Gate.OR span:before,
+			.Gate.OR:after {
+				background-color: #ffc107;
+			}
+	</style>
+</head>
+<body>
+	<div class="Gate OR">
+		<span></span>
+		<span></span>
+	</div>
+
+</body>
+</html>
