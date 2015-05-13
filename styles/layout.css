@@ -188,6 +188,7 @@ p + .Canvas {
 .IconList {
   position: fixed;
   bottom: 32px;
+  z-index: 100;
   right: 26px;
   display: -webkit-box;
   display: -webkit-flex;
