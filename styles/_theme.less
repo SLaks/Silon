@@ -51,8 +51,8 @@
 	}
 }
 
-// Draws a box around a value (input or computed result).  The caller 
-// must apply background-color: @activeColor when the value is active
+// Draws a boxed a value (input or computed result).  The
+// caller must extend .ActiveValueBox when active.
 .ValueBox() {
 	display: block;
 	.square(@valueSize);
@@ -60,14 +60,15 @@
 	background-color: @inactiveColor;
 	border: @border;
 	transition: background @transitionDuration;
-}
 
-// Draws the content of a value. The caller must apply
-// .ActiveValueContent() whenever the value is active.
-.ValueContent() {
 	position: relative;
 	overflow: hidden;
+
 	&:after {
+		// Make the text element cover the parent border
+		margin-left: -@borderThickness;
+		margin-top: -@borderThickness;
+
 		white-space: pre;
 		content: '0\00000a1';
 		font-size: 2rem;
@@ -101,53 +102,48 @@
 .Connectors.Active			{ .ColorizeConnectors(@activeColor);		}
 .Connectors.ActiveHover		{ .ColorizeConnectors(@activeHoverColor);	}
 
-// Applies active styles to a .ValueContent() element
-.ActiveValueContent {
+// Applies active styles to a .ValueBox() element
+.ActiveValueBox {
+	background-color: @activeColor;
 	&:after {
 		top: -@valueSize;
 	}
 }
 
 .Canvas input[type=checkbox] {
-	.square(@valueSize);
-	margin: -@borderThickness;
-	padding: 0;
-	cursor: pointer;
-	transition: box-shadow @transitionDuration;
-
-	&:before {
-		content: '';
+	// Hide the checkbox (but make sure it's still focusable), and draw
+	// the subsequent label instead, since only Chrome allows :after on
+	// checkboxes.
+	opacity: 0;
+	position: absolute;
+	left: -9999px;
+	+ label {
+		.square(@valueSize);
+		margin: -@borderThickness;
+		padding: 0;
+		cursor: pointer;
+		transition: box-shadow @transitionDuration;
 		.ValueBox();
-	}
-	&:checked:before {
-		background-color: @activeColor;
-	}
-	&:focus {
-		box-shadow: 0 0 5px 2px #E65100;
-		outline: none;
-	}
 
-	.ValueContent();
-	&:checked {
-		&:extend(.ActiveValueContent all);
-		&:extend(.Connectors.Active all);
-	}
-
-	&:hover {
-		&:before {
+		&:hover {
 			background-color: @inactiveHoverColor;
+			&:extend(.Connectors.InactiveHover all);
 		}
-		&:extend(.Connectors.Hover all);
+	}
 
-		&:checked {
-			&:before {
-				background-color: @activeHoverColor;
-			}
+	&:checked + label {
+		&:extend(.ActiveValueBox all);
+		&:extend(.Connectors.Active all);
+		&:hover {
+			background-color: @activeHoverColor;
 			&:extend(.Connectors.ActiveHover all);
 		}
 	}
-}
 
+	&:focus + label {
+		box-shadow: 0 0 5px 2px #E65100;
+	}
+}
 
 .Canvas {
 	@padding: 1rem;
@@ -369,18 +365,6 @@
 	border-radius: @valueSize / 2;
 	margin: -@borderThickness;
 	.ValueBox();
-	.ValueContent();
-
-	// Make the text element cover the parent border
-	&:after {
-		margin-left: -@borderThickness;
-		margin-top: -@borderThickness;
-	}
-}
-
-// Applied to gates when the logic gate evaluates to true.
-.On() {
-	&:extend(.OnContent all);
 }
 
 &.ActiveGate.OR {
@@ -393,8 +377,7 @@
 }
 .ActiveGate.Result {
 	+ div > .Result {
-		background-color: @activeColor;
-		&:extend(.ActiveValueContent all);
+		&:extend(.ActiveValueBox all);
 	}
 }
 

@@ -25,14 +25,16 @@
 					<li>
 						<h2>And Gate</h2>
 						<div class="Canvas" style="width: 9rem; height: 17rem;">
-							<input type="checkbox" id="simple-and-a" style="top: 0; left: 0;" />
+							<input type="checkbox" id="simple-and-a" />
+							<label for="simple-and-a" style="top: 0; left: 0;"></label>
 							<div class="Group">
 								<div class="Connector Vertical" style="top: 3rem; left: 1.5rem; height: 2rem;"></div>
 								<div class="Connector Horizontal Corner Left Up" style="top: 5rem; left: 1.5rem; width: 2rem;"></div>
 								<div class="Connector Vertical Corner Left" style="top: 5rem; left: 3.5rem; height: 2rem;"></div>
 							</div>
 
-							<input type="checkbox" id="simple-and-b" style="top: 0; left: 6rem;" />
+							<input type="checkbox" id="simple-and-b" />
+							<label for="simple-and-b" style="top: 0; left: 6rem;"></label>
 							<div class="Group">
 								<div class="Connector Vertical" style="top: 3rem; left: 7.5rem; height: 2rem;"></div>
 								<div class="Connector Horizontal Corner Right Up" style="top: 5rem; left: 5.5rem; width: 2rem;"></div>
@@ -53,7 +55,8 @@
 					<li>
 						<h2>Or Gate</h2>
 						<div class="Canvas" style="width: 9rem; height: 17rem;">
-							<input type="checkbox" id="simple-or-a" style="top: 0.5rem; left: 0;" />
+							<input type="checkbox" id="simple-or-a" />
+							<label for="simple-or-a" style="top: 0.5rem; left: 0;"></label>
 							<div class="Group">
 								<div class="Connector Vertical" style="top: 3.5rem; left: 1.5rem; height: 2rem;"></div>
 								<div class="Connector Horizontal Corner Left Up" style="top: 5.5rem; left: 1.5rem; width: 2rem;"></div>
@@ -61,7 +64,8 @@
 								<div class="Connector Vertical Convex Left" style="top: 7.5rem; left: 3.5rem;"></div>
 							</div>
 
-							<input type="checkbox" id="simple-or-b" style="top: 0.5rem; left: 6rem;" />
+							<input type="checkbox" id="simple-or-b" />
+							<label for="simple-or-b" style="top: 0.5rem; left: 6rem;"></label>
 							<div class="Group">
 								<div class="Connector Vertical" style="top: 3.5rem; left: 7.5rem; height: 2rem;"></div>
 								<div class="Connector Horizontal Corner Right Up" style="top: 5.5rem; left: 5.5rem; width: 2rem;"></div>
@@ -83,7 +87,8 @@
 					<li>
 						<h2>XOR Gate</h2>
 						<div class="Canvas" style="width: 9rem; height: 17rem;">
-							<input type="checkbox" id="simple-xor-a" style="top: 0; left: 0;" />
+							<input type="checkbox" id="simple-xor-a" />
+							<label for="simple-xor-a" style="top: 0; left: 0;"></label>
 							<div class="Group">
 								<div class="Connector Vertical" style="top: 3rem; left: 1.5rem; height: 2rem;"></div>
 								<div class="Connector Horizontal Corner Left Up" style="top: 5rem; left: 1.5rem; width: 2rem;"></div>
@@ -91,7 +96,8 @@
 								<div class="Connector Vertical Convex Left" style="top: 7rem; left: 3.5rem;"></div>
 							</div>
 
-							<input type="checkbox" id="simple-xor-b" style="top: 0; left: 6rem;" />
+							<input type="checkbox" id="simple-xor-b" />
+							<label for="simple-xor-b" style="top: 0; left: 6rem;"></label>
 							<div class="Group">
 								<div class="Connector Vertical" style="top: 3rem; left: 7.5rem; height: 2rem;"></div>
 								<div class="Connector Horizontal Corner Right Up" style="top: 5rem; left: 5.5rem; width: 2rem;"></div>
@@ -120,7 +126,8 @@
 					A <a href="http://en.wikipedia.org/wiki/Adder_%28electronics%29#Half_adder">half adder</a> adds two binary digits, returning the result (either 0, 1, or 10) in its two outputs.  The two outputs are called the carry (the tens digit) and the sum (the ones digit); the carry can be chained into a full adder to add more inputs.
 				</p>
 				<div class="Canvas" style="width: 12.5rem; height: 21rem;">
-					<input type="checkbox" id="half-adder-a" style="top: 0; left: 3.5rem;" />
+					<input type="checkbox" id="half-adder-a" />
+					<label for="half-adder-a" style="top: 0; left: 3.5rem;"></label>
 					<div class="Group">
 						<div class="Connector Vertical" style="top: 3rem; left: 5rem; height: 2rem;"></div>
 						<div class="Connector Horizontal Corner Left Up" style="top: 5rem; left: 5rem; width: 2rem;"></div>
@@ -131,7 +138,8 @@
 						<div class="Connector Vertical Corner Right" style="top: 7rem; left: 1rem; height: 4rem;"></div>
 					</div>
 
-					<input type="checkbox" id="half-adder-b" style="top: 0; left: 9.5rem;" />
+					<input type="checkbox" id="half-adder-b" />
+					<label for="half-adder-b" style="top: 0; left: 9.5rem;"></label>
 					<div class="Group">
 						<div class="Connector Vertical" style="top: 3rem; left: 11rem; height: 2rem;"></div>
 						<div class="Connector Horizontal Corner Right Up" style="top: 5rem; left: 9rem; width: 2rem;"></div>
@@ -167,7 +175,8 @@
 					A <a href="http://en.wikipedia.org/wiki/Adder_%28electronics%29#Full_adder">full adder</a> adds three binary digits, returning the result (0, 1, 10, or 11) in its two outputs.  The two outputs are called the carry-out (the tens digit) and the sum (the ones digit); the carry can be chained to another full adder to add more inputs.  The first input (which a carry-out can be chained to) is called the carry-in; the other two are usually called A and B (this designation is arbitrary; the inputs are completely symmetric).
 				</p>
 				<div class="Canvas" style="width: 21rem; height: 42rem;">
-					<input type="checkbox" id="full-adder-carry" style="top: 0; left: 6rem;" />
+					<input type="checkbox" id="full-adder-carry" />
+					<label for="full-adder-carry" style="top: 0; left: 6rem;"></label>
 					<div class="Group">
 						<div class="Connector Vertical" style="top: 3rem; left: 7.5rem; height: 2rem;"></div>
 						<div class="Connector Horizontal Corner Left Up" style="top: 5rem; left: 7.5rem; width: 4rem;"></div>
@@ -181,7 +190,8 @@
 						<div class="Connector Vertical Corner Right" style="top: 20rem; left: 7rem; height: 4rem;"></div>
 					</div>
 
-					<input type="checkbox" id="full-adder-a" style="top: 0; left: 12rem;" />
+					<input type="checkbox" id="full-adder-a" />
+					<label for="full-adder-a" style="top: 0; left: 12rem;"></label>
 					<div class="Group">
 						<div class="Connector Vertical" style="top: 3rem; left: 13.5rem; height: 2rem;"></div>
 						<div class="Connector Horizontal Corner Left Up" style="top: 5rem; left: 13.5rem; width: 2rem;"></div>
@@ -192,7 +202,8 @@
 						<div class="Connector Vertical Corner Right" style="top: 7rem; left: 1rem; height: 17rem;"></div>
 					</div>
 
-					<input type="checkbox" id="full-adder-b" style="top: 0; left: 18rem;" />
+					<input type="checkbox" id="full-adder-b" />
+					<label for="full-adder-b" style="top: 0; left: 18rem;"></label>
 					<div class="Group">
 						<div class="Connector Vertical" style="top: 3rem; left: 19.5rem; height: 2rem;"></div>
 						<div class="Connector Horizontal Corner Right Up" style="top: 5rem; left: 17.5rem; width: 2rem;"></div>
@@ -262,7 +273,8 @@
 					Here are four full adders chained together. These adders add two four-digit binary numbers (0 &ndash; 15), formed by the upper row of inputs and the lower row of inputs, resulting in the five digit binary number (which will always be &le; 30) formed by the row of outputs at the bottom.
 				</p><p> The carry-out of each adder connects to the carry-in of the next adder, forming the chain (as opposed to the single full-adder, where both the carry-in and the carry-out are directly drawn).  The right-most adder is a simple half-adder, since there is no carry-in to incorporate.  The carry-out from the left-most adder is drawn directly as the most significant digit of the output, since there is no further adder to carry to.</p>
 				<div class="Canvas" style="width: 75rem; height: 44rem;">
-					<input type="checkbox" id="chained-adder-1-a" style="top: 0; left: 68.5rem;" />
+					<input type="checkbox" id="chained-adder-1-a" />
+					<label for="chained-adder-1-a" style="top: 0; left: 68.5rem;"></label>
 					<div class="Group">
 						<div class="Connector Vertical" style="top: 3rem; left: 70rem; height: 23rem;"></div>
 						<div class="Connector Vertical Convex Left" style="top: 26rem; left: 70rem;"></div>
@@ -271,7 +283,8 @@
 						<div class="Connector Vertical Corner Right" style="top: 9rem; left: 64rem; height: 17rem;"></div>
 					</div>
 
-					<input type="checkbox" id="chained-adder-1-b" style="top: 4rem; left: 71.5rem;" />
+					<input type="checkbox" id="chained-adder-1-b" />
+					<label for="chained-adder-1-b" style="top: 4rem; left: 71.5rem;"></label>
 					<div class="Group">
 						<div class="Connector Vertical" style="top: 7rem; left: 73rem; height: 4rem;"></div>
 						<div class="Connector Horizontal Corner Right Up" style="top: 11rem; left: 66rem; width: 7rem;"></div>
@@ -307,7 +320,8 @@
 
 
 
-					<input type="checkbox" id="chained-adder-2-a" style="top: 0; left: 54rem;" />
+					<input type="checkbox" id="chained-adder-2-a" />
+					<label for="chained-adder-2-a" style="top: 0; left: 54rem;"></label>
 					<div class="Group">
 						<div class="Connector Vertical" style="top: 3rem; left: 55.5rem; height: 10rem;"></div>
 						<div class="Connector Vertical Convex Left" style="top: 13rem; left: 55.5rem;"></div>
@@ -316,7 +330,8 @@
 						<div class="Connector Vertical Corner Right" style="top: 9rem; left: 41rem; height: 17rem;"></div>
 					</div>
 
-					<input type="checkbox" id="chained-adder-2-b" style="top: 4rem; left: 57rem;" />
+					<input type="checkbox" id="chained-adder-2-b" />
+					<label for="chained-adder-2-b" style="top: 4rem; left: 57rem;"></label>
 					<div class="Group">
 						<div class="Connector Vertical" style="top: 7rem; left: 58.5rem; height: 4rem;"></div>
 
@@ -384,7 +399,8 @@
 					</div>
 
 
-					<input type="checkbox" id="chained-adder-3-a" style="top: 0; left: 34rem;" />
+					<input type="checkbox" id="chained-adder-3-a" />
+					<label for="chained-adder-3-a" style="top: 0; left: 34rem;"></label>
 					<div class="Group">
 						<div class="Connector Vertical" style="top: 3rem; left: 35.5rem; height: 10rem;"></div>
 						<div class="Connector Vertical Convex Left" style="top: 13rem; left: 35.5rem;"></div>
@@ -393,7 +409,8 @@
 						<div class="Connector Vertical Corner Right" style="top: 9rem; left: 21rem; height: 17rem;"></div>
 					</div>
 
-					<input type="checkbox" id="chained-adder-3-b" style="top: 4rem; left: 37rem;" />
+					<input type="checkbox" id="chained-adder-3-b" />
+					<label for="chained-adder-3-b" style="top: 4rem; left: 37rem;"></label>
 					<div class="Group">
 						<div class="Connector Vertical" style="top: 7rem; left: 38.5rem; height: 4rem;"></div>
 
@@ -461,7 +478,8 @@
 					</div>
 
 
-					<input type="checkbox" id="chained-adder-4-a" style="top: 0; left: 14rem;" />
+					<input type="checkbox" id="chained-adder-4-a" />
+					<label for="chained-adder-4-a" style="top: 0; left: 14rem;"></label>
 					<div class="Group">
 						<div class="Connector Vertical" style="top: 3rem; left: 15.5rem; height: 10rem;"></div>
 						<div class="Connector Vertical Convex Left" style="top: 13rem; left: 15.5rem;"></div>
@@ -470,7 +488,8 @@
 						<div class="Connector Vertical Corner Right" style="top: 9rem; left: 1rem; height: 17rem;"></div>
 					</div>
 
-					<input type="checkbox" id="chained-adder-4-b" style="top: 4rem; left: 17rem;" />
+					<input type="checkbox" id="chained-adder-4-b" />
+					<label for="chained-adder-4-b" style="top: 4rem; left: 17rem;"></label>
 					<div class="Group">
 						<div class="Connector Vertical" style="top: 7rem; left: 18.5rem; height: 4rem;"></div>
 

@@ -8,13 +8,15 @@
   }
 }
 .Connectors.InactiveHover + div > .Connector,
-.Connectors.InactiveHover + div > .Connector:before {
+.Connectors.InactiveHover + div > .Connector:before,
+.Canvas input[type=checkbox] + label:hover + div > .Connector,
+.Canvas input[type=checkbox] + label:hover + div > .Connector:before {
   background-color: #b3e5fc;
 }
 .Connectors.Active + div > .Connector,
 .Connectors.Active + div > .Connector:before,
-.Canvas input[type=checkbox]:checked + div > .Connector,
-.Canvas input[type=checkbox]:checked + div > .Connector:before,
+.Canvas input[type=checkbox]:checked + label + div > .Connector,
+.Canvas input[type=checkbox]:checked + label + div > .Connector:before,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + div > .Connector,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + div > .Connector:before,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + div > .Connector,
@@ -59,12 +61,32 @@
 }
 .Connectors.ActiveHover + div > .Connector,
 .Connectors.ActiveHover + div > .Connector:before,
-.Canvas input[type=checkbox]:hover:checked + div > .Connector,
-.Canvas input[type=checkbox]:hover:checked + div > .Connector:before {
+.Canvas input[type=checkbox]:checked + label:hover + div > .Connector,
+.Canvas input[type=checkbox]:checked + label:hover + div > .Connector:before {
   background-color: #ffb300;
 }
-.ActiveValueContent:after,
-.Canvas input[type=checkbox]:checked:after,
+.ActiveValueBox,
+.Canvas input[type=checkbox]:checked + label,
+.ActiveGate.Result + div > .Result,
+#simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + div > .Result,
+#simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + div > .Result,
+#simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + div > .Result,
+#simple-or-a:checked ~ #simple-or-gate + div > .Result,
+#simple-or-b:checked ~ #simple-or-gate + div > .Result,
+#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + div > .Result,
+#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + div > .Result,
+#half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + div > .Result,
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + div > .Result,
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-or-gate-carry-out + div > .Result,
+#full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + div > .Result,
+#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + div > .Result,
+#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + div > .Result,
+#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + div > .Result,
+#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + div > .Result {
+  background-color: #ffc107;
+}
+.ActiveValueBox:after,
+.Canvas input[type=checkbox]:checked + label:after,
 .ActiveGate.Result + div > .Result:after,
 #simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + div > .Result:after,
 #simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + div > .Result:after,
@@ -84,18 +106,16 @@
   top: -3.25rem;
 }
 .Canvas input[type=checkbox] {
-  width: 3.25rem;
-  height: 3.25rem;
+  opacity: 0;
+  position: absolute;
+  left: -9999px;
+}
+.Canvas input[type=checkbox] + label {
   margin: -0.125rem;
   padding: 0;
   cursor: pointer;
   -webkit-transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-  position: relative;
-  overflow: hidden;
-}
-.Canvas input[type=checkbox]:before {
-  content: '';
   display: block;
   width: 3.25rem;
   height: 3.25rem;
@@ -104,15 +124,12 @@
   border: 0.125rem solid #ffa000;
   -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  position: relative;
+  overflow: hidden;
 }
-.Canvas input[type=checkbox]:checked:before {
-  background-color: #ffc107;
-}
-.Canvas input[type=checkbox]:focus {
-  box-shadow: 0 0 5px 2px #E65100;
-  outline: none;
-}
-.Canvas input[type=checkbox]:after {
+.Canvas input[type=checkbox] + label:after {
+  margin-left: -0.125rem;
+  margin-top: -0.125rem;
   white-space: pre;
   content: '0\00000a1';
   font-size: 2rem;
@@ -126,11 +143,14 @@
   -webkit-transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
-.Canvas input[type=checkbox]:hover:before {
+.Canvas input[type=checkbox] + label:hover {
   background-color: #b3e5fc;
 }
-.Canvas input[type=checkbox]:hover:checked:before {
+.Canvas input[type=checkbox]:checked + label:hover {
   background-color: #ffb300;
+}
+.Canvas input[type=checkbox]:focus + label {
+  box-shadow: 0 0 5px 2px #E65100;
 }
 .Canvas {
   position: relative;
@@ -302,6 +322,8 @@
   overflow: hidden;
 }
 .Result:after {
+  margin-left: -0.125rem;
+  margin-top: -0.125rem;
   white-space: pre;
   content: '0\00000a1';
   font-size: 2rem;
@@ -314,10 +336,6 @@
   top: 0;
   -webkit-transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-}
-.Result:after {
-  margin-left: -0.125rem;
-  margin-top: -0.125rem;
 }
 .ActiveGate.OR span:before,
 .ActiveGate.OR:after,
@@ -359,24 +377,6 @@
 #full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-and-gate-sum,
 #full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-and-gate-sum,
 #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-and-gate-input {
-  background-color: #ffc107;
-}
-.ActiveGate.Result + div > .Result,
-#simple-xor-a:not(:checked) ~ #simple-xor-b:checked ~ #simple-xor-gate + div > .Result,
-#simple-xor-a:checked ~ #simple-xor-b:not(:checked) ~ #simple-xor-gate + div > .Result,
-#simple-and-a:checked ~ #simple-and-b:checked ~ #simple-and-gate + div > .Result,
-#simple-or-a:checked ~ #simple-or-gate + div > .Result,
-#simple-or-b:checked ~ #simple-or-gate + div > .Result,
-#half-adder-a:not(:checked) ~ #half-adder-b:checked ~ #half-adder-xor-gate + div > .Result,
-#half-adder-a:checked ~ #half-adder-b:not(:checked) ~ #half-adder-xor-gate + div > .Result,
-#half-adder-a:checked ~ #half-adder-b:checked ~ #half-adder-and-gate + div > .Result,
-#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + div > .Result,
-#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-or-gate-carry-out + div > .Result,
-#full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-or-gate-carry-out + div > .Result,
-#full-adder-carry:not(:checked) ~ #full-adder-a:not(:checked) ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + div > .Result,
-#full-adder-carry:not(:checked) ~ #full-adder-a:checked ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + div > .Result,
-#full-adder-carry:checked ~ #full-adder-a:not(:checked) ~ #full-adder-b:not(:checked) ~ #full-adder-xor-gate-carry + div > .Result,
-#full-adder-carry:checked ~ #full-adder-a:checked ~ #full-adder-b:checked ~ #full-adder-xor-gate-carry + div > .Result {
   background-color: #ffc107;
 }
 .Gate.OR {
