@@ -18,7 +18,7 @@ nav {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	overflow: auto;
+	overflow: auto hidden;
 
 	> a {
 		display: flex;
@@ -35,8 +35,9 @@ nav {
 			font-size: 12px;
 		}
 		padding: 0 24px;
+		box-sizing: border-box;
 		position: relative;
-		transition: color .2s @easing, background-color .4s @easing, border .4s @easing, height .4s @easing;
+		transition: color .2s @easing, background-color .4s @easing, border .4s @easing;
 
 		&:hover {
 			color: rgba(255,255,255, .87) !important;
@@ -46,10 +47,6 @@ nav {
 			color: rgba(255,255,255, .87) !important;
 			outline: none;
 			background-color: #7986CB;
-			// Subtract from the declared height so that the border
-			// doesn't consume more space.  Using box-sizing breaks
-			// the active bar.
-			height: @tabHeight - @indicatorHeight;
 			border-bottom: #5C6BC0 solid @indicatorHeight;
 		}
 
@@ -70,11 +67,10 @@ nav {
 
 	> a:target {
 		color: white !important;
-		border-bottom-color: #FFC107;	// Override the focus style
 
 		&:before {
 			top: @tabHeight - @indicatorHeight;
-			bottom: 0;
+			bottom: -@indicatorHeight;
 			opacity: 1;
 			// This transition applies when entering active state; do not animate the opacity.
 			transition: bottom @duration @easing, top .4s @easing;

@@ -19,7 +19,7 @@ nav {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  overflow: auto;
+  overflow: auto hidden;
 }
 nav > a {
   display: -webkit-box;
@@ -39,9 +39,10 @@ nav > a {
   font-weight: bold;
   font-size: 14px;
   padding: 0 24px;
+  box-sizing: border-box;
   position: relative;
-  -webkit-transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), border 0.4s cubic-bezier(0.4, 0, 0.2, 1), height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-          transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), border 0.4s cubic-bezier(0.4, 0, 0.2, 1), height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), border 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), border 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media (max-width: 680px) {
   nav > a {
@@ -55,7 +56,6 @@ nav > a:focus {
   color: rgba(255, 255, 255, 0.87) !important;
   outline: none;
   background-color: #7986CB;
-  height: 60px;
   border-bottom: #5c6bc0 solid 4px;
 }
 nav > a:before {
@@ -73,11 +73,10 @@ nav > a:before {
 }
 nav > a:target {
   color: white !important;
-  border-bottom-color: #FFC107;
 }
 nav > a:target:before {
   top: 60px;
-  bottom: 0;
+  bottom: -4px;
   opacity: 1;
   -webkit-transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1), top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
           transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1), top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
