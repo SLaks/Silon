@@ -11,7 +11,7 @@ body {
 
 nav {
 	@tabHeight: 64px;
-	@indicatorHeight: 2px;
+	@indicatorHeight: 4px;
 
 	background-color: #3F51B5;
 	box-shadow: 0 0 4px rgba(0, 0, 0, 0.14),0 4px 8px rgba(0, 0, 0, 0.28);
@@ -26,6 +26,7 @@ nav {
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
+		background-color: #3F51B5;
 		color: rgba(255,255,255, .54) !important;
 		height: @tabHeight;
 		font-weight: bold;
@@ -35,10 +36,21 @@ nav {
 		}
 		padding: 0 24px;
 		position: relative;
-		transition: color .2s @easing;
+		transition: color .2s @easing, background-color .4s @easing, border .4s @easing, height .4s @easing;
 
 		&:hover {
 			color: rgba(255,255,255, .87) !important;
+		}
+
+		&:focus {
+			color: rgba(255,255,255, .87) !important;
+			outline: none;
+			background-color: #7986CB;
+			// Subtract from the declared height so that the border
+			// doesn't consume more space.  Using box-sizing breaks
+			// the active bar.
+			height: @tabHeight - @indicatorHeight;
+			border-bottom: #5C6BC0 solid @indicatorHeight;
 		}
 
 		&:before {
@@ -58,6 +70,7 @@ nav {
 
 	> a:target {
 		color: white !important;
+		border-bottom-color: #FFC107;	// Override the focus style
 
 		&:before {
 			top: @tabHeight - @indicatorHeight;
