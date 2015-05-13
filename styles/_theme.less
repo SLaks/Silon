@@ -119,10 +119,10 @@
 .Canvas input[type=checkbox] {
 	// Hide the checkbox (but make sure it's still focusable), and draw
 	// the subsequent label instead, since only Chrome allows :after on
-	// checkboxes.
+	// checkboxes. To preserve scrolling behavior on focus, the <input>
+	// must be explicitly positioned at the same location as the label.
 	opacity: 0;
-	position: absolute;
-	left: -9999px;
+
 	+ label {
 		.square(@valueSize);
 		margin: -@borderThickness;

@@ -107,8 +107,6 @@
 }
 .Canvas input[type=checkbox] {
   opacity: 0;
-  position: absolute;
-  left: -9999px;
 }
 .Canvas input[type=checkbox] + label {
   margin: -0.125rem;
