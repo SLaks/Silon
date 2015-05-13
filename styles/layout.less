@@ -169,9 +169,12 @@ p + .Canvas {
 }
 
 .IconList {
+	@width: 24px;
+	@focusWidth: @width * 1.5;
+
 	position: fixed;
 	bottom: 32px;
-	right: 32px;
+	right: 32px - (@focusWidth - @width) / 2;
 	display: flex;
 	align-items: center;
 	list-style-type: none;
@@ -179,18 +182,33 @@ p + .Canvas {
 	padding: 0;
 
 	a {
-		display: block;
-		opacity: .7;
-		transition: opacity @duration @easing;
-		margin-left: 12px;
+		display: flex;
+		align-items: center;
+		margin-left: 6px;
+		// Give the icon enough room to grow when focused
+		width: @focusWidth;
+		height: 32px;
 
 		svg {
+			opacity: .7;
 			display: block;
-			width: 24px;
+			width: @width;
+			transition: opacity @duration @easing, width @duration @easing, margin-left @duration @easing;
+
+			&:hover {
+				opacity: 1;
+			}
 		}
 
-		&:hover {
-			opacity: 1;
+		&:focus {
+			outline: none;
+
+			svg {
+				opacity: 1;
+				// Move the icon to the left so that it stays centered
+				margin-left: -(@focusWidth - @width) / 2;
+				width: @focusWidth;
+			}
 		}
 	}
 }

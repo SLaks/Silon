@@ -180,7 +180,7 @@ p + .Canvas {
 .IconList {
   position: fixed;
   bottom: 32px;
-  right: 32px;
+  right: 26px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -194,18 +194,35 @@ p + .Canvas {
   padding: 0;
 }
 .IconList a {
-  display: block;
-  opacity: .7;
-  -webkit-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-          transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  margin-left: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 6px;
+  width: 36px;
+  height: 32px;
 }
 .IconList a svg {
+  opacity: .7;
   display: block;
   width: 24px;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), width 0.3s cubic-bezier(0.4, 0, 0.2, 1), margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), width 0.3s cubic-bezier(0.4, 0, 0.2, 1), margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.IconList a:hover {
+.IconList a svg:hover {
   opacity: 1;
+}
+.IconList a:focus {
+  outline: none;
+}
+.IconList a:focus svg {
+  opacity: 1;
+  margin-left: -6px;
+  width: 36px;
 }
 
 /*# sourceMappingURL=layout.css.map */
