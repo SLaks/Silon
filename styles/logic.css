@@ -114,16 +114,14 @@
   margin: -0.125rem;
   padding: 0;
   cursor: pointer;
-  -webkit-transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-          transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  -webkit-transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 0.3s, background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+          transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 0.3s, background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
   display: block;
   width: 3.25rem;
   height: 3.25rem;
   box-sizing: border-box;
   background-color: #e0e0e0;
   border: 0.125rem solid #ffa000;
-  -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-          transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
   position: relative;
   overflow: hidden;
 }

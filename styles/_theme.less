@@ -65,7 +65,7 @@
 	box-sizing: border-box;
 	background-color: @inactiveColor;
 	border: @border;
-	transition: background @transitionDuration;
+	transition+: background @transitionDuration;
 
 	position: relative;
 	overflow: hidden;
@@ -128,7 +128,7 @@
 		margin: -@borderThickness;
 		padding: 0;
 		cursor: pointer;
-		transition: box-shadow @transitionDuration;
+		transition+: box-shadow @transitionDuration;
 		.ValueBox();
 
 		&:hover {
