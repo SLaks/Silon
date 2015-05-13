@@ -167,3 +167,30 @@ p {
 p + .Canvas {
 	margin-top: 3rem;
 }
+
+.IconList {
+	position: fixed;
+	bottom: 32px;
+	right: 32px;
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	a {
+		display: block;
+		opacity: .7;
+		transition: opacity @duration @easing;
+		margin-left: 12px;
+
+		svg {
+			display: block;
+			width: 24px;
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}

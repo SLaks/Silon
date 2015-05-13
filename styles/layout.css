@@ -177,5 +177,35 @@ p {
 p + .Canvas {
   margin-top: 3rem;
 }
+.IconList {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.IconList a {
+  display: block;
+  opacity: .7;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: 12px;
+}
+.IconList a svg {
+  display: block;
+  width: 24px;
+}
+.IconList a:hover {
+  opacity: 1;
+}
 
 /*# sourceMappingURL=layout.css.map */
