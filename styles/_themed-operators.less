@@ -1,0 +1,85 @@
+﻿@import "_operators";
+
+// These mixins call .op() and pass a result selector 
+// that colorizes the gate with the given ID, as well
+// as the following connectors & result. They'll also 
+// colorize results of intermediate chained selectors
+// (you must pass a result ID when chaining as well).
+// If the same operation is used more than once, pass
+// none as the result of the second one to prevent an
+// extra selector set.
+
+// The mixins extend ActiveGate selectors to colorize
+// the results.  These selectors must be included (by
+// reference) from gate-theme.less to use this file.
+
+// This is called for the outermost layer.
+.coloredOp(@first, @operation, @second, @output, @result: hasResult) when (@operation = and), (@operation = xor), (@operation = or) {
+	@combinatedOutput: %(~'~ #%s', replace(@output, '^#', ''));
+	#private.callProbe(@first);
+	#private.callProbe(@second);
+	.op(@first, @operation, @second, {
+		@{combinatedOutput}:extend(.Connectors.Active all) { }
+		@{combinatedOutput}:extend(.ActiveGate.OR all) when (@operation = or) {}
+		@{combinatedOutput}:extend(.ActiveGate.AND all) when (@operation = and) {}
+		@{combinatedOutput}:extend(.ActiveGate.XOR all) when (@operation = xor) {}
+		@{combinatedOutput}:extend(.ActiveGate.Result all) when (@result = hasResult) { }
+	});
+}
+
+// This is called for chained selectors.
+// The first overload will be invoked by
+// the outer layer to colorize this part
+// of the chain.  The second overload is
+// invoked by normal chaining and simply
+// passes through to the actual .op(). I
+// reuse the @c parameter passthrough to
+// disambiguate.
+.coloredOp(probe, @first, @operation, @second, @output) when not (@output = none) {
+	.coloredOp(@first, @operation, @second, @output, noResult);
+}
+.coloredOp(root, @first, @operation, @second, @output) {
+	.coloredOp(@first, @operation, @second, @output, hasResult);
+}
+.coloredOp(@mode, @first, @operation, @second, @output) when (length(@mode) > 1) {
+	.op(@mode, @first, @operation, @second);
+}
+
+#private {
+	.callProbe(@operand) when not (iskeyword(@operand)) and not (isstring(@operand)) {
+		@operand();
+		.c(probe);
+	}
+}
+
+// Creates a single full adder.  This rule can be chained as an input
+// like a simple .op() call, producing the carry-out.  When called at
+// the root level, pass the literal `root` as @c.
+.fullAdder(@c, @prefix, @carryIn) {
+	@prefixFormat: %(~'#%s-%%s', @prefix);
+	.coloredOp(@c,
+		{ .c(@c) { .coloredOp(@c,
+			@carryIn,
+			and,
+			{ .c(@c) { .coloredOp(@c, %(@prefixFormat, a), xor, %(@prefixFormat, b), %(@prefixFormat, xor-gate-input)); } },
+			%(@prefixFormat, and-gate-sum)
+		); } },
+		or,
+		{ .c(@c) { .coloredOp(@c, %(@prefixFormat, a), and, %(@prefixFormat, b), %(@prefixFormat, and-gate-input)) } },
+		%(@prefixFormat, or-gate-carry-out)
+	);
+}
+
+// Colorizes the sum output from a single full adder.  This is
+// not called when chaining as an operator, but is called when
+// probing to colorized chained operators.
+.fullAdder(@mode, @prefix, @carryIn) when (@mode = root), (@mode = probe) {
+	@prefixFormat: %(~'#%s-%%s', @prefix);
+	.coloredOp(
+		// When passing a nested selector as the carryIn, don't probe it a second time.
+		{ .c(@c) when not (@c = probe) { .callSelector(@carryIn, @c); } },
+		xor,
+		{ .c(@c) { .coloredOp(@c, %(@prefixFormat, a), xor, %(@prefixFormat, b), none); } },
+		%(@prefixFormat, xor-gate-carry)
+	);
+}
