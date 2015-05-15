@@ -1,4 +1,4 @@
-﻿#Silon
+﻿#![logo](icons/android-chrome-36x36.png) [Silon](http://silon.slaks.net)
 _Adders and logic gates in pure CSS_
 
 Silon is an experiment in the true power of CSS selectors.  Most people would not expect CSS selectors to be capable of expressing arbitrary boolean logic.  However, thanks to the sibling selector (AND), the comma selector (OR), and the `:not()` selector, this is actually completely possible.
