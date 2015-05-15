@@ -126,3 +126,6 @@ You can also create "function" mixins that encapsulate complex logical operation
 If the function also has its own terminal outputs, it should declare them in a separate overload with `when (@c = root), (@c = probe)`, containing as many other `.coloredOp()` calls as necessary.
 
 For an example, see the end of [_themed-operators.less](styles/_themed-operators.less), called in [chained-adder.less](styles/chained-adder.less)
+
+##Decimal adder
+The decimal adder has nothing to do with logic gates; it's just a cool demonstration of what can be done with pure CSS.  It creates a strip of numbers from `0` through the largest possible sum of the inputs, and offsets the strip by the value of each binary `1` digit when checked.  In effect, the math happens in the browser's layout engine, by adding the margins of the elements before the strip.

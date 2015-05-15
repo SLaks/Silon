@@ -1,0 +1,140 @@
+﻿@import "_variables.less";
+
+// The number of binary digits in each input number.
+// To change the input size, simply adjust this, and
+// add more HTML elements for the new input digits.
+@digitCount: 5;
+// The (square) size of each digit
+@digitSize: 32px;
+
+.DecimalAdder {
+	position: relative;
+	overflow: hidden;
+	font-size: .7 * @digitSize;
+	width: (@digitCount + 1) * @digitSize;
+	height: @digitSize;
+	padding-top: 2 * @digitSize;
+
+	&:before {
+		// This pseudo-element holds the plus sign and divider between the two operands and the result.
+		content: '+';
+		padding-left: 4px;
+		line-height: @digitSize;
+		box-sizing: padding-box;
+		display: block;
+		position: absolute;
+		left: @digitSize / 2;
+		top: @digitSize + 0;
+		height: @digitSize;
+		width: (@digitCount + 1) * @digitSize;
+		border-bottom: solid 1px black;
+	}
+
+	&:after {
+		// This pseudo-element holds the strip of results, and is statically laid out after the offsetting elements.
+		.CountTo(2 * (pow(2, @digitCount) - 1), '\00000a');
+		content: @resultEven;
+		display: block;
+		text-align: right;
+		white-space: pre;
+		padding-right: @digitSize / 4;
+		line-height: @digitSize;
+		margin-top: -2px * @digitCount;
+	}
+
+	input {
+		opacity: 0;
+		position: absolute;
+		top: -@digitSize;
+	}
+
+	label {
+		// The <label>s, which correspond to their adjacent <input>s,
+		// display the value of the input.
+		overflow: hidden;
+		display: block;
+		height: @digitSize;
+		width: @digitSize;
+		cursor: pointer;
+		text-align: center;
+		position: absolute;
+		background: white;
+		transition: border-color @duration @easing;
+		box-sizing: border-box;
+		border: 1px solid white;
+
+		&:after {
+			content: '0\00000a1';
+			white-space: pre;
+			line-height: @digitSize;
+			position: relative;
+			top: -1px; // Cover the parent border
+			transition: top @duration @easing;
+		}
+	}
+
+	input:checked + div + label:after {
+		top: -@digitSize - 1px;
+	}
+
+	input:focus + div + label {
+		border-color: #FFC107;
+	}
+
+	label[for^="decimal-adder-a"] {
+		top: 0;
+	}
+
+	label[for^="decimal-adder-b"] {
+		top: @digitSize;
+	}
+
+	input + div {
+		// These divs gain negative margins when the <input>s are on to offset the result.
+		margin-top: 0;
+		height: 1px; // Prevents margin collapse
+	}
+
+	.Digit(@digitCount - 1);
+}
+
+.Digit(@logarithm) {
+	// Sets the location and offset for each pair of input digits
+	@value: pow(2, @logarithm);
+
+	#decimal-adder-a-@{logarithm}, #decimal-adder-b-@{logarithm} {
+		+ div {
+			transition: margin-top .1s * @value @easing;
+		}
+
+		&:checked + div {
+			margin-top: -@value * @digitSize;
+		}
+	}
+
+	label[for^="decimal-adder"][for$="-@{logarithm}"] {
+		right: @logarithm * @digitSize;
+	}
+}
+
+.Digit(@index) when (@index > 0) {
+	.Digit(@index - 1);
+}
+
+// Joins the numbers from 0 through @count.
+// Produces either resultEven or resultOdd,
+// because LESS variables can't be assigned
+// recursively.
+.CountTo(0, @separator) {
+	@resultEven: '0';
+}
+
+.CountTo(@count, @separator) when (@count > 0) and (mod(@count, 2) = 0) {
+	.CountTo(@count - 1, @separator);
+	@resultEven: %('%s%s%d', @resultOdd, @separator, @count);
+}
+
+.CountTo(@count, @separator) when (mod(@count, 2) = 1) {
+	.CountTo(@count - 1, @separator);
+	@resultOdd: %('%s%s%d', @resultEven, @separator, @count);
+}

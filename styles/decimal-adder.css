@@ -1,0 +1,136 @@
+.DecimalAdder {
+  position: relative;
+  overflow: hidden;
+  font-size: 22.4px;
+  width: 192px;
+  height: 32px;
+  padding-top: 64px;
+}
+.DecimalAdder:before {
+  content: '+';
+  padding-left: 4px;
+  line-height: 32px;
+  box-sizing: padding-box;
+  display: block;
+  position: absolute;
+  left: 16px;
+  top: 32px;
+  height: 32px;
+  width: 192px;
+  border-bottom: solid 1px black;
+}
+.DecimalAdder:after {
+  content: '0\00000a1\00000a2\00000a3\00000a4\00000a5\00000a6\00000a7\00000a8\00000a9\00000a10\00000a11\00000a12\00000a13\00000a14\00000a15\00000a16\00000a17\00000a18\00000a19\00000a20\00000a21\00000a22\00000a23\00000a24\00000a25\00000a26\00000a27\00000a28\00000a29\00000a30\00000a31\00000a32\00000a33\00000a34\00000a35\00000a36\00000a37\00000a38\00000a39\00000a40\00000a41\00000a42\00000a43\00000a44\00000a45\00000a46\00000a47\00000a48\00000a49\00000a50\00000a51\00000a52\00000a53\00000a54\00000a55\00000a56\00000a57\00000a58\00000a59\00000a60\00000a61\00000a62';
+  display: block;
+  text-align: right;
+  white-space: pre;
+  padding-right: 8px;
+  line-height: 32px;
+  margin-top: -10px;
+}
+.DecimalAdder input {
+  opacity: 0;
+  position: absolute;
+  top: -32px;
+}
+.DecimalAdder label {
+  overflow: hidden;
+  display: block;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  text-align: center;
+  position: absolute;
+  background: white;
+  -webkit-transition: border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+  border: 1px solid white;
+}
+.DecimalAdder label:after {
+  content: '0\00000a1';
+  white-space: pre;
+  line-height: 32px;
+  position: relative;
+  top: -1px;
+  -webkit-transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.DecimalAdder input:checked + div + label:after {
+  top: -33px;
+}
+.DecimalAdder input:focus + div + label {
+  border-color: #FFC107;
+}
+.DecimalAdder label[for^="decimal-adder-a"] {
+  top: 0;
+}
+.DecimalAdder label[for^="decimal-adder-b"] {
+  top: 32px;
+}
+.DecimalAdder input + div {
+  margin-top: 0;
+  height: 1px;
+}
+.DecimalAdder #decimal-adder-a-4 + div,
+.DecimalAdder #decimal-adder-b-4 + div {
+  -webkit-transition: margin-top 1.6s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: margin-top 1.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.DecimalAdder #decimal-adder-a-4:checked + div,
+.DecimalAdder #decimal-adder-b-4:checked + div {
+  margin-top: -512px;
+}
+.DecimalAdder label[for^="decimal-adder"][for$="-4"] {
+  right: 128px;
+}
+.DecimalAdder #decimal-adder-a-3 + div,
+.DecimalAdder #decimal-adder-b-3 + div {
+  -webkit-transition: margin-top 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: margin-top 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.DecimalAdder #decimal-adder-a-3:checked + div,
+.DecimalAdder #decimal-adder-b-3:checked + div {
+  margin-top: -256px;
+}
+.DecimalAdder label[for^="decimal-adder"][for$="-3"] {
+  right: 96px;
+}
+.DecimalAdder #decimal-adder-a-2 + div,
+.DecimalAdder #decimal-adder-b-2 + div {
+  -webkit-transition: margin-top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: margin-top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.DecimalAdder #decimal-adder-a-2:checked + div,
+.DecimalAdder #decimal-adder-b-2:checked + div {
+  margin-top: -128px;
+}
+.DecimalAdder label[for^="decimal-adder"][for$="-2"] {
+  right: 64px;
+}
+.DecimalAdder #decimal-adder-a-1 + div,
+.DecimalAdder #decimal-adder-b-1 + div {
+  -webkit-transition: margin-top 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: margin-top 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.DecimalAdder #decimal-adder-a-1:checked + div,
+.DecimalAdder #decimal-adder-b-1:checked + div {
+  margin-top: -64px;
+}
+.DecimalAdder label[for^="decimal-adder"][for$="-1"] {
+  right: 32px;
+}
+.DecimalAdder #decimal-adder-a-0 + div,
+.DecimalAdder #decimal-adder-b-0 + div {
+  -webkit-transition: margin-top 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: margin-top 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.DecimalAdder #decimal-adder-a-0:checked + div,
+.DecimalAdder #decimal-adder-b-0:checked + div {
+  margin-top: -32px;
+}
+.DecimalAdder label[for^="decimal-adder"][for$="-0"] {
+  right: 0px;
+}
+
+/*# sourceMappingURL=decimal-adder.css.map */
