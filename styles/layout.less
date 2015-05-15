@@ -37,17 +37,20 @@ nav {
 		padding: 0 24px;
 		box-sizing: border-box;
 		position: relative;
-		transition: color .2s @easing, background-color .4s @easing, border .4s @easing;
+		// Add a border to change color on focus, but keep the text vertically centered.
+		padding-top: @indicatorHeight;
+		border-bottom: #3F51B5 solid @indicatorHeight;
+		transition: color .2s @easing, background-color .4s @easing, border-bottom-color .4s @easing;
 
 		&:hover {
 			color: rgba(255,255,255, .87) !important;
 		}
 
-		&:focus {
+		&:focus, &:active {
 			color: rgba(255,255,255, .87) !important;
 			outline: none;
 			background-color: #7986CB;
-			border-bottom: #5C6BC0 solid @indicatorHeight;
+			border-bottom-color: #5C6BC0;
 		}
 
 		&:before {

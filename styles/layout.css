@@ -41,8 +41,10 @@ nav > a {
   padding: 0 24px;
   box-sizing: border-box;
   position: relative;
-  -webkit-transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), border 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-          transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), border 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding-top: 4px;
+  border-bottom: #3f51b5 solid 4px;
+  -webkit-transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-bottom-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-bottom-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media (max-width: 680px) {
   nav > a {
@@ -52,11 +54,12 @@ nav > a {
 nav > a:hover {
   color: rgba(255, 255, 255, 0.87) !important;
 }
-nav > a:focus {
+nav > a:focus,
+nav > a:active {
   color: rgba(255, 255, 255, 0.87) !important;
   outline: none;
   background-color: #7986CB;
-  border-bottom: #5c6bc0 solid 4px;
+  border-bottom-color: #5C6BC0;
 }
 nav > a:before {
   content: '';
