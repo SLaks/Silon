@@ -9,7 +9,7 @@ Silon is also useful as a teaching aid when teaching boolean logic and adders; h
  - Supports all modern browsers and IE10+ (the logic gates themselves actually work fine in older IEs as well, but the tab layout, which uses flexbox, does not)
  - Everything is drawn in pure CSS; no images anywhere (except the Twitter & GitHub icons, which are inline SVGs)
  - All visual changes are animated (this makes the UI surprisingly much nicer)
- - Everything is implemented in CSS; the site has no Javascript anywhere (except the Gulpfile to compile my LESS source)
+ - Everything is implemented in CSS; the site has no Javascript anywhere (except the Gulpfile to compile my LESS source, and except for Google Analytics)
 
 #Implementation details
 Silon is implemented using LESS to generate CSS selectors for every combination of inputs that will turn each gate on.  In effect, I created a LESS-based DSL that expresses (almost-)arbitrary boolean expressions.  My LESS mixins expand the expression into its truth table, then encode the truth table as CSS selectors using ANDs, ORs, and NOTs.
