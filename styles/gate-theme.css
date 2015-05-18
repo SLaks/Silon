@@ -2,7 +2,7 @@
   font-size: 16px;
   box-sizing: border-box;
 }
-@media (max-width: 480px) {
+@media (max-width: 640px), (max-height: 700px) {
   :root {
     font-size: 8px;
   }
@@ -69,7 +69,7 @@
   -webkit-transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
-@media (max-width: 480px) {
+@media (max-width: 640px), (max-height: 700px) {
   .Canvas input[type=checkbox] + label:after {
     line-height: 26px;
   }
@@ -268,7 +268,7 @@
   -webkit-transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
           transition: top cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
 }
-@media (max-width: 480px) {
+@media (max-width: 640px), (max-height: 700px) {
   .Result:after {
     line-height: 26px;
   }
@@ -305,7 +305,7 @@
   position: relative;
   z-index: 1;
 }
-@media (max-width: 480px) {
+@media (max-width: 640px), (max-height: 700px) {
   .Gate.OR:after {
     line-height: 33.1190231px;
   }
@@ -384,7 +384,7 @@
   position: relative;
   z-index: 1;
 }
-@media (max-width: 480px) {
+@media (max-width: 640px), (max-height: 700px) {
   .Gate.XOR:after {
     line-height: 41.1190231px;
   }
@@ -443,7 +443,7 @@
   content: 'XOR';
   line-height: 55.84px;
 }
-@media (max-width: 480px) {
+@media (max-width: 640px), (max-height: 700px) {
   .Gate.XOR:after {
     line-height: 27.92px;
   }
@@ -481,7 +481,7 @@
   font-size: 1.4rem;
   text-align: center;
 }
-@media (max-width: 480px) {
+@media (max-width: 640px), (max-height: 700px) {
   .Gate.AND:after {
     line-height: 33.6px;
   }

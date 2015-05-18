@@ -49,7 +49,7 @@
 // values in line-heights for :after.
 .scaleValue(@property, @value) {
 	@{property}: unit(@value) * @remSize;
-	@media (max-width: 480px) {
+	@media (max-width: 640px), (max-height: 700px) {
 		@{property}: 8px * unit(@value);
 	}
 }
