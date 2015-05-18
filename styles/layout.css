@@ -98,6 +98,12 @@ nav > a:target ~ section.DefaultTab {
           transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
   margin-left: -96px;
 }
+@media (max-height: 500px) {
+  nav > section,
+  nav > a:target ~ section.DefaultTab {
+    bottom: -64px;
+  }
+}
 nav > section > div {
   padding: 48px;
   overflow: auto;
